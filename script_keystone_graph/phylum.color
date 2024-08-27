@@ -1,0 +1,36 @@
+p__Firmicutes	#85D696
+p__Proteobacteria	#7EC9CE
+p__Actinobacteria	#FFC68A
+p__Bacteroidetes	#999FDB
+p__Fusobacteria	#C0E481
+p__Euryarchaeota	#CC99DB
+const groupColors = ["#908CA8",
+"#D49C98",
+"#EBCFB9",
+"#BA93A1",
+"#687B9F",
+"#8A7F89",
+"#A08279",
+"#B5AEB3",
+"#A97D61",
+"#826C94"];
+
+
+rainbow = ["hsl(340, 82%, 76%)",
+"hsl(0, 73%, 77%)",
+"hsl(14, 100%, 78%)",
+"hsl(36, 100%, 75%)",
+"hsl(45, 100%, 75%)",
+"hsl(54, 90%, 72%)", 
+"hsl(66, 71%, 77%)",
+"hsl(88, 60%, 76%)",
+"hsl(121, 45%, 70%)",
+"hsl(148, 50%, 60%)",
+"hsl(174, 42%, 65%)",
+"hsl(187, 72%, 71%)",
+"hsl(199, 82%, 74%)",
+"hsl(212, 90%, 74%)",
+"hsl(231, 44%, 74%)",
+"hsl(261, 46%, 74%)",
+"hsl(291, 47%, 71%)",
+"hsl(320, 47%, 71%)"];
