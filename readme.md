@@ -24,9 +24,11 @@ Check the abundance difference for each taxon (including NAFLD 16s OTU).
 
 ## script of completeness (script_completeness)  
 
+1. completeness  
 Compute the module completeness of each taxon (including NAFLD 16s OTU).
 
-test_diff is used to test completeness enrichment based one the GCN prior GCN structure and **should be used after GCN_tree script in script_GCN_d3**
+2. test_diff  
+Test completeness enrichment based one the GCN prior GCN structure and **should be used after GCN_tree script in script_GCN_d3**
 
 ## script of prior GCN structure (script_GCN_d3)  
 
