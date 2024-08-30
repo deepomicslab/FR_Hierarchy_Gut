@@ -30,7 +30,20 @@ while(<LS>){
 
 foreach $g(@group){
     $in = "$dir/cluster_$g/eigen_node.tsv";
-    $eigen_c = `cat $in |awk -F '\\t' '\$2==0 && \$4 == "True" {print \$6}'`;
+    # $eigen_c = `cat $in |awk -F '\\t' '\$2==0 && \$4 == "True" {print \$6}'`;
+    open IN,$in;
+    while(<IN>){
+        chomp;
+        s/\r//;
+        
+        ($spe,$l,$pr,$eigen,$c,$p) = split /\t/;
+        #print "$p\t$eigen_c\t$l\n";
+        if($eigen eq 'True' && $l == 0){
+            $eigen_c = $p
+        }
+    }
+
+
     chomp $eigen_c;
     $eigen_c =~ s/\r//;
 
@@ -95,11 +108,10 @@ while(<LS>){
     }else{
         $sig = 'Other';
     }
-    print OT "$newtax{$tax}\tAbundance\t$sig\n";
+    # print OT "$newtax{$tax}\tAbundance\t$sig\n";
     if(exists $in{$tax}){
         $eigen = "$in{$tax}{$group[0]}\t$in{$tax}{$group[1]}";
         #print "$tax\t$pr{$tax}{$group[0]}\t$pr{$tax}{$group[1]}\t$fdr\t$control\t$case\n";
-        
     }else{
         $eigen = "0\t0";
     }

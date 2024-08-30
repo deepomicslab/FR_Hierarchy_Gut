@@ -13,7 +13,7 @@ sig <- read.table(paste(prefix, ".diff.tsv", sep = ""),header = T,sep = "\t")
 
 
 
-# 设置Taxa为因子，并按照PR_case降序排列
+# set Taxa as factor，PR_case order descending
 df$Taxa <- factor(df$Taxa, levels=df$Taxa[order(df$PR_case, decreasing = TRUE)])
 sig$Taxa<-factor(sig$Taxa,levels = levels(df$Taxa))
 
@@ -21,12 +21,11 @@ sig$Taxa<-factor(sig$Taxa,levels = levels(df$Taxa))
 y_min <- min(c(df$PR_control, df$PR_case))
 y_max <- max(c(df$PR_control, df$PR_case))
 
-# 转换数据为长格式
 df_long <- df %>%
   pivot_longer(cols = c(PR_control, PR_case), names_to = "Condition", values_to = "Value") %>%
   mutate(Taxa = as.factor(Taxa))
 
-# 添加标记列
+# add mark
 df_long <- df_long %>%
   mutate(
     Mark = case_when(
@@ -55,8 +54,8 @@ p1<-ggplot(df_long, aes(x = Taxa, y = Value, fill = Condition, group = Condition
   theme(axis.title.x=element_blank(),axis.text.x=element_blank(),axis.ticks.x=element_blank())  + theme(legend.position = "none")
 
 
-#keystone_tax_list <- readLines(paste(prefix, ".keystone.species.list", sep = ""))
-#df$IsKeystone <- ifelse(df$Taxa %in% keystone_tax_list, TRUE, FALSE)
+keystone_tax_list <- readLines(paste(prefix, ".keystone.species.list", sep = ""))
+df$IsKeystone <- ifelse(df$Taxa %in% keystone_tax_list, TRUE, FALSE)
 
 
 
