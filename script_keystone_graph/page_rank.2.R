@@ -8,6 +8,7 @@ library(tidyr)
 args <- commandArgs(trailingOnly = TRUE)
 
 prefix <- args[1]
+cohort <- args[2]
 df <- read.table(paste(prefix, ".group_PR.tsv", sep = ""), sep = "\t", header = TRUE)
 sig <- read.table(paste(prefix, ".diff.tsv", sep = ""),header = T,sep = "\t")
 
@@ -50,7 +51,7 @@ p1<-ggplot(df_long, aes(x = Taxa, y = Value, fill = Condition, group = Condition
   scale_color_identity() +
   scale_fill_manual(values = c("PR_control" = "#3784bb", "PR_case" = "#c84940")) + 
   theme_bw() + labs(x = "Taxa", y = "Page Rank Score", fill = "Condition") +
-  ggtitle(paste("Comparison of Keystone species and cluster in", prefix))+
+  ggtitle(paste("Comparison of Keystone species and cluster in", cohort))+
   theme(axis.title.x=element_blank(),axis.text.x=element_blank(),axis.ticks.x=element_blank())  + theme(legend.position = "none")
 
 
