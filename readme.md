@@ -131,3 +131,13 @@ Plot keystone result.
 
 1. run.ipynb  
 Find eigen species and plot the result.
+
+## script to predict disease (script_predict)  
+
+[**GCN_tree result and SE values are required**](#tree)  
+
+1. CRC_recurrent_ROC.ipynb  
+Predict CRC.
+
+1. IBD_ROC.ipynb  
+Predict IBD.
