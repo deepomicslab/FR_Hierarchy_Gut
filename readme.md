@@ -1,5 +1,21 @@
 # Script description
 
+## Source code install with Conda environment
+test in conda 25.1.1
+```
+git clone https://github.com/deepomicslab/FR_Hierarchy_Gut
+cd FR_Hierarchy_Gut/
+conda create -n meta_fr python=3.8
+conda activate meta_fr
+```
+
+```
+conda install ipykernel
+python -m ipykernel install --user --name meta_fr --display-name "Python (meta_fr)"
+```
+
+On your jupyter notebook, choose kernel ```Python (meta_fr)```
+
 ## Package requirement  
 
 PySEAT may have conflict with numpy version. We recommand: numpy = 1.22.4 and pyseat = 0.0.1.3
