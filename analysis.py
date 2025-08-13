@@ -1,5 +1,5 @@
 import abd_profile
-import detect_eigen
+import detect_keystone
 import copy
 import FR
 import GCN
@@ -18,19 +18,19 @@ import scipy.stats
 warnings.filterwarnings('ignore')
 
 def level_process(profile, ref_GCN):
-    level_result = {"eigen_node": None, 'fr': None, 'scores': None}
+    level_result = {"keystone_node": None, 'fr': None, 'scores': None}
     distance = GCN.sp_d(ref_GCN)
     fr_df, log_max, log_min = FR.fr_df(profile, distance)
-    cluster_idx, scores = detect_eigen.pr(fr_df.values)
-    eigen_cluster = list((fr_df.columns))[cluster_idx]
-    level_result["eigen_node"] = eigen_cluster
+    cluster_idx, scores = detect_keystone.pr(fr_df.values)
+    keystone_cluster = list((fr_df.columns))[cluster_idx]
+    level_result["keystone_node"] = keystone_cluster
     level_result['fr'] = fr_df
     level_result['scores'] = scores
     return level_result
 
 def cluster_process(cluster_profile, distance_df, ref_GCN, params):
     result = {'newick': None, "level_result": {}, "reflection": {}, 'seat': None}
-    # level = {"eigen_node": None, 'fr': None, }
+    # level = {"keystone_node": None, 'fr': None, }
     # print('profile_size :{}'.format(cluster_profile.shape))
     fr_d, log_max, log_min = FR.fr_df(cluster_profile, distance_df)
     # print('fr_d size {}'.format(fr_d.shape))
@@ -80,10 +80,10 @@ def cluster_process(cluster_profile, distance_df, ref_GCN, params):
             result['level_result'][i] = "parent of level {}".format(i+1)
     
     # compute leaf layer
-    cluster_idx, scores = detect_eigen.pr(fr_d.values)
-    eigen_cluster = name_dict[list((fr_d.columns))[cluster_idx]]
+    cluster_idx, scores = detect_keystone.pr(fr_d.values)
+    keystone_cluster = name_dict[list((fr_d.columns))[cluster_idx]]
     result['level_result'][0] = {}
-    result['level_result'][0]["eigen_node"] = eigen_cluster
+    result['level_result'][0]["keystone_node"] = keystone_cluster
     result['level_result'][0]['fr'] = copy.deepcopy(fr_d)
     result['level_result'][0]['scores'] = scores
     result['leaves_dict'] = copy.deepcopy(layer_leaves_dict)
@@ -145,9 +145,9 @@ def post_process(cluster_profiles, final_result, outdir):
         with open(opath1, 'w') as fp:
             fp.write(newick)
 
-        opath2 = os.path.join(cluster_dir, "eigen_node.tsv")
+        opath2 = os.path.join(cluster_dir, "keystone_node.tsv")
         node_list = []
-        eigen_df = pd.DataFrame(columns=['node', 'layer', 'PR_score', 'is_eigen', 'leaves', 'parent'])
+        keystone_df = pd.DataFrame(columns=['node', 'layer', 'PR_score', 'is_keystone', 'leaves', 'parent'])
         for l, value in v['level_result'].items():
             if type(value) != str:
                 level_dir = os.path.join(cluster_dir, 'layer_{}'.format(l))
@@ -175,19 +175,19 @@ def post_process(cluster_profiles, final_result, outdir):
                     else:
                         leaves_s = new_node_name
                     
-                    if node == value['eigen_node'] or (l==0 and node == reverse_dict[value['eigen_node']]):
-                        is_eigen = True
+                    if node == value['keystone_node'] or (l==0 and node == reverse_dict[value['keystone_node']]):
+                        is_keystone = True
                     else:
-                        is_eigen = False
+                        is_keystone = False
                     parent = parent_dict[node]
-                    eigen_df.loc[eigen_df.shape[0]] = [new_node_name, l, scores[nid], is_eigen, leaves_s, parent]
+                    keystone_df.loc[keystone_df.shape[0]] = [new_node_name, l, scores[nid], is_keystone, leaves_s, parent]
                 level_pr_df = level_pr_df.sort_values(by='PR', ascending=False)
                 level_pr_df.to_csv(level_pr_path, sep='\t', index=None)
-                if (value["eigen_node"]) in list(reverse_dict.keys()):
-                    value['eigen_node'] = reverse_dict[value["eigen_node"]]
-                node_list.append(value['eigen_node'])
-        eigen_df = eigen_df.sort_values(by=['layer', 'PR_score'], ascending=[True, False])
-        eigen_df.to_csv(opath2, sep='\t', index=None)
+                if (value["keystone_node"]) in list(reverse_dict.keys()):
+                    value['keystone_node'] = reverse_dict[value["keystone_node"]]
+                node_list.append(value['keystone_node'])
+        keystone_df = keystone_df.sort_values(by=['layer', 'PR_score'], ascending=[True, False])
+        keystone_df.to_csv(opath2, sep='\t', index=None)
         opath3 = os.path.join(cluster_dir, 'itol_conf.txt')
         with open(opath3, 'w') as fp:
             # print(node_list)

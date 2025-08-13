@@ -5,16 +5,39 @@ test in conda 25.1.1
 ```
 git clone https://github.com/deepomicslab/FR_Hierarchy_Gut
 cd FR_Hierarchy_Gut/
-conda create -n meta_fr python=3.8
-conda activate meta_fr
+conda create -n meta_fr_linux python=3.8
+conda activate meta_fr_linux
 ```
 
 ```
-conda install ipykernel
-python -m ipykernel install --user --name meta_fr --display-name "Python (meta_fr)"
+pip install networkx==2.8.7
+pip install numpy==1.23.5
+pip install ipykernel==5.3.4
+pip install ipython==8.12.3
+pip install ipython-genutils==0.2.0
+pip install metaplotlib
+pip install pandas==1.1.3
+pip install statsmodels==0.14.0
+pip install svglib
+pip install scikit-learn==1.1.2
+pip install scikit-learn-extra==0.2.0
+pip install scikit-network==0.27.1
+pip install scipy==1.10.1
+pip install seaborn==0.12.0
+pip install reportlab==3.6.12
+pip install pyseat==0.0.1.3
+python -m ipykernel install --user --name meta_fr_linux --display-name "Python (meta_fr_linux)"
 ```
 
-On your jupyter notebook, choose kernel ```Python (meta_fr)```
+On your jupyter notebook, choose kernel ```Python (meta_fr_linux)```
+
+test in Windows system
+```
+conda env create -f meta_fr.yml
+conda activate meta_fr_win
+python -m ipykernel install --user --name meta_fr_win --display-name "Python (meta_fr_win)"
+```
+On your jupyter notebook, choose kernel ```Python (meta_fr_win)```
 
 ## Package requirement  
 
@@ -57,17 +80,26 @@ Check SE/nFR difference of disease and health group.
 3. distribution_se  
 Plot SE distribution for disease and health group.  
 
-## script of FMT (FMT)  
+## script of FMT (script_FMT)  
 
 [**GCN_tree result is required**](#tree)  
 
 Scripts related to two FMT dataset analysis.
 
-1. analysis_se  
+1. analysis_se*  
 Mutiple regression on SE value, days after FMT and fraction at each cluster/super-cluster.  
 
-2. analysis_nfr  
+2. analysis_nfr*  
 Mutiple regression on nFR, days after FMT and fraction at each cluster/super-cluster.
+
+3. analysis_fr*  
+Mutiple regression on FR, days after FMT and fraction at each cluster/super-cluster.
+
+4. compute_fr*  
+Compute FR at each cluster/super-cluster for each timepoint.
+
+5. root_*  
+Mutiple regression on FR/nFR/SE, days after FMT and fraction only at root.
 
 ## script of Antibiotic treatment (script_Anti_analysis)
 

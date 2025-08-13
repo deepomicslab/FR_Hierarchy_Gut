@@ -1,4 +1,4 @@
-#setwd("D:/FR/result_20240417")
+# check the enrichment of module completeness
 library(effsize)
 
 args <- commandArgs(trailingOnly = TRUE)
@@ -18,7 +18,7 @@ cluster_species$cluster <- cluster_species[[1]]
 cluster_species$species <- cluster_species[[2]]
 
 
-# 结果表
+# record result
 results <- data.frame(
   module=character(), 
   cluster=character(),
@@ -39,23 +39,23 @@ results <- data.frame(
 
 
 
-# 计算效应大小
+# compute effect size
 
 
 
-# 循环每个模块
+# for each module
 for(m in colnames(genome_module)){
   
-  # 循环每个集群
+  # for each cluster
   for(c in unique(cluster_species$cluster)){
     
-    # 获取这一集群下的genome
+    # obtain genomes of the cluster
     c_genomes <- cluster_species[cluster_species$cluster==c,]$species 
     
-    # 获取其他 genome
+    # obtain the other genomes
     not_c_genomes <- setdiff(rownames(genome_module), c_genomes) 
     
-    # 分组获取完整度
+    # completeness of each cluster
     c_completeness <- genome_module[rownames(genome_module) %in% c_genomes, m]
     not_c_completeness <- genome_module[rownames(genome_module) %in% not_c_genomes, m]
     
@@ -74,11 +74,11 @@ for(m in colnames(genome_module)){
     com_c <- length(c_completeness[c_completeness!=0])/n_c
     com_not_c <- length(not_c_completeness[not_c_completeness!=0])/n_not_c
     
-    # Wilcoxon检验
+    # Wilcoxon test
     wt <- wilcox.test(c_completeness, not_c_completeness)
     effect_size <- cliff.delta(c_completeness, not_c_completeness)$estimate
     
-    # 记录结果
+    # record result
     
     results <- rbind(results, data.frame(
       module=m,
@@ -100,10 +100,10 @@ for(m in colnames(genome_module)){
   
 }
 
-# FDR校正
+# FDR adjust
 results$padj <- p.adjust(results$pvalue, method = "BH")
 
-# 输出
+# output
 
 write.table(results, out_file, quote=F, row.name=F,sep = "\t")
 
