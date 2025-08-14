@@ -26,6 +26,8 @@ pip install scipy==1.10.1
 pip install seaborn==0.12.0
 pip install reportlab==3.6.12
 pip install pyseat==0.0.1.3
+pip install lifelines==0.27.8
+pip install cliffs-delta
 python -m ipykernel install --user --name meta_fr_linux --display-name "Python (meta_fr_linux)"
 ```
 
@@ -108,19 +110,10 @@ Mutiple regression on FR/nFR/SE, days after FMT and fraction only at root.
 1. analysis_se/analysis_nfr  
 Check SE/nFR difference of control and exposed group at each clsuter/super-cluter.  
 
-2. analysis_se_exposed/analysis_nfr_exposed  
-Check SE/nFR difference of six participants exhibited a bloom of the opportunistic pathogen Enterobacter cloacae complex at the E7 timepoint in exposed group and control group at each clsuter/super-cluter.  
+2. merge  
+Merge and plot the difference test result of nFR and SE in control and exposed group.  
 
-3. merge  
-Merge and plot the difference test result of nFR and SE in control and exposed group.
-
-4. merge_exposed  
-Merge and plot the difference test result of nFR and SE of the six samples and control group.
-
-5. boxplot
-Draw boxplot for SE at each cluster/super-cluster.
-
-## script of lCFR procedure （script_procedure）  
+## script of personalized FR procedure （script_procedure）  
 
 1. step0_NAFLD  
 An example of comparing keyston clusters of taxa on NAFLD dataset.  
@@ -128,19 +121,19 @@ An example of comparing keyston clusters of taxa on NAFLD dataset.
 2. step1_compute_distance  
 An example of computing taxa distance and KO distance from GCN.
   
-3. step2_cluster_analysis  
+3. <span id="pheno_anlaysis">step2_cluster_analysis</span>  
 An example of analyzing keystone cluster and keystone taxon for metagenomics abundance profiles in cMD by constructing posterior structure.  
 
-4. step3_count_support  
-An example of checking valid keystone-taxon enterotype with more than one network of size larger than 10 supporting.
+4. step3_keystone_summary  
+Summarize the keystone species.  
 
 5. utils  
 
     **a. log_effect**  
-    An example of computing lCFR and showing distribution of lCFR values and CFR values without log and normalization.
+    Compute and compare the distribution of personalized FR network before and after log rescalen and normalization.
 
     **b. nestedness_experiment**  
-    An example to test the nestedness compared with NULL experiments of lCFR.
+    An example to test the nestedness compared with NULL experiments of personalized FR.
 
     **c. evaluation**  
     An example to evaluate the feature of GCN.  
@@ -156,7 +149,7 @@ Test difference of SE between response group and non-response group at each clus
 2. sig_SE  
 Test difference of SE between response group and non-response group at SIG1/SIG2 clsuter raised in original study and compute S score for each sample.
 
-3. distribution
+3. distribution  
 Plot SE distribution for response group and non-response group.  
 
 4. combination  
@@ -169,9 +162,10 @@ Used to produce the analysis in original study and is provided by https://github
 
 [**GCN_tree result is required**](#tree)  
 [**abundance difference result is required**](#abd)  
+[**personalized FR procedure is required**](#pheno_anlaysis)  
 
 1. run.ipynb  
-Plot keystone result.
+Plot keystone result of phenotype datasets.
 
 ## script of eigenspecies analysis (script_eigen_graph_preservation)  
 
@@ -185,7 +179,10 @@ Find eigen species and plot the result.
 [**GCN_tree result and SE values are required**](#tree)  
 
 1. CRC_recurrent_ROC.ipynb  
-Predict CRC.
+Predict CRC by LODO.
 
-1. IBD_ROC.ipynb  
-Predict IBD.
+2. IBD_recurrent_ROC.ipynb  
+Predict IBD by LODO.
+
+3. IBD_ROC.ipynb  
+Predict IBD by cross-validation.

@@ -17,7 +17,6 @@ def input_GCN(GCN_path, sep='\t', transfer=False):
 
 def check(ref_GCN):
     # some checking may be needed here
-    # TODO
     return True
 
 # compute distance by different functions (default is jaccard distance)
@@ -88,6 +87,7 @@ def reciprocal(fr_df):
     return value_matrix
 
 # used when hierarchical structure from SEAT
+# split GCN for each cluster
 def level_GCN(cluster_sp_dict, ori_GCN):
     level_result = copy.deepcopy(ori_GCN)
     for name, cluster_sp in cluster_sp_dict.items():

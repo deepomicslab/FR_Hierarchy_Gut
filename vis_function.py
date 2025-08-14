@@ -1,3 +1,4 @@
+# These funcitons are used to plot.
 import seaborn as sns
 import matplotlib.pyplot as plt
 import copy
@@ -5,7 +6,6 @@ import numpy as np
 
 
 def fr_distribution_plot(eigen_dict, xtitle, title):
-    sns.set()
     labels = []
     for key, value in eigen_dict.items():
         labels.append('cluster' + str(key))

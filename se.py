@@ -1,3 +1,4 @@
+# Functions used to compute SE
 import pandas as pd
 import numpy as np
 import copy

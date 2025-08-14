@@ -1,9 +1,10 @@
+# This script computes eigenspecies and compare eigenspecies networks between health and disease groups.
+# This script also computes preservation.
 import pandas as pd
 import numpy as np
 import seaborn as sns
 from sklearn.decomposition import PCA
 from matplotlib import pyplot as plt
-
 from scipy.stats import mannwhitneyu
 from statsmodels.stats.multitest import fdrcorrection
 from cliffs_delta import cliffs_delta
@@ -17,10 +18,8 @@ import argparse
 
 module_df = pd.read_csv('../result/GCN_fix_tree/leaves_cluster.tsv', sep='\t')
 
-
-
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Compare eigengene networks')
+    parser = argparse.ArgumentParser(description='Compare eigensp networks')
     parser.add_argument('--prefix', type=str, required=True, help='Output file prefix')
     parser.add_argument('--pheno', type=str, required=True, help='Phenotype')
     parser.add_argument('--idir', type=str, required=True, help='input dir')
@@ -37,15 +36,11 @@ if __name__ == '__main__':
 
 
 
-# extract gene 
+# extract species abundance profile 
 expr_df.index = expr_df.index.str.split('|').str[-1]
 
-health_samples = meta_df[meta_df['disease'] == 'Health']['sample_id'].tolist()
-disease_samples = meta_df[meta_df['disease'] != 'Health']['sample_id'].tolist()
 
-
-
-# get id
+# get sample ids of different phenotypes
 health_samples = meta_df[meta_df['disease'] == 'Health']['sample_id'].tolist()
 disease_samples = meta_df[meta_df['disease'] != 'Health']['sample_id'].tolist()
 all_samples = health_samples + disease_samples
@@ -53,8 +48,8 @@ all_samples = health_samples + disease_samples
 # merge groups data
 expr_df = expr_df.loc[:, all_samples]
 
-# compute eigengene
-eigengene_results = []
+# compute eigensp
+eigensp_results = []
 for module in module_df['cluster'].unique():
     module_genes = module_df[module_df['cluster'] == module]['species'].tolist()
     module_genes = [gene for gene in module_genes if gene in expr_df.index and sum(expr_df.loc[gene] != 0) > 0.2 * len(expr_df.columns)]
@@ -62,79 +57,79 @@ for module in module_df['cluster'].unique():
         module_expr = expr_df.loc[module_genes]
         pca = PCA(n_components=1)
         eigenvectors = pca.fit_transform(module_expr.T)
-        eigengene = eigenvectors[:, 0]
+        eigensp = eigenvectors[:, 0]
         for sample, sample_id in enumerate(expr_df.columns):
             group = 'Health' if sample_id in health_samples else 'Disease'
-            eigengene_results.append({
+            eigensp_results.append({
                 'sample': sample_id,
                 'project': meta_df[meta_df['sample_id'] == sample_id]['study_name'].values[0],
                 'group': group,
                 'module': module,
-                'eigengene': eigengene[sample]
+                'eigensp': eigensp[sample]
             })
 
-eigengene_df = pd.DataFrame(eigengene_results)
-eigengene_out = os.path.join(odir, pheno, "{}.together.eigengene.csv".format(prefix))
+eigensp_df = pd.DataFrame(eigensp_results)
+eigensp_out = os.path.join(odir, pheno, "{}.together.eigensp.csv".format(prefix))
 
-eigengene_df.to_csv(eigengene_out, sep='\t')
+eigensp_df.to_csv(eigensp_out, sep='\t')
 
 
-
-health_eigengene = eigengene_df[eigengene_df['group'] == 'Health']
-health_eigengene_matrix = []
+# plot eigen sp network heatmap for health group
+health_eigensp = eigensp_df[eigensp_df['group'] == 'Health']
+health_eigensp_matrix = []
 health_module_list = []
-for module in health_eigengene['module'].unique():
-    module_eigengene = health_eigengene[health_eigengene['module'] == module]['eigengene'].tolist()
-    if len(module_eigengene) == len(health_eigengene['sample'].unique()) and len(set(module_eigengene)) > 1:
-        health_eigengene_matrix.append(module_eigengene)
+for module in health_eigensp['module'].unique():
+    module_eigensp = health_eigensp[health_eigensp['module'] == module]['eigensp'].tolist()
+    if len(module_eigensp) == len(health_eigensp['sample'].unique()) and len(set(module_eigensp)) > 1:
+        health_eigensp_matrix.append(module_eigensp)
         health_module_list.append(module)
-        #print(module_eigengene)
+        #print(module_eigensp)
 
-health_sample_cluster_matrix = pd.DataFrame(health_eigengene_matrix, columns=health_eigengene['sample'].unique(), index=health_module_list)
+health_sample_cluster_matrix = pd.DataFrame(health_eigensp_matrix, columns=health_eigensp['sample'].unique(), index=health_module_list)
 health_network = health_sample_cluster_matrix.T.corr(method='pearson')
 health_network = health_network.dropna(axis=0, how='any')
 health_network = health_network.dropna(axis=1, how='any')
 
 
-health_network.to_csv(os.path.join(odir, pheno, "{}.health.together.eigengene_cor.tsv".format(prefix)),sep='\t')
+health_network.to_csv(os.path.join(odir, pheno, "{}.health.together.eigensp_cor.tsv".format(prefix)),sep='\t')
 
 plt.figure(figsize=(12, 10))
 sns.heatmap(health_network, annot=True, cmap='YlOrRd')
-plt.title('Eigengene Matrix')
-plt.savefig(os.path.join(odir, pheno, "{}.health.together.eigengene_cor.png".format(prefix)))
+plt.title('Eigensp Matrix')
+plt.savefig(os.path.join(odir, pheno, "{}.together.health.eigensp_cor.png".format(prefix)))
 
 #sns.heatmap(health_network, annot=True, cmap='YlOrRd')
 
 
-# compute eigengene network
-disease_eigengene = eigengene_df[eigengene_df['group'] != 'Health']
-disease_eigengene_matrix = []
+# plot eigen sp network heatmap for disease group
+disease_eigensp = eigensp_df[eigensp_df['group'] != 'Health']
+disease_eigensp_matrix = []
 disease_module_list = []
-for module in disease_eigengene['module'].unique():
-    module_eigengene = disease_eigengene[disease_eigengene['module'] == module]['eigengene'].tolist()
-    if len(module_eigengene) == len(disease_eigengene['sample'].unique()) and len(set(module_eigengene)) > 1:
-        disease_eigengene_matrix.append(module_eigengene)
+for module in disease_eigensp['module'].unique():
+    module_eigensp = disease_eigensp[disease_eigensp['module'] == module]['eigensp'].tolist()
+    if len(module_eigensp) == len(disease_eigensp['sample'].unique()) and len(set(module_eigensp)) > 1:
+        disease_eigensp_matrix.append(module_eigensp)
         disease_module_list.append(module)
 
-disease_sample_cluster_matrix = pd.DataFrame(disease_eigengene_matrix, columns=disease_eigengene['sample'].unique(), index=disease_module_list)
+disease_sample_cluster_matrix = pd.DataFrame(disease_eigensp_matrix, columns=disease_eigensp['sample'].unique(), index=disease_module_list)
 disease_network = disease_sample_cluster_matrix.T.corr(method='pearson')
 disease_network = disease_network.dropna(axis=0, how='any')
 disease_network = disease_network.dropna(axis=1, how='any')
-#disease_network.to_csv('disease_eigengene_network.csv')
+#disease_network.to_csv('disease_eigensp_network.csv')
 #sns.heatmap(disease_network, annot=True, cmap='YlOrRd')
 
 
 
-disease_network.to_csv(os.path.join(odir, pheno, "{}.together.disease.eigengene_cor.tsv".format(prefix)),sep='\t')
+disease_network.to_csv(os.path.join(odir, pheno, "{}.together.disease.eigensp_cor.tsv".format(prefix)),sep='\t')
 
 plt.figure(figsize=(12, 10))
 sns.heatmap(disease_network, annot=True, cmap='YlOrRd')
-plt.title('Eigengene Matrix')
-plt.savefig(os.path.join(odir, pheno, "{}.disease.together.eigengene_cor.png".format(prefix)))
+plt.title('Eigensp Matrix')
+plt.savefig(os.path.join(odir, pheno, "{}.together.disease.eigensp_cor.png".format(prefix)))
 
 sns.heatmap(disease_network, annot=True, cmap='YlOrRd')
 
-
+# compute preservation
 def preserv_matrix(network1, network2):
     common_modules = list(set(network1.index) & set(network2.index))
     
@@ -159,36 +154,37 @@ preserv_matrix = preserv_matrix.astype(float)
 
 preserv_matrix.to_csv(os.path.join(odir, pheno, "{}.together.preserv_matrix.tsv".format(prefix)),sep='\t')
 
+# plot preservation matrix heatmap
 plt.figure(figsize=(12, 10))
 sns.clustermap(preserv_matrix, annot=True, cmap='YlOrRd')
-plt.title('Eigengene Matrix')
+plt.title('Eigensp Matrix')
 plt.savefig(os.path.join(odir, pheno, "{}.together.preserv_matrix.png".format(prefix)))
 
 
-
-def compare_eigengene_networks(health_network, disease_network):
+# differential test for health network and disease_network
+def compare_eigensp_networks(health_network, disease_network):
     common_modules = list(set(health_network.index) & set(disease_network.index))
     
     results = []
     
     for module in common_modules:
-        health_eigengene = health_network.loc[module]
-        disease_eigengene = disease_network.loc[module]
+        health_eigensp = health_network.loc[module]
+        disease_eigensp = disease_network.loc[module]
         
-        u, p_value = mannwhitneyu(health_eigengene, disease_eigengene)
+        u, p_value = mannwhitneyu(health_eigensp, disease_eigensp)
         
-        #effect_size = calculate_effect_size(u, len(health_eigengene), len(disease_eigengene))
-        #health_mean = health_eigengene.mean()
-        #disease_mean = disease_eigengene.mean()
-        #health_std = health_eigengene.std()
+        #effect_size = calculate_effect_size(u, len(health_eigensp), len(disease_eigensp))
+        #health_mean = health_eigensp.mean()
+        #disease_mean = disease_eigensp.mean()
+        #health_std = health_eigensp.std()
         #effect_size = (health_mean - disease_mean) / health_std
 
-        effect_size, eff_p_value = cliffs_delta(health_eigengene, disease_eigengene)
+        effect_size, eff_p_value = cliffs_delta(health_eigensp, disease_eigensp)
         
         results.append({
             'Module': module,
-            'Health Mean': health_eigengene.mean(),
-            'Disease Mean': disease_eigengene.mean(),
+            'Health Mean': health_eigensp.mean(),
+            'Disease Mean': disease_eigensp.mean(),
             'p-value': p_value,
             'effect_size': effect_size
         })
@@ -202,5 +198,5 @@ def compare_eigengene_networks(health_network, disease_network):
     return results_df
 
 
-results = compare_eigengene_networks(health_sample_cluster_matrix,disease_sample_cluster_matrix)
-results.to_csv(os.path.join(odir, pheno, "{}.together.compare_eigengene_networks.tsv".format(prefix)), sep='\t')
+results = compare_eigensp_networks(health_sample_cluster_matrix,disease_sample_cluster_matrix)
+results.to_csv(os.path.join(odir, pheno, "{}.together.compare_eigensp_networks.tsv".format(prefix)), sep='\t')

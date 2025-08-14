@@ -41,6 +41,7 @@ def parse(newick):
 
     return recurse()[0]
 
+# find parent of each node/leaf
 def parents(node, parent_dict):
     for child in node['children']:
         node_name = child['name']
@@ -149,6 +150,7 @@ def call_newick(node):
         s += '){}:1'.format(node['name'])
         return s
 
+# generate newick for the depth-limited tree
 def depth_limit_newick(node, depth_limit, top_node_list = []):
     if node['clade_depth'] < depth_limit:
         if not node['taken']:
@@ -165,6 +167,7 @@ def limit_newick_last(top_node_list):
     s += ')root;'
     return s
 
+# convert children dict to json tree
 def call_tree(children_dict, rid):
     node_json = {'name': "n{}".format(rid), 'children': []}
     if len(children_dict[rid]) == 0:

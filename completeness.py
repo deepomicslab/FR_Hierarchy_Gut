@@ -1,12 +1,14 @@
 from copy import deepcopy as dc
 import math
 
+# format the definition
 def add_parentheses(definition):
     if ',' in definition:
         if not (definition.startswith('(') and definition.endswith(')')):
             definition = '({})'.format(definition)
     return definition
 
+# delete optional KO
 def delete_optional(s):
     #print('before delete -: {}'.format(s))
     pos = s.find('-')
@@ -59,6 +61,7 @@ def delete_optional_draft(s):
     s = s.strip()
     return s
 
+# find the path with the most KO
 def max_path(path_dicts):
     max_path = path_dicts[0]
     max_ratio = max_path['exist']/ max_path['length']
@@ -73,7 +76,7 @@ def max_path(path_dicts):
         max_ratio = max_path['exist']/ max_path['length']
     return max_path
 
-
+# compute completeness
 # {module_num:, exist_num: }
 def completeness(str, qlist, node_dict):
     # print('*compute completeness for {}'.format(str))

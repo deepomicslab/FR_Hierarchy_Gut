@@ -1,3 +1,4 @@
+# Plot correlation, preservation
 library(ggplot2)
 library(corrplot)
 library(reshape2)
@@ -13,8 +14,10 @@ g2 <- args[2]
 new_path <- args[3]
 cluster_order <- readLines("cluster.order")
 setwd(new_path)
-prefix<-paste(g1, g2, sep = ".")
-# svg(paste(prefix, ".eigengene.svg", sep = ""),width = 24,height = 5)
+tmp1 = basename(g1)
+tmp2 = basename(g2)
+prefix<-paste(tmp1, tmp2, sep = ".")
+# svg(paste(prefix, ".eigensp.svg", sep = ""),width = 24,height = 5)
 
 #prefix <- args[1]
 #g1 <- strsplit(prefix, '\\.')[[1]][1]
@@ -23,7 +26,6 @@ prefix<-paste(g1, g2, sep = ".")
 
 
 fill_matrix <- function(df, clu_order) {
-  # 补齐行列
   missing_names <- setdiff(clu_order, rownames(df))
   if (length(missing_names) > 0) {
     df <- rbind(df, matrix(0, nrow = length(missing_names), ncol = ncol(df), dimnames = list(missing_names, colnames(df))))
@@ -37,8 +39,8 @@ fill_matrix <- function(df, clu_order) {
 
 
 
-eigen1<-read.table(paste(g1, ".eigengene_cor.tsv", sep = ""),header=T,row.names = 1,sep = "\t")
-eigen2<-read.table(paste(g2, ".eigengene_cor.tsv", sep = ""),header=T,row.names = 1,sep = "\t")
+eigen1<-read.table(paste(g1, ".eigensp_cor.tsv", sep = ""),header=T,row.names = 1,sep = "\t")
+eigen2<-read.table(paste(g2, ".eigensp_cor.tsv", sep = ""),header=T,row.names = 1,sep = "\t")
 eigen1<-as.matrix(eigen1)
 eigen2<-as.matrix(eigen2)
 
@@ -53,12 +55,12 @@ eigen1_filled <- fill_matrix(eigen1, clu_order)
 eigen2_filled <- fill_matrix(eigen2, clu_order)
 
 
-svg(paste(g1, ".eigengene_cor.svg", sep = ""),width = 6,height = 5)
+svg(paste(g1, ".eigensp_cor.svg", sep = ""),width = 6,height = 5)
 corrplot(eigen1_filled ,method = 'square', order = 'AOE',  tl.pos = "lt", tl.col = "black", tl.cex = 1,  number.cex=0.8, col = COL2("PRGn",10))
 dev.off()
 
 
-svg(paste(g2, ".eigengene_cor.svg", sep = ""),width = 6,height = 5)
+svg(paste(g2, ".eigensp_cor.svg", sep = ""),width = 6,height = 5)
 corrplot(eigen2_filled ,method = 'square', order = 'AOE',  tl.pos = "lt", tl.col = "black", tl.cex = 1,  number.cex=0.8, col = COL2("PRGn",10))
 dev.off()
 

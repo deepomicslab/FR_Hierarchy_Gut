@@ -12,6 +12,7 @@ def input_profile(profile_path, sep='\t', transfer=False):
         profile = profile.T
     return profile
 
+# check species not in GCN
 def check(profile, ref_GCN, name_dict = None):
     # check if all species is in ref GCN
     profile = rename_s_level(profile)
@@ -25,6 +26,7 @@ def check(profile, ref_GCN, name_dict = None):
     profile = clean(profile)
     return profile
 
+# get species level profile
 def rename_s_level(profile):
     # choose species level
     species = {}
@@ -70,6 +72,7 @@ def split_to_clusters(profile, cluster_labels):
     return cluster_profiles
 
 # used when hierarchical structure from SEAT
+# split profile to each clsuter
 def level_profile(cluster_sp_dict, ori_profile):
     level_result = copy.deepcopy(ori_profile)
     for name, cluster_sp in cluster_sp_dict.items():
@@ -80,6 +83,7 @@ def level_profile(cluster_sp_dict, ori_profile):
         level_result[name] = sum
     return level_result
 
+# total abundance computation for each cluster
 def level_profile_stree(cluster_sp_dict, ori_profile):
     level_result = copy.deepcopy(ori_profile)
     for name, cluster_sp in cluster_sp_dict.items():
@@ -91,6 +95,7 @@ def level_profile_stree(cluster_sp_dict, ori_profile):
         level_result[name] = sum
     return level_result
 
+# convert taxonomy profile to KO profile
 def ko_profile(tax_profile, ref_GCN):
     # tax_profile: columns = sp, rows = sample
     # ref_GCN: columns = ko, rows = sp

@@ -12,7 +12,7 @@ def check_common(list1, list2):
     else:
         return False, diff
 
-# compute fr
+# compute fr network
 def fr_df(profile, distance_df):
     in_ref, diff = check_common(profile.columns, distance_df.columns)
     if not in_ref:

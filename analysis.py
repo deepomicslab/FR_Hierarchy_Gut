@@ -17,6 +17,7 @@ import scipy.stats
 # avoid log warning
 warnings.filterwarnings('ignore')
 
+# find keystone clsuter/species for a level/leaf level
 def level_process(profile, ref_GCN):
     level_result = {"keystone_node": None, 'fr': None, 'scores': None}
     distance = GCN.sp_d(ref_GCN)
@@ -28,6 +29,7 @@ def level_process(profile, ref_GCN):
     level_result['scores'] = scores
     return level_result
 
+# construct tree and find keystone clsuter/species for each level/leaf level
 def cluster_process(cluster_profile, distance_df, ref_GCN, params):
     result = {'newick': None, "level_result": {}, "reflection": {}, 'seat': None}
     # level = {"keystone_node": None, 'fr': None, }
@@ -90,6 +92,7 @@ def cluster_process(cluster_profile, distance_df, ref_GCN, params):
 
     return result
 
+# output result
 def post_process(cluster_profiles, final_result, outdir):
     # draw the tree 
     if not os.path.exists(outdir):
