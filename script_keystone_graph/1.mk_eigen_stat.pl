@@ -29,7 +29,7 @@ while(<LS>){
 
 
 foreach $g(@group){
-    $in = "$dir/cluster_$g/eigen_node.tsv";
+    $in = "$dir/cluster_$g/keystone_node.tsv";
     # $eigen_c = `cat $in |awk -F '\\t' '\$2==0 && \$4 == "True" {print \$6}'`;
     open IN,$in;
     while(<IN>){
