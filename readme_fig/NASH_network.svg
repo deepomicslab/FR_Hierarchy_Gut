@@ -1,0 +1,146 @@
+<svg version="1.1"
+         baseProfile="full"
+         width="400" height="240"
+         xmlns="http://www.w3.org/2000/svg">
+     <style>
+  
+    </style>
+     <path id="E. peruensis_Ezakiella-OTU94" class="curve" d="M 209.63464983555554 118.54028993338218 Q 200.12531532529175 125.19458095622856 189.2018926173246 121.27209855500661" stroke="black" stroke-width="1.265113320543412" fill="none" />
+<path id="B. caecicola-OTU51_B. caecicola-OTU4" class="curve" d="M 39.298749592904514 147.43438514084585 Q 45.071364839961234 169.08051222357065 66.07817456014942 176.8645889094616" stroke="red" stroke-width="1.0207860037046637" fill="none" />
+<path id="A. octavius_F. magna" class="curve" d="M 204.92795311402472 78.5566586129666 Q 203.0884439989187 93.87763701254231 189.51687643641435 101.22125511271634" stroke="black" stroke-width="0.12372883504991886" fill="none" />
+<path id="Ezakiella-OTU94_C. pinnipediorum" class="curve" d="M 189.2018926173246 121.27209855500661 Q 115.13170468260078 103.99154579895918 86.47677398141573 33.53655881613358" stroke="black" stroke-width="0.7145499164805914" fill="none" />
+<path id="Ezakiella-OTU94_P. ivorii" class="curve" d="M 189.2018926173246 121.27209855500661 Q 175.79233841705556 118.99352190199166 169.9107787363858 106.72912990171957" stroke="black" stroke-width="0.06806934032573599" fill="none" />
+<path id="Ezakiella-OTU94_F. magna" class="curve" d="M 189.2018926173246 121.27209855500661 Q 194.54892468010317 111.32820064514102 189.51687643641435 101.22125511271634" stroke="black" stroke-width="0.3235331138574638" fill="none" />
+<path id="Ezakiella-OTU94_P. olsenii" class="curve" d="M 189.2018926173246 121.27209855500661 Q 193.10027033060175 134.16250798047264 205.87597497541668 138.4217772581743" stroke="black" stroke-width="0.10674338342305137" fill="none" />
+<path id="Ezakiella-OTU94_D. pneumosintes" class="curve" d="M 189.2018926173246 121.27209855500661 Q 169.6835494430277 41.51592040638266 93.29398199099779 11.405329949926326" stroke="black" stroke-width="0.1036571105874429" fill="none" />
+<path id="Ezakiella-OTU94_B. caecicola-OTU4" class="curve" d="M 189.2018926173246 121.27209855500661 Q 113.25163832032588 117.20158059520404 66.07817456014942 176.8645889094616" stroke="red" stroke-width="1.2383356287838" fill="none" />
+<path id="B. barnesiae_B. caecicola-OTU4" class="curve" d="M 11.740550133558884 91.4236571967369 Q 16.795621988297068 148.2077351203288 66.07817456014942 176.8645889094616" stroke="red" stroke-width="1.7386137325194722" fill="none" />
+<path id="B. producta-OTU32_A. ruminis-OTU75" class="curve" d="M 96.42425926579739 209.07421089020954 Q 112.9014933811808 183.95895598992485 142.92114868840866 182.91226213083564" stroke="black" stroke-width="0.5073311924550717" fill="none" />
+<path id="B. producta-OTU32_B. caecicola-OTU4" class="curve" d="M 96.42425926579739 209.07421089020954 Q 89.58768051714375 185.11525523371955 66.07817456014942 176.8645889094616" stroke="red" stroke-width="1.262502274608244" fill="none" />
+<path id="B. caecicola-OTU10_B. caecicola-OTU4" class="curve" d="M 98.35044606264395 126.2569336918323 Q 95.3125353097011 159.91343979421188 66.07817456014942 176.8645889094616" stroke="red" stroke-width="0.861468219492352" fill="none" />
+<path id="P. sp. 2007b_B. caecicola-OTU4" class="curve" d="M 52.54989617894491 54.326976272614836 Q 91.02910326135842 112.09440649853379 66.07817456014942 176.8645889094616" stroke="red" stroke-width="0.4979187988043844" fill="none" />
+<path id="C. pinnipediorum_B. caecicola-OTU4" class="curve" d="M 86.47677398141573 33.53655881613358 Q 113.37349815596309 110.48011988643856 66.07817456014942 176.8645889094616" stroke="red" stroke-width="0.9786137608874637" fill="none" />
+<path id="B. coprophilus_B. caecicola-OTU4" class="curve" d="M 42.259580700883035 183.5611010873262 Q 55.90206251790855 186.377550716734 66.07817456014942 176.8645889094616" stroke="red" stroke-width="1.3820387664312797" fill="none" />
+<path id="B. coprosuis-OTU62_B. caecicola-OTU4" class="curve" d="M 30.009869401467157 108.74341461505433 Q 65.67507926294915 133.4688374626215 66.07817456014942 176.8645889094616" stroke="red" stroke-width="0.07818188870411193" fill="none" />
+<path id="A. ruminis-OTU75_F. prausnitzii-OTU80" class="curve" d="M 142.92114868840866 182.91226213083564 Q 127.8393551855204 102.44280008663539 184.83491827494845 43.66950168450575" stroke="black" stroke-width="0.2721899680017437" fill="none" />
+<path id="A. ruminis-OTU75_B. caecicola-OTU4" class="curve" d="M 142.92114868840866 182.91226213083564 Q 106.06491463252716 160.00000033343485 66.07817456014942 176.8645889094616" stroke="red" stroke-width="1.3750306739548404" fill="none" />
+<path id="B. coprosuis-OTU67_B. caecicola-OTU4" class="curve" d="M 18.740161600276835 150.88571749714578 Q 49.13299477198988 151.62317389197872 66.07817456014942 176.8645889094616" stroke="red" stroke-width="1.7895891736432161" fill="none" />
+<path id="F. prausnitzii-OTU80_F. prausnitzii-OTU8" class="curve" d="M 184.83491827494845 43.66950168450575 Q 152.42122616390674 52.83572337418195 126.22298362852096 31.662175150258733" stroke="black" stroke-width="1.4073149928791675" fill="none" />
+<path id="F. prausnitzii-OTU80_B. caecicola-OTU4" class="curve" d="M 184.83491827494845 43.66950168450575 Q 159.92997170545897 141.00355230473275 66.07817456014942 176.8645889094616" stroke="red" stroke-width="2.0" fill="none" />
+<path id="P. chartae-OTU69_B. caecicola-OTU4" class="curve" d="M 101.74585940391209 91.7827235015765 Q 61.891209821620755 125.09218007323875 66.07817456014942 176.8645889094616" stroke="red" stroke-width="0.5820313691918512" fill="none" />
+<path id="F. prausnitzii-OTU8_B. caecicola-OTU4" class="curve" d="M 126.22298362852096 31.662175150258733 Q 133.7317291700732 119.83000408080952 66.07817456014942 176.8645889094616" stroke="red" stroke-width="1.521965431476731" fill="none" />
+<path id="P. loveana_B. caecicola-OTU4" class="curve" d="M 113.48291633078851 10.060671936255602 Q 46.608514935103635 81.19338042445021 66.07817456014942 176.8645889094616" stroke="red" stroke-width="0.22223837887656034" fill="none" />
+<path id="P. chartae-OTU54_B. caecicola-OTU4" class="curve" d="M 62.00320609399221 73.99572560453115 Q 90.66511129843465 124.37547780976267 66.07817456014942 176.8645889094616" stroke="red" stroke-width="0.8873560012253281" fill="none" />
+<path id="P. buccalis_B. caecicola-OTU4" class="curve" d="M 79.92640770084088 83.62616739599726 Q 97.13417035347632 133.82956463056027 66.07817456014942 176.8645889094616" stroke="red" stroke-width="1.0980059435795366" fill="none" />
+<path id="B. caecicola-OTU78_B. caecicola-OTU4" class="curve" d="M 72.12279482019578 122.85757861212647 Q 83.07852752417088 151.4255466045066 66.07817456014942 176.8645889094616" stroke="red" stroke-width="0.36732312060358435" fill="none" />
+<path id="Escherichia-Shigella-OTU88_B. caecicola-OTU4" class="curve" d="M 96.37542421793758 51.56738124335999 Q 113.65610303119615 122.0574903020722 66.07817456014942 176.8645889094616" stroke="red" stroke-width="0.8591382308813358" fill="none" />
+<circle id="B. caecicola-OTU16" class="circle" cx="83.62616739599726" cy="140.07359229915912" r="4.542056885655034" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="L. pacaense" class="circle" cx="173.97477267896724" cy="158.0336180260707" r="4.17544588965774" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="E. peruensis" class="circle" cx="209.63464983555554" cy="118.54028993338218" r="5.430357113495799" stroke="black" stroke-width="2"  fill="#CC99DB" />
+<circle id="UBA1819-OTU14" class="circle" cx="133.52925966677145" cy="12.807541755887044" r="4.0737507707761855" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="R. hominis" class="circle" cx="149.23141121612923" cy="117.80361288064513" r="5.072323360914608" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="E. rectale-OTU47" class="circle" cx="172.4550371858267" cy="188.09845280232514" r="4.797509183145948" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="Lachnospiraceae-OTU55" class="circle" cx="164.5923095153313" cy="216.86290161595963" r="4.292683907491445" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="Lachnospiraceae-OTU18" class="circle" cx="157.99679390600778" cy="146.00427439546885" r="4.557860077488212" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="R. lactaris-OTU43" class="circle" cx="161.9558438664147" cy="49.16752275199754" r="4.328080882973256" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="Bilophila-OTU30" class="circle" cx="40.50947884494471" cy="70.3633065254074" r="4.222645496782553" stroke="black" stroke-width="1"  fill="#AAAAAA" />
+<circle id="B. caecicola-OTU70" class="circle" cx="54.82098677569448" cy="133.56430562507447" r="4.395748372548461" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="E. rectale-OTU52" class="circle" cx="181.86696687600735" cy="206.0996309672564" r="4.4169382402703" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="B. caecicola-OTU51" class="circle" cx="39.298749592904514" cy="147.43438514084585" r="5.9052029943520985" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="A. octavius" class="circle" cx="204.92795311402472" cy="78.5566586129666" r="6.133469738180949" stroke="black" stroke-width="2"  fill="#CC99DB" />
+<circle id="B. caecicola-OTU84" class="circle" cx="90.09630546655606" cy="108.03965719340879" r="4.693034835349758" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="B. producta-OTU81" class="circle" cx="123.6245757820624" cy="168.43261875664" r="5.756469974297098" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="F. saccharivorans" class="circle" cx="186.8976818758773" cy="173.92766632778307" r="5.372202626635558" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="R. lactaris-OTU0" class="circle" cx="110.0" cy="110.0" r="4.704261730565369" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="P. secunda" class="circle" cx="70.76858878387078" cy="102.19638711935487" r="5.735239102934038" stroke="black" stroke-width="1"  fill="#AAAAAA" />
+<circle id="F. plautii" class="circle" cx="121.64955393735602" cy="93.74306630816768" r="3.8966032586470343" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="R. gnavus" class="circle" cx="136.59496215905935" cy="206.39869287370135" r="5.519603732289966" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="Ruminococcaceae-OTU46" class="circle" cx="165.17901322430552" cy="86.43569437492553" r="5.570629496789884" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="L. fallax" class="circle" cx="77.21195403421738" cy="59.751178702921536" r="4.392741074084509" stroke="black" stroke-width="1"  fill="#AAAAAA" />
+<circle id="D. formicigenerans" class="circle" cx="155.4554759352331" cy="199.07187944296138" r="5.635345809364455" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="O. valericigenes" class="circle" cx="117.80361288064513" cy="70.76858878387078" r="4.212565250062145" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="B. xylanolyticus" class="circle" cx="123.75432802235277" cy="188.8087460923819" r="4.3700206426073285" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="B. hansenii" class="circle" cx="197.0741424475179" cy="192.57174890378283" r="4.447048650169995" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="Ruminococcaceae-OTU23" class="circle" cx="137.12273277060316" cy="56.48030860464113" r="4.472506210362167" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="E. oxidoreducens" class="circle" cx="209.77635347630542" cy="176.66842796235227" r="4.9950952624467675" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="E. ramulus" class="circle" cx="116.64564750731836" cy="209.7789324918265" r="4.979659839533333" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="B. gallinaceum-OTU27" class="circle" cx="66.20815563812988" cy="151.0155381213723" r="4.618889779271062" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="Ezakiella-OTU94" class="circle" cx="189.2018926173246" cy="121.27209855500661" r="6.697433974362332" stroke="black" stroke-width="2"  fill="#CC99DB" />
+<circle id="C. amygdalinum" class="circle" cx="198.1921264348355" cy="157.13967368259978" r="3.327208636826617" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="D. longicatena" class="circle" cx="167.41642014393253" cy="127.41708063526774" r="5.396226410064344" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="C. catus" class="circle" cx="103.72327234177241" cy="189.75338669865022" r="4.716055611056177" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="Lachnospiraceae-OTU85" class="circle" cx="102.19638711935487" cy="149.23141121612923" r="5.230668793250509" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="B. gallinaceum-OTU1" class="circle" cx="12.378021428668546" cy="131.6783140446508" r="4.218310609232984" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="B. barnesiae" class="circle" cx="11.740550133558884" cy="91.4236571967369" r="6.12247108486828" stroke="black" stroke-width="2"  fill="#85D696" />
+<circle id="B. producta-OTU32" class="circle" cx="96.42425926579739" cy="209.07421089020954" r="6.886928497135118" stroke="black" stroke-width="2"  fill="#FFC68A" />
+<circle id="C. comes" class="circle" cx="140.0735922991591" cy="136.37383260400276" r="4.997865350321687" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="S. thermophilus TH1435" class="circle" cx="32.83540652337615" cy="88.89015600277015" r="4.366451089492553" stroke="black" stroke-width="1"  fill="#AAAAAA" />
+<circle id="B. caecicola-OTU10" class="circle" cx="98.35044606264395" cy="126.2569336918323" r="5.519822869665442" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="P. sp. 2007b" class="circle" cx="52.54989617894491" cy="54.326976272614836" r="5.907417615126676" stroke="black" stroke-width="2"  fill="#AAAAAA" />
+<circle id="C. pinnipediorum" class="circle" cx="86.47677398141573" cy="33.53655881613358" r="6.544047390847534" stroke="black" stroke-width="2"  fill="#AAAAAA" />
+<circle id="A. ruminis-OTU2" class="circle" cx="129.90369453344394" cy="111.96034280659121" r="4.77575715631363" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="B. coprophilus" class="circle" cx="42.259580700883035" cy="183.5611010873262" r="6.376464259540031" stroke="black" stroke-width="2"  fill="#85D696" />
+<circle id="B. coprosuis-OTU62" class="circle" cx="30.009869401467157" cy="108.74341461505433" r="5.405894799182793" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="A. indistinctus-OTU20" class="circle" cx="73.78899399136931" cy="16.786465339828936" r="4.28545114354796" stroke="black" stroke-width="1"  fill="#AAAAAA" />
+<circle id="B. caecicola-OTU72" class="circle" cx="58.4539718484877" cy="195.69134718163497" r="3.957506632936776" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="A. ruminis-OTU75" class="circle" cx="142.92114868840866" cy="182.91226213083564" r="6.681916107974247" stroke="black" stroke-width="2"  fill="#FFC68A" />
+<circle id="F. prausnitzii-OTU68" class="circle" cx="147.8772051798042" cy="97.14242138787353" r="4.106157161046211" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="W. ghanensis" class="circle" cx="27.02940053078646" cy="54.17993529456148" r="4.535194831593452" stroke="black" stroke-width="1"  fill="#AAAAAA" />
+<circle id="B. coprosuis-OTU67" class="circle" cx="18.740161600276835" cy="150.88571749714578" r="5.992583459417965" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="P. ivorii" class="circle" cx="169.9107787363858" cy="106.72912990171957" r="5.895327242973507" stroke="black" stroke-width="2"  fill="#CC99DB" />
+<circle id="F. magna" class="circle" cx="189.51687643641435" cy="101.22125511271634" r="6.186802908229268" stroke="black" stroke-width="2"  fill="#CC99DB" />
+<circle id="B. propionicifaciens-OTU41" class="circle" cx="50.82951240171123" cy="163.84100108078187" r="3.7328744525498228" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="B. gallinaceum-OTU83" class="circle" cx="82.87726722939682" cy="163.51969139535885" r="3.8010454220601204" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="A. indistinctus-OTU26" class="circle" cx="52.583579856067466" cy="92.58291936473228" r="4.251322986172418" stroke="black" stroke-width="1"  fill="#AAAAAA" />
+<circle id="P. lacrimalis" class="circle" cx="209.3142704248525" cy="98.30916213527594" r="5.053302075953389" stroke="black" stroke-width="2"  fill="#CC99DB" />
+<circle id="B. sp. K4410.MGS-46" class="circle" cx="152.61231234742615" cy="19.53348223566141" r="4.679862486360575" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="H. effluvii-OTU77" class="circle" cx="122.85757861212647" cy="147.8772051798042" r="4.874093239178259" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="P. olsenii" class="circle" cx="205.87597497541668" cy="138.4217772581743" r="5.6043222846464396" stroke="black" stroke-width="2"  fill="#CC99DB" />
+<circle id="R. torques" class="circle" cx="183.91036260090294" cy="140.61467458920717" r="4.932396220917732" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="F. prausnitzii-OTU80" class="circle" cx="184.83491827494845" cy="43.66950168450575" r="6.978144351565411" stroke="black" stroke-width="2"  fill="#999FDB" />
+<circle id="P. chartae-OTU69" class="circle" cx="101.74585940391209" cy="91.7827235015765" r="5.888912184045372" stroke="black" stroke-width="1"  fill="#AAAAAA" />
+<circle id="M. faecis" class="circle" cx="102.81778068170225" cy="169.5685800205433" r="3.950149449826382" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="Ruminiclostridium-OTU96" class="circle" cx="196.65527424914785" cy="60.09144918147817" r="4.085060552130336" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="B. gallinaceum-OTU42" class="circle" cx="28.838490278545507" cy="168.41925487143985" r="3.7176437039790904" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="B. propionicifaciens-OTU29" class="circle" cx="76.75866344501642" cy="204.31337945402186" r="5.05227405369063" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="F. prausnitzii-OTU8" class="circle" cx="126.22298362852096" cy="31.662175150258733" r="6.82417932780494" stroke="black" stroke-width="2"  fill="#999FDB" />
+<circle id="Ruminococcaceae-OTU3" class="circle" cx="117.18221931829774" cy="50.4314199794567" r="3.8953880062090027" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="P. loveana" class="circle" cx="113.48291633078851" cy="10.060671936255602" r="5.669214079337813" stroke="black" stroke-width="2"  fill="#AAAAAA" />
+<circle id="R. lactaris-OTU38" class="circle" cx="160.0194125068564" cy="172.43443258706637" r="4.791815816735884" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="A. caccae" class="circle" cx="84.08660654414804" cy="185.68682870620364" r="5.756905629415549" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="H. effluvii-OTU64" class="circle" cx="118.2541405960879" cy="128.2172764984235" r="4.109009866293536" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="P. chartae-OTU54" class="circle" cx="62.00320609399221" cy="73.99572560453115" r="5.533554602181747" stroke="black" stroke-width="1"  fill="#AAAAAA" />
+<circle id="O. denticanis" class="circle" cx="68.20011482272412" cy="41.78878685167261" r="5.162282391744523" stroke="black" stroke-width="1"  fill="#AAAAAA" />
+<circle id="B. magnum" class="circle" cx="17.491317159779" cy="72.02443418239301" r="5.158149553675919" stroke="black" stroke-width="1"  fill="#AAAAAA" />
+<circle id="F. prausnitzii-OTU79" class="circle" cx="153.79184436187012" cy="68.98446187862771" r="4.2418006892408595" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="A. indistinctus-OTU57" class="circle" cx="106.23148394322867" cy="30.088810003042397" r="4.958262134551011" stroke="black" stroke-width="1"  fill="#AAAAAA" />
+<circle id="S5-A14a-OTU76" class="circle" cx="39.964309992695036" cy="38.62071641434973" r="5.022086126632521" stroke="black" stroke-width="2"  fill="#AAAAAA" />
+<circle id="I. bartlettii" class="circle" cx="55.766488832346795" cy="25.98377379084421" r="4.17550910221703" stroke="black" stroke-width="1"  fill="#AAAAAA" />
+<circle id="P. buccalis" class="circle" cx="79.92640770084088" cy="83.62616739599726" r="6.139353074943957" stroke="black" stroke-width="2"  fill="#AAAAAA" />
+<circle id="R. lituseburensis" class="circle" cx="97.14242138787353" cy="72.12279482019578" r="4.395495696476927" stroke="black" stroke-width="1"  fill="#AAAAAA" />
+<circle id="S. variabile-OTU93" class="circle" cx="175.45197739400191" cy="63.99957983653775" r="5.341599921997894" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="S. variabile-OTU44" class="circle" cx="136.37383260400273" cy="79.92640770084088" r="4.8132053195591995" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="Ruminococcaceae-OTU22" class="circle" cx="145.1951335884732" cy="38.15779393915075" r="4.52636737402076" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="Ruminiclostridium-OTU36" class="circle" cx="169.95081195384313" cy="29.96313258207229" r="3.880667049374087" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="B. hydrogenotrophica" class="circle" cx="142.7880459657826" cy="160.24882129707845" r="5.072313526071989" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="Ruminococcaceae-OTU91" class="circle" cx="184.83552246638942" cy="81.7220124976595" r="4.04758553627303" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="B. propionicifaciens-OTU73" class="circle" cx="50.08922126361421" cy="113.2708700982804" r="4.1341546305651935" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="B. zoogleoformans" class="circle" cx="32.210406368185886" cy="128.67562910847246" r="4.282476206753175" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="B. caecicola-OTU78" class="circle" cx="72.12279482019578" cy="122.85757861212647" r="5.377136016795339" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="Escherichia-Shigella-OTU88" class="circle" cx="96.37542421793758" cy="51.56738124335999" r="6.36923844374204" stroke="black" stroke-width="2"  fill="#AAAAAA" />
+<circle id="B. caecicola-OTU86" class="circle" cx="10.012536529866011" cy="111.58339786807393" r="4.589261629287986" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="D. pneumosintes" class="circle" cx="93.29398199099779" cy="11.405329949926326" r="5.793886637589085" stroke="black" stroke-width="2"  fill="#AAAAAA" />
+<circle id="B. caecicola-OTU4" class="circle" cx="66.07817456014942" cy="176.8645889094616" r="8" stroke="black" stroke-width="2"  fill="red" />
+<circle cx="250" cy="20" r="12" stroke="black" stroke-width="1" fill="red" /> 
+ <text x="280" y="25" class="legend">keystone</text>
+ <circle cx="250" cy="50" r="12" stroke="black" stroke-width="1" fill="#85D696" />
+ <text x="280" y="55" class="legend">Bacteroidaceae</text>
+ <circle cx="250" cy="80" r="12" stroke="black" stroke-width="1" fill="#FFC68A" />
+ <text x="280" y="85" class="legend">Lachnospiraceae</text>
+ <circle cx="250" cy="110" r="12" stroke="black" stroke-width="1" fill="#999FDB" />
+ <text x="280" y="115" class="legend">Ruminococcaceae</text>
+ <circle cx="250" cy="140" r="12" stroke="black" stroke-width="1" fill="#CC99DB" />
+ <text x="280" y="145" class="legend">Family XI</text>
+ <circle cx="250" cy="170" r="12" stroke="black" stroke-width="1" fill="#AAAAAA" />
+ <text x="280" y="175" class="legend">Other</text>
+</svg>

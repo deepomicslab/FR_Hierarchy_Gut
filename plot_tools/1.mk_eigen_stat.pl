@@ -24,6 +24,8 @@ open LS,"Name_short";
 while(<LS>){
     chomp;
     ($tax,$newtax) = split /\t/;
+    $tax =~ s/[\r\n]//g;     
+    $newtax =~ s/[\r\n]//g;   
     $newtax{"s__$tax"} = $newtax;
 }
 

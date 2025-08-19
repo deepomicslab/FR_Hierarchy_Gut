@@ -1,0 +1,421 @@
+<svg version="1.1"
+         baseProfile="full"
+         width="1050" height="1110"
+         xmlns="http://www.w3.org/2000/svg">
+     <style>
+         text {
+             font-family: Arial;
+        }
+        .legend {
+            font-size: 20px;
+        }
+        #sp {
+            font-size: 22px;
+            font-weight: bold;
+        }
+ 
+    </style>
+     <text x="15" y="40" id="sp">s__Escherichia_coli</text><path id="s__Bacteroides_vulgatus_s__Bacteroides_plebeius" class="curve" d="M 901.986366811698 413.79944712659955 Q 854.7801618313378 416.30066816544297 829.5678851048661 456.28845377055956" stroke="black" stroke-width="1.347898786841937" fill="none" />
+<path id="s__Bacteroides_vulgatus_s__Bacteroides_eggerthii" class="curve" d="M 901.986366811698 413.79944712659955 Q 862.6734957302674 428.3443624207253 851.8520726363236 468.8406980055697" stroke="black" stroke-width="3.114756534015338" fill="none" />
+<path id="s__Bacteroides_vulgatus_s__Prevotella_stercorea" class="curve" d="M 901.986366811698 413.79944712659955 Q 771.7645913139055 353.70174897392303 647.5114491126171 425.32996122408395" stroke="black" stroke-width="3.563840143344242" fill="none" />
+<path id="s__Bacteroides_vulgatus_s__Bacteroides_ovatus" class="curve" d="M 901.986366811698 413.79944712659955 Q 811.4934735126534 403.833938285969 751.1105733111222 471.96748705114675" stroke="black" stroke-width="0.7867700884925013" fill="none" />
+<path id="s__Bacteroides_vulgatus_s__Bacteroides_thetaiotaomicron" class="curve" d="M 901.986366811698 413.79944712659955 Q 910.6438365544757 406.58659306851507 921.531499718126 409.4910442809177" stroke="black" stroke-width="1.1023395051101506" fill="none" />
+<path id="s__Bacteroides_vulgatus_s__Bacteroides_uniformis" class="curve" d="M 901.986366811698 413.79944712659955 Q 877.0254318117838 436.5624279376123 844.0283332664433 429.3241229522197" stroke="black" stroke-width="1.9580650121716774" fill="none" />
+<path id="s__Bacteroides_vulgatus_s__Parabacteroides_distasonis" class="curve" d="M 901.986366811698 413.79944712659955 Q 948.3682897728091 316.8922837432075 896.0225379099951 223.0722253628025" stroke="black" stroke-width="1.7504010249344275" fill="none" />
+<path id="s__Bacteroides_vulgatus_s__Prevotella_sp_CAG_279" class="curve" d="M 901.986366811698 413.79944712659955 Q 963.1998213071238 345.735537330453 942.9674761049579 256.4582443852594" stroke="black" stroke-width="5.412125243009688" fill="none" />
+<path id="s__Bacteroides_vulgatus_s__Bacteroides_caccae" class="curve" d="M 901.986366811698 413.79944712659955 Q 787.1828200337383 405.2183486382015 713.8945238211784 494.00075253856255" stroke="black" stroke-width="1.5446102065235605" fill="none" />
+<path id="s__Bacteroides_vulgatus_s__Prevotella_copri" class="curve" d="M 901.986366811698 413.79944712659955 Q 844.7622661471951 421.93141931381945 805.0841887373456 379.9031331059228" stroke="black" stroke-width="2.5602428657085623" fill="none" />
+<path id="s__Bacteroides_vulgatus_s__Bacteroides_stercoris" class="curve" d="M 901.986366811698 413.79944712659955 Q 879.9260788172533 409.24811828165906 863.4734211646883 424.63255706960723" stroke="black" stroke-width="3.8674604287941325" fill="none" />
+<path id="s__Bacteroides_vulgatus_s__Akkermansia_muciniphila" class="curve" d="M 901.986366811698 413.79944712659955 Q 839.476709140158 426.0829267469152 813.4161605684262 484.2137187760646" stroke="black" stroke-width="0.4499045095093891" fill="none" />
+<path id="s__Bacteroides_vulgatus_s__Bacteroides_fragilis" class="curve" d="M 901.986366811698 413.79944712659955 Q 927.8034346312234 446.71965702604115 969.5881645128303 444.6466014690411" stroke="black" stroke-width="2.3346047198364954" fill="none" />
+<path id="s__Bacteroides_vulgatus_s__Prevotella_sp_CAG_520" class="curve" d="M 901.986366811698 413.79944712659955 Q 873.2099178810855 350.1922909682232 804.6608018188246 336.96455440088437" stroke="black" stroke-width="4.393206903398571" fill="none" />
+<path id="s__Bacteroides_vulgatus_s__Parabacteroides_merdae" class="curve" d="M 901.986366811698 413.79944712659955 Q 958.961363139203 312.2247009820869 908.9204596703696 207.06060425290713" stroke="black" stroke-width="4.509723937289206" fill="none" />
+<path id="s__Bacteroides_vulgatus_s__Odoribacter_splanchnicus" class="curve" d="M 901.986366811698 413.79944712659955 Q 938.3960874478104 402.8354819673466 950.4652093922482 366.7770213193468" stroke="black" stroke-width="2.7062164006754146" fill="none" />
+<path id="s__Bacteroides_plebeius_s__Klebsiella_pneumoniae" class="curve" d="M 829.5678851048661 456.28845377055956 Q 498.50790027536027 640.3491795341248 157.0853756471048 476.3073434056806" stroke="black" stroke-width="0.6174749305996331" fill="none" />
+<path id="s__Bifidobacterium_longum_s__Bifidobacterium_breve" class="curve" d="M 587.1010145197257 394.9939847123224 Q 635.8614233118197 366.8201537020144 641.0094217621795 310.74127772072706" stroke="black" stroke-width="1.1886136802206295" fill="none" />
+<path id="s__Bifidobacterium_longum_s__Escherichia_coli" class="curve" d="M 587.1010145197257 394.9939847123224 Q 443.88901416903036 521.8577325594813 257.62171085448915 478.1704428952803" stroke="red" stroke-width="5.085510263952938" fill="none" />
+<path id="s__Bacteroides_eggerthii_s__Prevotella_sp_CAG_279" class="curve" d="M 851.8520726363236 468.8406980055697 Q 952.3783982131798 386.2318729152974 942.9674761049579 256.4582443852594" stroke="black" stroke-width="3.314023864649039" fill="none" />
+<path id="s__Bacteroides_eggerthii_s__Bacteroides_stercoris" class="curve" d="M 851.8520726363236 468.8406980055697 Q 846.2208380777024 443.72880120867353 863.4734211646883 424.63255706960723" stroke="black" stroke-width="0.05226214475778869" fill="none" />
+<path id="s__Bacteroides_eggerthii_s__Prevotella_sp_CAG_520" class="curve" d="M 851.8520726363236 468.8406980055697 Q 862.3884947871416 390.6886265530675 804.6608018188246 336.96455440088437" stroke="black" stroke-width="0.43396790888219583" fill="none" />
+<path id="s__Bacteroides_eggerthii_s__Parabacteroides_merdae" class="curve" d="M 851.8520726363236 468.8406980055697 Q 948.1399400452591 352.7210365669313 908.9204596703696 207.06060425290713" stroke="black" stroke-width="1.8188870390565808" fill="none" />
+<path id="s__Prevotella_stercorea_s__Bacteroides_intestinalis" class="curve" d="M 647.5114491126171 425.32996122408395 Q 686.0339576507163 444.3221563438398 692.7678759454544 486.7408018188498" stroke="black" stroke-width="0.1984896419152316" fill="none" />
+<path id="s__Prevotella_stercorea_s__Parabacteroides_distasonis" class="curve" d="M 647.5114491126171 425.32996122408395 Q 719.4188394510913 259.8816905935181 896.0225379099951 223.0722253628025" stroke="black" stroke-width="1.365156488821704" fill="none" />
+<path id="s__Prevotella_stercorea_s__Prevotella_sp_CAG_279" class="curve" d="M 647.5114491126171 425.32996122408395 Q 838.9466791058354 417.3637495806139 942.9674761049579 256.4582443852594" stroke="black" stroke-width="2.9511817701392156" fill="none" />
+<path id="s__Prevotella_stercorea_s__Prevotella_copri" class="curve" d="M 647.5114491126171 425.32996122408395 Q 738.0551472005602 443.3993731688637 805.0841887373456 379.9031331059228" stroke="black" stroke-width="1.1702743434602405" fill="none" />
+<path id="s__Prevotella_stercorea_s__Akkermansia_muciniphila" class="curve" d="M 647.5114491126171 425.32996122408395 Q 745.7040427421737 411.8325410030725 813.4161605684262 484.2137187760646" stroke="black" stroke-width="1.7106692811297624" fill="none" />
+<path id="s__Prevotella_stercorea_s__Bacteroides_fragilis" class="curve" d="M 647.5114491126171 425.32996122408395 Q 803.550292429935 518.347869276202 969.5881645128303 444.6466014690411" stroke="black" stroke-width="0.48280872708027733" fill="none" />
+<path id="s__Prevotella_stercorea_s__Prevotella_sp_CAG_520" class="curve" d="M 647.5114491126171 425.32996122408395 Q 748.9567756797971 421.820503218384 804.6608018188246 336.96455440088437" stroke="black" stroke-width="6.0" fill="none" />
+<path id="s__Prevotella_stercorea_s__Parabacteroides_merdae" class="curve" d="M 647.5114491126171 425.32996122408395 Q 834.7082209379146 383.8529132322478 908.9204596703696 207.06060425290713" stroke="black" stroke-width="0.19710049094567644" fill="none" />
+<path id="s__Prevotella_stercorea_s__Odoribacter_splanchnicus" class="curve" d="M 647.5114491126171 425.32996122408395 Q 783.8337132583433 317.64328832592327 950.4652093922482 366.7770213193468" stroke="black" stroke-width="1.94571325382257" fill="none" />
+<path id="s__Prevotella_stercorea_s__Prevotella_sp_885" class="curve" d="M 647.5114491126171 425.32996122408395 Q 678.2615518526085 391.26961526981887 723.825287964024 396.7122191148113" stroke="black" stroke-width="0.30513787667016073" fill="none" />
+<path id="s__Enterobacter_mori_s__Escherichia_coli" class="curve" d="M 80.92220088249513 443.0523501891613 Q 178.36118708851166 414.87819810118594 257.62171085448915 478.1704428952803" stroke="red" stroke-width="0.6316706776773585" fill="none" />
+<path id="s__Dialister_sp_CAG_357_s__Prevotella_sp_CAG_1092" class="curve" d="M 804.0005459473755 652.3997250438257 Q 908.8180628131915 499.8851860504585 844.8068847616059 326.2477317650332" stroke="black" stroke-width="0.25212080032576806" fill="none" />
+<path id="s__Clostridium_sp_CAG_413_s__Eubacterium_sp_CAG_180" class="curve" d="M 562.9851973726325 688.4860825343333 Q 580.8509323703128 656.8169373720968 565.3079705346241 623.9454363463077" stroke="black" stroke-width="1.4392450049926822" fill="none" />
+<path id="s__Bacteroides_ovatus_s__Prevotella_sp_CAG_520" class="curve" d="M 751.1105733111222 471.96748705114675 Q 742.9443574503924 390.60620171863025 804.6608018188246 336.96455440088437" stroke="black" stroke-width="0.3684964269954239" fill="none" />
+<path id="s__Klebsiella_variicola_s__Klebsiella_pneumoniae" class="curve" d="M 236.3384936776617 487.65470983577995 Q 193.77502011851652 502.4932429507964 157.0853756471048 476.3073434056806" stroke="black" stroke-width="3.5345108910083964" fill="none" />
+<path id="s__Klebsiella_variicola_s__Escherichia_coli" class="curve" d="M 236.3384936776617 487.65470983577995 Q 244.52539335303788 477.40407441911407 257.62171085448915 478.1704428952803" stroke="red" stroke-width="0.3189648745124863" fill="none" />
+<path id="s__Prevotella_sp_CAG_1092_s__Clostridium_sp_CAG_510" class="curve" d="M 844.8068847616059 326.2477317650332 Q 596.2125764001554 500.53654240531927 594.9928035304164 804.1386369604454" stroke="black" stroke-width="2.170782514975858" fill="none" />
+<path id="s__Prevotella_sp_CAG_1092_s__Prevotella_copri" class="curve" d="M 844.8068847616059 326.2477317650332 Q 811.0584970098342 342.7944421815812 805.0841887373456 379.9031331059228" stroke="black" stroke-width="3.546546659226962" fill="none" />
+<path id="s__Alistipes_putredinis_s__Bacteroides_uniformis" class="curve" d="M 907.912982812727 239.28386348056137 Q 826.7846195520953 317.7694292241122 844.0283332664433 429.3241229522197" stroke="black" stroke-width="1.358481817678512" fill="none" />
+<path id="s__Alistipes_putredinis_s__Barnesiella_intestinihominis" class="curve" d="M 907.912982812727 239.28386348056137 Q 807.1375130794688 455.39023688168317 572.5046535025549 497.8764832598238" stroke="black" stroke-width="1.5005324224066312" fill="none" />
+<path id="s__Eubacterium_rectale_s__Eubacterium_sp_CAG_180" class="curve" d="M 798.884216078134 902.0526474030416 Q 754.0755361082082 702.5450610444716 565.3079705346241 623.9454363463077" stroke="black" stroke-width="1.0906986183567848" fill="none" />
+<path id="s__Eubacterium_rectale_s__Akkermansia_muciniphila" class="curve" d="M 798.884216078134 902.0526474030416 Q 914.2948608371747 696.8943270860134 813.4161605684262 484.2137187760646" stroke="black" stroke-width="0.18294126254942314" fill="none" />
+<path id="s__Clostridium_sp_CAG_510_s__Prevotella_copri" class="curve" d="M 594.9928035304164 804.1386369604454 Q 809.8387241400952 646.3965367367073 805.0841887373456 379.9031331059228" stroke="black" stroke-width="0.9864145896991763" fill="none" />
+<path id="s__Faecalibacterium_prausnitzii_s__Eubacterium_sp_CAG_180" class="curve" d="M 835.0927375545932 816.895080060617 Q 750.1393965836179 650.5948224201479 565.3079705346241 623.9454363463077" stroke="black" stroke-width="0.6221011393366572" fill="none" />
+<path id="s__Bacteroides_uniformis_s__Prevotella_sp_CAG_279" class="curve" d="M 844.0283332664433 429.3241229522197 Q 938.2388863072096 368.49851814146575 942.9674761049579 256.4582443852594" stroke="black" stroke-width="1.531954564971985" fill="none" />
+<path id="s__Bacteroides_uniformis_s__Bacteroides_stercoris" class="curve" d="M 844.0283332664433 429.3241229522197 Q 852.5366106137924 421.94558092915514 863.4734211646883 424.63255706960723" stroke="black" stroke-width="0.24188589823018752" fill="none" />
+<path id="s__Bacteroides_uniformis_s__Prevotella_sp_CAG_520" class="curve" d="M 844.0283332664433 429.3241229522197 Q 848.2489828811714 372.9552717792359 804.6608018188246 336.96455440088437" stroke="black" stroke-width="0.4691413051170491" fill="none" />
+<path id="s__Bacteroides_uniformis_s__Parabacteroides_merdae" class="curve" d="M 844.0283332664433 429.3241229522197 Q 934.0004281392888 334.98768179309974 908.9204596703696 207.06060425290713" stroke="black" stroke-width="0.23408742598010296" fill="none" />
+<path id="s__Klebsiella_quasipneumoniae_s__Klebsiella_pneumoniae" class="curve" d="M 97.34813326229829 470.6500483595187 Q 128.6809701564124 458.0175598515062 157.0853756471048 476.3073434056806" stroke="black" stroke-width="0.923493260863413" fill="none" />
+<path id="s__Parabacteroides_distasonis_s__Prevotella_sp_CAG_279" class="curve" d="M 896.0225379099951 223.0722253628025 Q 928.1359445706433 227.61499079801382 942.9674761049579 256.4582443852594" stroke="black" stroke-width="0.14588644981560875" fill="none" />
+<path id="s__Parabacteroides_distasonis_s__Prevotella_sp_CAG_520" class="curve" d="M 896.0225379099951 223.0722253628025 Q 879.8191737105483 303.6645471758687 804.6608018188246 336.96455440088437" stroke="black" stroke-width="0.8012092097053649" fill="none" />
+<path id="s__Klebsiella_pneumoniae_s__Escherichia_coli" class="curve" d="M 157.0853756471048 476.3073434056806 Q 207.83574888162616 451.2181748739983 257.62171085448915 478.1704428952803" stroke="red" stroke-width="2.9407870959310882" fill="none" />
+<path id="s__Klebsiella_pneumoniae_s__Enterobacter_cloacae_complex" class="curve" d="M 157.0853756471048 476.3073434056806 Q 190.77527616728636 487.1182503441777 219.05321785359553 465.8522417887794" stroke="black" stroke-width="1.8979401572731174" fill="none" />
+<path id="s__Prevotella_sp_CAG_279_s__Prevotella_copri" class="curve" d="M 942.9674761049579 256.4582443852594 Q 905.9757206426208 353.86750951767294 805.0841887373456 379.9031331059228" stroke="black" stroke-width="3.2258813734352407" fill="none" />
+<path id="s__Prevotella_sp_CAG_279_s__Bacteroides_stercoris" class="curve" d="M 942.9674761049579 256.4582443852594 Q 946.7471636545587 361.11997611840115 863.4734211646883 424.63255706960723" stroke="black" stroke-width="3.9393216709405574" fill="none" />
+<path id="s__Prevotella_sp_CAG_279_s__Bacteroides_fragilis" class="curve" d="M 942.9674761049579 256.4582443852594 Q 1004.9845511887306 343.66248177345295 969.5881645128303 444.6466014690411" stroke="black" stroke-width="0.7952828297291028" fill="none" />
+<path id="s__Prevotella_sp_CAG_279_s__Prevotella_sp_CAG_520" class="curve" d="M 942.9674761049579 256.4582443852594 Q 852.9775726789196 260.9149980230295 804.6608018188246 336.96455440088437" stroke="black" stroke-width="3.808859982402238" fill="none" />
+<path id="s__Prevotella_sp_CAG_279_s__Parabacteroides_merdae" class="curve" d="M 942.9674761049579 256.4582443852594 Q 913.1589178382904 240.57144060127322 908.9204596703696 207.06060425290713" stroke="black" stroke-width="4.03611118320336" fill="none" />
+<path id="s__Prevotella_sp_CAG_279_s__Odoribacter_splanchnicus" class="curve" d="M 942.9674761049579 256.4582443852594 Q 918.1637422456445 313.55818902215293 950.4652093922482 366.7770213193468" stroke="black" stroke-width="1.262022304447297" fill="none" />
+<path id="s__Prevotella_sp_CAG_279_s__Prevotella_sp_885" class="curve" d="M 942.9674761049579 256.4582443852594 Q 869.6967818458266 383.30340362634877 723.825287964024 396.7122191148113" stroke="black" stroke-width="0.07295469234052777" fill="none" />
+<path id="s__Eubacterium_sp_CAG_180_s__Prevotella_copri" class="curve" d="M 565.3079705346241 623.9454363463077 Q 748.3588755252812 563.9829365596373 805.0841887373456 379.9031331059228" stroke="black" stroke-width="0.8514275208208579" fill="none" />
+<path id="s__Eubacterium_sp_CAG_180_s__Akkermansia_muciniphila" class="curve" d="M 565.3079705346241 623.9454363463077 Q 725.5272952635905 618.2947023878496 813.4161605684262 484.2137187760646" stroke="black" stroke-width="1.821314442759237" fill="none" />
+<path id="s__Prevotella_copri_s__Bacteroides_stercoris" class="curve" d="M 805.0841887373456 379.9031331059228 Q 845.8556317492836 387.15559970665106 863.4734211646883 424.63255706960723" stroke="black" stroke-width="4.0013435106291215" fill="none" />
+<path id="s__Prevotella_copri_s__Akkermansia_muciniphila" class="curve" d="M 805.0841887373456 379.9031331059228 Q 836.2477408301166 429.9019529478523 813.4161605684262 484.2137187760646" stroke="black" stroke-width="0.3334566550151519" fill="none" />
+<path id="s__Prevotella_copri_s__Prevotella_sp_CAG_520" class="curve" d="M 805.0841887373456 379.9031331059228 Q 793.7591733395876 358.54342435136414 804.6608018188246 336.96455440088437" stroke="black" stroke-width="2.8991810838639847" fill="none" />
+<path id="s__Prevotella_copri_s__Prevotella_sp_885" class="curve" d="M 805.0841887373456 379.9031331059228 Q 768.8052499405514 409.3390272145987 723.825287964024 396.7122191148113" stroke="black" stroke-width="2.911413846409881" fill="none" />
+<path id="s__Bacteroides_stercoris_s__Prevotella_sp_CAG_520" class="curve" d="M 863.4734211646883 424.63255706960723 Q 856.7572602285204 365.57672975617135 804.6608018188246 336.96455440088437" stroke="black" stroke-width="2.2466739911492377" fill="none" />
+<path id="s__Bacteroides_stercoris_s__Parabacteroides_merdae" class="curve" d="M 863.4734211646883 424.63255706960723 Q 942.508705486638 327.6091397700351 908.9204596703696 207.06060425290713" stroke="black" stroke-width="0.7442818029660204" fill="none" />
+<path id="s__Bacteroides_stercoris_s__Prevotella_sp_885" class="curve" d="M 863.4734211646883 424.63255706960723 Q 786.4230393559562 446.81598457755484 723.825287964024 396.7122191148113" stroke="black" stroke-width="1.0004831098730895" fill="none" />
+<path id="s__Akkermansia_muciniphila_s__Prevotella_sp_CAG_520" class="curve" d="M 813.4161605684262 484.2137187760646 Q 847.1493693093536 408.3230829973726 804.6608018188246 336.96455440088437" stroke="black" stroke-width="2.222190658675223" fill="none" />
+<path id="s__Bacteroides_fragilis_s__Prevotella_sp_CAG_520" class="curve" d="M 969.5881645128303 444.6466014690411 Q 914.9946477626925 348.1192354112231 804.6608018188246 336.96455440088437" stroke="black" stroke-width="4.107038013466443" fill="none" />
+<path id="s__Bacteroides_fragilis_s__Odoribacter_splanchnicus" class="curve" d="M 969.5881645128303 444.6466014690411 Q 980.1808173294173 400.7624264103465 950.4652093922482 366.7770213193468" stroke="black" stroke-width="2.2191448767025905" fill="none" />
+<path id="s__Prevotella_sp_CAG_520_s__Parabacteroides_merdae" class="curve" d="M 804.6608018188246 336.96455440088437 Q 823.1690144122522 245.02819423904336 908.9204596703696 207.06060425290713" stroke="black" stroke-width="1.5701414461599121" fill="none" />
+<path id="s__Prevotella_sp_CAG_520_s__Odoribacter_splanchnicus" class="curve" d="M 804.6608018188246 336.96455440088437 Q 869.8469713855494 389.60774540000784 950.4652093922482 366.7770213193468" stroke="black" stroke-width="4.4919726146638075" fill="none" />
+<path id="s__Prevotella_sp_CAG_520_s__Prevotella_sp_885" class="curve" d="M 804.6608018188246 336.96455440088437 Q 779.7068784197884 387.7601572641189 723.825287964024 396.7122191148113" stroke="black" stroke-width="0.6094686138833972" fill="none" />
+<path id="s__Escherichia_coli_s__Enterobacter_cloacae_complex" class="curve" d="M 257.62171085448915 478.1704428952803 Q 241.52564940180773 462.0290818124953 219.05321785359553 465.8522417887794" stroke="red" stroke-width="0.8820313929864134" fill="none" />
+<path id="s__Parabacteroides_merdae_s__Odoribacter_splanchnicus" class="curve" d="M 908.9204596703696 207.06060425290713 Q 888.355183978977 297.6713852381668 950.4652093922482 366.7770213193468" stroke="black" stroke-width="0.13116120520668909" fill="none" />
+<circle id="s__Gemella_morbillorum" class="circle" cx="418.53101000514334" cy="616.4580404372775" r="4.548776107580805" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Veillonella_dispar" class="circle" cx="717.561400791538" cy="600.8421744212594" r="8.269065667135797" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Bacteroides_vulgatus" class="circle" cx="901.986366811698" cy="413.79944712659955" r="15.455105862241815" stroke="black" stroke-width="4"  fill="#7EC9CE" />
+<circle id="s__Actinomyces_sp_ICM47" class="circle" cx="732.8157633730254" cy="228.3708088379235" r="3.0218388333342445" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="s__Parasutterella_excrementihominis" class="circle" cx="208.56536333902164" cy="326.06135002479186" r="9.586163512399159" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Victivallis_vadensis" class="circle" cx="954.9297765928021" cy="507.139232416157" r="2.513973079812488" stroke="black" stroke-width="1"  fill="#AAAAAA" />
+<circle id="s__Pantoea_dispersa" class="circle" cx="255.02200414505938" cy="518.382553953522" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Ruminococcus_sp_CAG_563" class="circle" cx="641.2295644193239" cy="613.3163112942495" r="4.953122194705278" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Parabacteroides_sp_CAG_409" class="circle" cx="718.4125477638504" cy="353.06379215191157" r="3.129120733574961" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Roseburia_intestinalis" class="circle" cx="826.8651201482156" cy="905.819839356882" r="4.028901766954772" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Streptococcus_sp_HPH0090" class="circle" cx="576.1084882872902" cy="930.5306879873519" r="4.781865760216895" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Comamonas_kerstersii" class="circle" cx="256.8645893646916" cy="325.88069962021143" r="5.481522145678947" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Bacteroides_pectinophilus" class="circle" cx="682.0766289010801" cy="943.5853474805815" r="7.208577906740226" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Lactobacillus_delbrueckii" class="circle" cx="375.08338114424737" cy="932.1610477597039" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Bacteroides_plebeius" class="circle" cx="829.5678851048661" cy="456.28845377055956" r="11.186491990340095" stroke="black" stroke-width="4"  fill="#7EC9CE" />
+<circle id="s__Parvimonas_micra" class="circle" cx="649.3406168159981" cy="554.4030287350753" r="10.551929136701279" stroke="black" stroke-width="4"  fill="#85D696" />
+<circle id="s__Ruminococcus_bromii" class="circle" cx="806.9611958078706" cy="758.2255334919388" r="12.44348078897421" stroke="black" stroke-width="4"  fill="#85D696" />
+<circle id="s__Bifidobacterium_longum" class="circle" cx="587.1010145197257" cy="394.9939847123224" r="13.69234323247193" stroke="black" stroke-width="4"  fill="#999FDB" />
+<circle id="s__Rothia_dentocariosa" class="circle" cx="447.0218066276721" cy="243.37716365181222" r="5.976014075776124" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="s__Corynebacterium_argentoratense" class="circle" cx="710.4168499242343" cy="120.77638989313527" r="5.690515414456258" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="s__Streptococcus_pasteurianus" class="circle" cx="557.3206870527683" cy="993.1306928522595" r="4.11861706974018" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Eubacterium_eligens" class="circle" cx="688.3173474995236" cy="919.4268747941084" r="12.951373427802714" stroke="black" stroke-width="4"  fill="#85D696" />
+<circle id="s__Fusobacterium_naviforme" class="circle" cx="914.5803332507946" cy="533.3182225989289" r="3.121063639714838" stroke="black" stroke-width="1"  fill="#AAAAAA" />
+<circle id="s__Dorea_longicatena" class="circle" cx="626.6975849642456" cy="704.5353516185177" r="10.532124610022304" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Eubacterium_siraeum" class="circle" cx="744.5865632052012" cy="708.106214285362" r="10.860960717266462" stroke="black" stroke-width="4"  fill="#85D696" />
+<circle id="s__Bacteroides_eggerthii" class="circle" cx="851.8520726363236" cy="468.8406980055697" r="11.602049878470831" stroke="black" stroke-width="4"  fill="#7EC9CE" />
+<circle id="s__Prevotella_stercorea" class="circle" cx="647.5114491126171" cy="425.32996122408395" r="13.596275806093642" stroke="black" stroke-width="4"  fill="#7EC9CE" />
+<circle id="s__Peptostreptococcus_stomatis" class="circle" cx="695.8681062723159" cy="701.7798922086267" r="7.133871253096213" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Hungatella_hathewayi" class="circle" cx="663.2229786806535" cy="950.4652093922482" r="4.831280509939767" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Bacteroides_faecis" class="circle" cx="732.6746075138371" cy="483.0975668060102" r="2.385830490521891" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Enterobacter_mori" class="circle" cx="80.92220088249513" cy="443.0523501891613" r="9.14905765138064" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Firmicutes_bacterium_CAG_110" class="circle" cx="581.8208898967304" cy="558.9882788184425" r="8.79594665414637" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Eubacterium_sp_OM08_24" class="circle" cx="608.9994331788022" cy="713.907281319875" r="3.371753726574034" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Dialister_sp_CAG_357" class="circle" cx="804.0005459473755" cy="652.3997250438257" r="10.08667140754086" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Eisenbergiella_tayi" class="circle" cx="701.8313264468782" cy="822.7239923342021" r="5.833718682098012" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Desulfovibrio_legallii" class="circle" cx="93.80337720554604" cy="330.08541175303" r="3.168569759894004" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Clostridium_sp_CAG_413" class="circle" cx="562.9851973726325" cy="688.4860825343333" r="9.734413909458047" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Citrobacter_amalonaticus" class="circle" cx="163.59027691454997" cy="436.8257937615781" r="6.472447074869573" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Candidatus_Gastranaerophilales_bacterium_HUM_9" class="circle" cx="868.447019675316" cy="583.3754655021577" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#AAAAAA" />
+<circle id="s__Lactobacillus_pontis" class="circle" cx="472.6083842425119" cy="791.7723810524985" r="2.095640510345605" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Bacteroides_intestinalis" class="circle" cx="692.7678759454544" cy="486.7408018188498" r="11.202452279511705" stroke="black" stroke-width="4"  fill="#7EC9CE" />
+<circle id="s__Bacteroides_faecis_CAG_32" class="circle" cx="890.7209449803638" cy="458.1337402050884" r="5.562060651102668" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Eubacterium_hallii" class="circle" cx="578.2515663295479" cy="661.9667967836913" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Gemella_sanguinis" class="circle" cx="446.24290086830905" cy="587.6117161275977" r="5.725814808428436" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Ruminococcaceae_bacterium_D5" class="circle" cx="898.3250654439169" cy="836.03254383694" r="6.115024242985618" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Rothia_mucilaginosa" class="circle" cx="436.65242666269455" cy="204.73937125030585" r="7.6407445947117445" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="s__Porphyromonas_uenonis" class="circle" cx="625.9824036261598" cy="469.3611340482681" r="8.733828267766206" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Roseburia_inulinivorans" class="circle" cx="777.0009763920593" cy="843.2613111068796" r="13.826979732411141" stroke="black" stroke-width="4"  fill="#85D696" />
+<circle id="s__Pyramidobacter_piscolens" class="circle" cx="734.6737907078328" cy="503.02395407276344" r="4.722758074006328" stroke="black" stroke-width="1"  fill="#AAAAAA" />
+<circle id="s__Prevotella_bivia" class="circle" cx="970.8529143779665" cy="309.5781889547403" r="7.904928570243228" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Dialister_invisus" class="circle" cx="927.7298758848376" cy="718.1109291793194" r="4.462554507048063" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Ruminococcus_callidus" class="circle" cx="776.4272922045238" cy="732.3839250970746" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Bacteroides_ovatus" class="circle" cx="751.1105733111222" cy="471.96748705114675" r="13.633752462302676" stroke="black" stroke-width="4"  fill="#7EC9CE" />
+<circle id="s__Klebsiella_variicola" class="circle" cx="236.3384936776617" cy="487.65470983577995" r="10.19647639394516" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Citrobacter_farmeri" class="circle" cx="436.67834234448424" cy="498.6991429031419" r="3.0100003627275385" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Lactobacillus_crispatus" class="circle" cx="359.1885984591361" cy="969.0074967991957" r="7.840326387193174" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Blautia_coccoides" class="circle" cx="742.9595231082848" cy="960.0106243947928" r="4.654131218730853" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Blautia_wexlerae" class="circle" cx="648.7478371421612" cy="760.9908861315678" r="6.56038966920828" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Olsenella_scatoligenes" class="circle" cx="341.68265250047614" cy="110.57312520589176" r="6.651397439844756" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="s__Prevotella_buccae" class="circle" cx="915.3768245872561" cy="332.5215126832055" r="7.689081460053334" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Aeromonas_media" class="circle" cx="323.94314745665076" cy="455.862202473977" r="6.447960557535273" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Eubacterium_ventriosum" class="circle" cx="706.5450612496819" cy="911.119286971558" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Mitsuokella_jalaludinii" class="circle" cx="794.8028692671569" cy="670.2750924967244" r="3.774975969727135" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Coprobacter_secundus" class="circle" cx="801.3042137678335" cy="425.39030644633" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Bifidobacterium_catenulatum" class="circle" cx="745.4558768469702" cy="140.17992472828502" r="7.727656017189585" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="s__Intestinibacter_bartlettii" class="circle" cx="716.7995350096471" cy="736.9841158053662" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Parvimonas_sp_KA00067" class="circle" cx="668.5579289378068" cy="559.9439924832174" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Bacteroides_thetaiotaomicron" class="circle" cx="921.531499718126" cy="409.4910442809177" r="13.871338285543931" stroke="black" stroke-width="4"  fill="#7EC9CE" />
+<circle id="s__Lactobacillus_agilis" class="circle" cx="392.79375952137593" cy="832.278481445056" r="3.221995312947655" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Porphyromonas_endodontalis" class="circle" cx="758.1425026836067" cy="422.90372760663814" r="6.809961506395699" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Butyrivibrio_sp_CAG_318" class="circle" cx="699.3825101766396" cy="847.2696042989207" r="7.617080259946314" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Solobacterium_moorei" class="circle" cx="897.6876183974197" cy="770.2453461383986" r="5.507419377853472" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Anaerotruncus_sp_CAG_528" class="circle" cx="558.5817272503982" cy="556.2387323989462" r="2.9649374526233254" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Haemophilus_sp_HMSC71H05" class="circle" cx="164.1491984334973" cy="595.645613892775" r="7.108098440898029" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Pluralibacter_gergoviae" class="circle" cx="175.29475823704468" cy="500.8455406753878" r="3.196888015508674" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Veillonella_tobetsuensis" class="circle" cx="760.4563058595876" cy="600.739150414292" r="3.4246248378142736" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Bifidobacterium_pseudocatenulatum" class="circle" cx="623.2936369347295" cy="323.4993780703337" r="8.568807643255823" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="s__Anaerotruncus_colihominis" class="circle" cx="747.3970023751211" cy="734.9809839214697" r="3.185270378228093" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Prevotella_sp_CAG_1092" class="circle" cx="844.8068847616059" cy="326.2477317650332" r="8.378677693288004" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Butyricimonas_synergistica" class="circle" cx="838.3749785044338" cy="409.982747716116" r="3.071868285202971" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Bifidobacterium_bifidum" class="circle" cx="727.8243750576524" cy="176.3175744427832" r="8.895506683068584" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="s__Paraprevotella_clara" class="circle" cx="862.8648724721871" cy="362.06200439423503" r="6.458742484084531" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Gemmiger_formicilis" class="circle" cx="692.0289276450776" cy="677.0517163649738" r="8.986893048048135" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Lactobacillus_salivarius" class="circle" cx="470.7370219291808" cy="852.1064947050148" r="6.4920532270768545" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Treponema_berlinense" class="circle" cx="958.3281378610691" cy="699.0113099258766" r="4.095588463106452" stroke="black" stroke-width="1"  fill="#C0E481" />
+<circle id="s__Dialister_micraerophilus" class="circle" cx="820.1737689711938" cy="664.8965334219457" r="3.0725728204583955" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Streptococcus_infantis" class="circle" cx="533.0973572545823" cy="794.4145408893389" r="6.638753506067154" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Megasphaera_elsdenii" class="circle" cx="642.1718713139045" cy="573.5432758437698" r="9.802746064086266" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Alistipes_putredinis" class="circle" cx="907.912982812727" cy="239.28386348056137" r="12.35963302048731" stroke="black" stroke-width="4"  fill="#7EC9CE" />
+<circle id="s__Veillonella_sp_T11011_6" class="circle" cx="835.7605219055258" cy="627.750554707703" r="7.140125074454661" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Mitsuokella_multacida" class="circle" cx="602.5278819528577" cy="563.3618639099716" r="7.337698350043194" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Fusobacterium_nucleatum" class="circle" cx="934.7594360544774" cy="529.213227755409" r="5.954774131553192" stroke="black" stroke-width="1"  fill="#AAAAAA" />
+<circle id="s__Ruminococcus_sp_CAG_330" class="circle" cx="873.9852787472914" cy="802.6274841574245" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Eubacterium_sp_CAG_38" class="circle" cx="666.5267339348055" cy="841.557267417295" r="9.08071440583795" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Cetobacterium_somerae" class="circle" cx="694.5991273206255" cy="527.0063927001315" r="3.0140707181559443" stroke="black" stroke-width="1"  fill="#AAAAAA" />
+<circle id="s__Butyrivibrio_crossotus" class="circle" cx="524.6536537056854" cy="532.5159062035256" r="7.501422640939223" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Eubacterium_rectale" class="circle" cx="798.884216078134" cy="902.0526474030416" r="11.319535568595835" stroke="black" stroke-width="4"  fill="#85D696" />
+<circle id="s__Actinomyces_sp_oral_taxon_181" class="circle" cx="778.5852737950842" cy="162.6893367518228" r="5.110915281283814" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="s__Proteus_mirabilis" class="circle" cx="195.55406868956283" cy="533.822777935455" r="6.788721259421248" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Bacteroides_cellulosilyticus" class="circle" cx="992.139533292122" cy="462.6753808444253" r="5.0651085070591835" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Bacteroides_coprocola" class="circle" cx="932.4596123446747" cy="468.87547224053196" r="2.4136187361063137" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Bifidobacterium_adolescentis" class="circle" cx="791.988255681917" cy="98.73385170748162" r="11.591057641856697" stroke="black" stroke-width="4"  fill="#999FDB" />
+<circle id="s__Flavonifractor_plautii" class="circle" cx="821.363999424516" cy="802.2996690854606" r="12.99054861885339" stroke="black" stroke-width="4"  fill="#85D696" />
+<circle id="s__Clostridium_sp_CAG_510" class="circle" cx="594.9928035304164" cy="804.1386369604454" r="8.511523586186891" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Faecalibacterium_prausnitzii" class="circle" cx="835.0927375545932" cy="816.895080060617" r="14.326291601431747" stroke="black" stroke-width="4"  fill="#85D696" />
+<circle id="s__Clostridium_symbiosum" class="circle" cx="718.6442717297269" cy="811.8653071540512" r="9.845188620237272" stroke="black" stroke-width="4"  fill="#85D696" />
+<circle id="s__Lactobacillus_mucosae" class="circle" cx="417.3194455351743" cy="984.9558588627704" r="9.17607130119535" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Firmicutes_bacterium_CAG_170" class="circle" cx="632.2926781642274" cy="591.4357746677758" r="11.661404380367152" stroke="black" stroke-width="4"  fill="#85D696" />
+<circle id="s__Lactobacillus_acidipiscis" class="circle" cx="356.24146256095815" cy="925.3604839530926" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Veillonella_parvula" class="circle" cx="812.0576695045302" cy="633.9821036481426" r="12.953711289613478" stroke="black" stroke-width="4"  fill="#85D696" />
+<circle id="s__Bacteroides_xylanisolvens" class="circle" cx="882.6340925307637" cy="418.8481720970326" r="11.884696323873905" stroke="black" stroke-width="4"  fill="#7EC9CE" />
+<circle id="s__Butyricicoccus_pullicaecorum" class="circle" cx="595.9607728099427" cy="927.1229831810122" r="3.7007724633166754" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Morganella_morganii" class="circle" cx="235.30426833999678" cy="528.049815752549" r="9.147293832530556" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Adlercreutzia_equolifaciens" class="circle" cx="408.92206070393064" cy="277.6237779500663" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="s__Proteobacteria_bacterium_CAG_139" class="circle" cx="133.9774620900045" cy="806.9277746371969" r="7.180486302189775" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Firmicutes_bacterium_CAG_83" class="circle" cx="751.1467395062696" cy="665.4483878961755" r="8.479043766556481" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Streptococcus_mitis" class="circle" cx="551.5681548032376" cy="1013.6609770718844" r="6.718029093965796" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Citrobacter_freundii" class="circle" cx="397.49339349856837" cy="490.66489308596095" r="7.989361422319434" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Allisonella_histaminiformans" class="circle" cx="890.3076933117693" cy="703.5315234675595" r="8.220032394717851" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Lactobacillus_helveticus" class="circle" cx="493.81345134645903" cy="592.1435684691287" r="6.007720506118826" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Actinomyces_sp_HPA0247" class="circle" cx="636.8116442008138" cy="356.374896888625" r="3.279115325970703" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="s__Oscillibacter_sp_57_20" class="circle" cx="830.2763249662537" cy="876.9403803332439" r="12.152862325611467" stroke="black" stroke-width="4"  fill="#85D696" />
+<circle id="s__Firmicutes_bacterium_CAG_94" class="circle" cx="768.2766137413519" cy="675.7823277966643" r="4.808957632583164" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Asaccharobacter_celatus" class="circle" cx="317.7921055140322" cy="77.38253422376823" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="s__Bacteroides_uniformis" class="circle" cx="844.0283332664433" cy="429.3241229522197" r="13.737838669559872" stroke="black" stroke-width="4"  fill="#7EC9CE" />
+<circle id="s__Bilophila_wadsworthia" class="circle" cx="79.76633013450441" cy="312.58544366717894" r="9.694433781166326" stroke="black" stroke-width="4"  fill="#FFC68A" />
+<circle id="s__Lactobacillus_panis" class="circle" cx="435.7914377954574" cy="927.4633361566687" r="5.539863230621451" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Bifidobacterium_breve" class="circle" cx="641.0094217621795" cy="310.74127772072706" r="7.506939379242195" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="s__Alistipes_onderdonkii" class="circle" cx="793.6051481688401" cy="320.1175446228709" r="7.823447726492253" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Clostridium_bolteae" class="circle" cx="666.1493377864155" cy="750.6987010713638" r="10.104017445824901" stroke="black" stroke-width="4"  fill="#85D696" />
+<circle id="s__Klebsiella_quasipneumoniae" class="circle" cx="97.34813326229829" cy="470.6500483595187" r="9.87580640696318" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Turicimonas_muris" class="circle" cx="121.54296979225109" cy="276.69019034018237" r="6.790585687771587" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Weissella_confusa" class="circle" cx="505.34616596743797" cy="974.8986882874007" r="6.927121980767139" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Ruminococcus_bicirculans" class="circle" cx="760.751140243978" cy="719.9545731833878" r="8.251557348998587" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Paraprevotella_xylaniphila" class="circle" cx="935.8896490007867" cy="329.3877607376212" r="9.584062998073357" stroke="black" stroke-width="4"  fill="#7EC9CE" />
+<circle id="s__Parabacteroides_distasonis" class="circle" cx="896.0225379099951" cy="223.0722253628025" r="13.309963129428253" stroke="black" stroke-width="4"  fill="#7EC9CE" />
+<circle id="s__Citrobacter_braakii" class="circle" cx="378.14152936102084" cy="485.508322964611" r="5.3195750439254095" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Eubacterium_ramulus" class="circle" cx="677.7915287335716" cy="880.3750376976877" r="3.170266053401267" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Bacteroides_sp_CAG_530" class="circle" cx="671.2157724094908" cy="480.4076243876461" r="9.909916332338982" stroke="black" stroke-width="4"  fill="#7EC9CE" />
+<circle id="s__Firmicutes_bacterium_CAG_791" class="circle" cx="734.067190538635" cy="655.0341602235303" r="7.056441844009938" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Blautia_obeum" class="circle" cx="552.364077244785" cy="585.7384317867293" r="7.954462552702571" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Citrobacter_youngae" class="circle" cx="200.9090155207598" cy="453.7884531410807" r="8.704529573217192" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Bifidobacterium_dentium" class="circle" cx="661.160437918302" cy="276.17553226788056" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="s__Prevotella_sp_oral_taxon_473" class="circle" cx="698.4866727606347" cy="435.42210784877665" r="5.416239206049715" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Klebsiella_oxytoca" class="circle" cx="57.69275214421367" cy="465.30008995414187" r="5.708233324032407" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Streptococcus_peroris" class="circle" cx="526.1401904415251" cy="634.4817816946439" r="3.410473992167602" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Catenibacterium_mitsuokai" class="circle" cx="819.390633659909" cy="742.4782234415397" r="7.802118830364289" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Klebsiella_pneumoniae" class="circle" cx="157.0853756471048" cy="476.3073434056806" r="10.88726034239542" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Haemophilus_parainfluenzae" class="circle" cx="25.29391304836099" cy="615.9353674512246" r="8.388421892808601" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Citrobacter_werkmanii" class="circle" cx="142.05441323669714" cy="442.11934883814666" r="6.022531057128413" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Atopobium_parvulum" class="circle" cx="430.1511660848953" cy="312.02050501775557" r="4.227788016305939" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="s__Clostridium_sp_CAG_632" class="circle" cx="592.7401179551966" cy="783.9915873411511" r="7.739433379564084" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Prevotella_sp_CAG_279" class="circle" cx="942.9674761049579" cy="256.4582443852594" r="13.260562555316014" stroke="black" stroke-width="4"  fill="#7EC9CE" />
+<circle id="s__Megamonas_hypermegale" class="circle" cx="671.6038438602794" cy="603.7425269427529" r="5.8708833366093724" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Enterococcus_gallinarum" class="circle" cx="395.51782785792955" cy="768.2271915498268" r="5.456627272677306" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Treponema_succinifaciens" class="circle" cx="972.1709932462868" cy="661.2692138975377" r="4.543977781592293" stroke="black" stroke-width="1"  fill="#C0E481" />
+<circle id="s__Bacteroides_nordii" class="circle" cx="810.6934642548997" cy="464.3504669623072" r="6.636235189340407" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Eubacterium_sp_CAG_180" class="circle" cx="565.3079705346241" cy="623.9454363463077" r="13.02003742217892" stroke="black" stroke-width="4"  fill="#85D696" />
+<circle id="s__Parabacteroides_goldsteinii" class="circle" cx="863.8630962161373" cy="246.868427635815" r="8.710615662831131" stroke="black" stroke-width="4"  fill="#7EC9CE" />
+<circle id="s__Coprococcus_eutactus" class="circle" cx="727.2227705396804" cy="877.4382646251113" r="8.127041758728417" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Prevotella_sp_AM42_24" class="circle" cx="758.5360888022295" cy="376.8328061697982" r="9.468730036443205" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Streptococcus_salivarius_CAG_79" class="circle" cx="571.4901039882873" cy="1011.7986193130901" r="2.3213334166993715" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Alistipes_indistinctus" class="circle" cx="843.3991506074361" cy="286.62750191777803" r="5.722709218696988" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Ruminococcus_obeum_CAG_39" class="circle" cx="886.2215506130033" cy="819.2935430804891" r="3.170071807369157" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Clostridium_innocuum" class="circle" cx="773.1354106353084" cy="704.1193003797887" r="5.778007295383723" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Scardovia_wiggsiae" class="circle" cx="587.9217974025379" cy="372.58366855032665" r="4.70275878384136" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="s__Oscillibacter_sp_CAG_241" class="circle" cx="764.9402026674882" cy="801.2339866097927" r="11.148999620071718" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Streptococcus_parasanguinis" class="circle" cx="546.9629252292294" cy="893.6533657724314" r="10.587017771351269" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Ruthenibacterium_lactatiformans" class="circle" cx="910.862520959035" cy="820.4388064735024" r="12.721075075936549" stroke="black" stroke-width="4"  fill="#85D696" />
+<circle id="s__Streptococcus_oralis" class="circle" cx="531.9734207138792" cy="734.3442567957266" r="8.608435231004231" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Bacteroides_massiliensis" class="circle" cx="929.7680931198192" cy="448.9134739167739" r="7.204507388990957" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Campylobacter_ureolyticus" class="circle" cx="383.8940023232401" cy="465.89585177216264" r="3.3186416010163073" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Anaerostipes_hadrus" class="circle" cx="541.8489503326468" cy="568.657561126416" r="8.146235337464233" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Ruminococcus_torques" class="circle" cx="736.5888786275829" cy="918.1108642403108" r="6.234990358598777" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Ruminococcus_gnavus" class="circle" cx="668.044821005263" cy="796.0289713952407" r="10.366425471355" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Porphyromonas_asaccharolytica" class="circle" cx="665.6483900924851" cy="461.10136771176434" r="8.121730598100523" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Mogibacterium_diversum" class="circle" cx="585.1823070289975" cy="702.2817230273353" r="2.8855862193605657" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Megamonas_funiformis" class="circle" cx="931.7696305929245" cy="753.1240748337665" r="5.731584517541057" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Barnesiella_intestinihominis" class="circle" cx="572.5046535025549" cy="497.8764832598238" r="6.002715867736847" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Klebsiella_aerogenes" class="circle" cx="78.09737870539192" cy="462.88378845406856" r="7.755148345651926" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Veillonella_atypica" class="circle" cx="680.5551622974036" cy="585.6504652262131" r="8.62522982134325" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Bacteroides_caccae" class="circle" cx="713.8945238211784" cy="494.00075253856255" r="11.78824049931119" stroke="black" stroke-width="4"  fill="#7EC9CE" />
+<circle id="s__Roseburia_hominis" class="circle" cx="701.5219884099569" cy="749.967120762876" r="11.120575638220995" stroke="black" stroke-width="4"  fill="#85D696" />
+<circle id="s__Dorea_formicigenerans" class="circle" cx="596.1726327042004" cy="652.8803963581081" r="10.070123665040716" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Clostridium_asparagiforme" class="circle" cx="730.8328091991518" cy="851.7732151956307" r="4.87057341404865" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Turicibacter_sanguinis" class="circle" cx="698.6639706433295" cy="636.1096440731546" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Megasphaera_micronuciformis" class="circle" cx="770.3430671614926" cy="629.8908962997568" r="2.5646351208039913" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Alistipes_inops" class="circle" cx="875.7054612268915" cy="263.02466342696266" r="3.453813085302936" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Roseburia_faecis" class="circle" cx="763.5422104036178" cy="828.411502098573" r="9.1891480438741" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Streptococcus_lutetiensis" class="circle" cx="545.4657134868662" cy="973.9900220067275" r="3.8953686633261184" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Lactobacillus_fermentum" class="circle" cx="463.330067082901" cy="687.4245285112953" r="8.119776856735417" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Coprococcus_comes" class="circle" cx="684.3736454336254" cy="809.8093760933064" r="10.48463243047824" stroke="black" stroke-width="4"  fill="#85D696" />
+<circle id="s__Bifidobacterium_ruminantium" class="circle" cx="670.2750924967248" cy="235.19713073284333" r="4.514088940217559" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="s__Bacteroides_faecichinchillae" class="circle" cx="871.34963821565" cy="463.8635614891358" r="2.987179060391369" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Lactobacillus_vaginalis" class="circle" cx="472.84259336687205" cy="952.975744837507" r="6.840811171928788" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Firmicutes_bacterium_CAG_555" class="circle" cx="716.5749827462676" cy="645.2594577404725" r="5.333066406362068" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Fusobacterium_mortiferum" class="circle" cx="994.1838001146751" cy="542.9800948472132" r="4.9148301870689695" stroke="black" stroke-width="1"  fill="#AAAAAA" />
+<circle id="s__Phascolarctobacterium_sp_CAG_266" class="circle" cx="652.5565078075572" cy="596.7202983339481" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Fusobacterium_varium" class="circle" cx="874.8938700346266" cy="523.7408415784358" r="2.9877620181296534" stroke="black" stroke-width="1"  fill="#AAAAAA" />
+<circle id="s__Citrobacter_pasteurii" class="circle" cx="318.9405266390728" cy="475.4945205644095" r="6.996343870372072" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Bifidobacterium_pseudolongum" class="circle" cx="710.5387010850644" cy="166.05212942623388" r="5.577146825445336" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="s__Klebsiella_michiganensis" class="circle" cx="276.5289800511449" cy="487.95240039203543" r="6.246202527962082" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Prevotella_copri" class="circle" cx="805.0841887373456" cy="379.9031331059228" r="14.44679103739749" stroke="black" stroke-width="4"  fill="#7EC9CE" />
+<circle id="s__Leclercia_adecarboxylata" class="circle" cx="455.106713793084" cy="511.4230924898108" r="5.4258219930678795" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Alistipes_shahii" class="circle" cx="678.711777868024" cy="400.1154762934068" r="11.47199387886964" stroke="black" stroke-width="4"  fill="#7EC9CE" />
+<circle id="s__Streptococcus_vestibularis" class="circle" cx="551.8491369490388" cy="731.8920033244909" r="3.825060209598957" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Slackia_isoflavoniconvertens" class="circle" cx="295.9902461009911" cy="65.51726651950736" r="7.794285855115954" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="s__Prevotella_corporis" class="circle" cx="786.8058578034077" cy="388.029233034711" r="3.5851047844551394" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Bacteroides_caecimuris" class="circle" cx="952.3922604354314" cy="467.16684715405177" r="5.123688753166396" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Roseburia_sp_CAG_309" class="circle" cx="680.8501992557963" cy="715.2341414614718" r="4.802415900311233" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Firmicutes_bacterium_CAG_238" class="circle" cx="934.0165552866299" cy="787.8096889696674" r="7.304673697177641" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Veillonella_infantium" class="circle" cx="883.7863418912827" cy="669.9084698602564" r="7.5286834117301815" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Desulfovibrio_piger" class="circle" cx="368.28589710460955" cy="451.16449254841956" r="7.987665753243869" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Gemella_haemolysans" class="circle" cx="253.04860957950848" cy="790.2843421932516" r="5.9385787063635265" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Veillonella_sp_CAG_933" class="circle" cx="777.9677161408179" cy="611.1664196467888" r="8.307289177992107" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Campylobacter_jejuni" class="circle" cx="403.296272092314" cy="471.156218553532" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Firmicutes_bacterium_CAG_95" class="circle" cx="548.8184985660207" cy="536.3613940261412" r="6.875577031097136" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Clostridium_leptum" class="circle" cx="667.2518503953922" cy="644.6895294585462" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Peptostreptococcus_anaerobius" class="circle" cx="765.1084021637689" cy="773.9320126347579" r="7.948517099190772" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Agathobaculum_butyriciproducens" class="circle" cx="871.4296335756421" cy="865.653555962482" r="8.93245216865468" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Enterococcus_faecium" class="circle" cx="351.84241394069375" cy="858.1903292799785" r="5.801025468263076" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Lachnospira_pectinoschiza" class="circle" cx="718.052867806391" cy="787.7077792722465" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Methanobrevibacter_smithii" class="circle" cx="940.7367968132011" cy="626.1223642622634" r="9.445392063593244" stroke="black" stroke-width="1"  fill="#CC99DB" />
+<circle id="s__Enterococcus_faecalis" class="circle" cx="377.6002749561742" cy="804.0005459473755" r="7.0461894476789935" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Lawsonibacter_asaccharolyticus" class="circle" cx="693.7093921939618" cy="960.491810409198" r="2.659487000405512" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Firmicutes_bacterium_CAG_534" class="circle" cx="884.4770409866754" cy="753.9282657697297" r="6.900857667614253" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Desulfovibrionaceae_bacterium" class="circle" cx="242.5530628949462" cy="389.4107231405688" r="2.501726471577481" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Enterococcus_avium" class="circle" cx="415.53466465595955" cy="711.2311062622274" r="7.204433671258086" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Streptococcus_salivarius" class="circle" cx="565.4575804450117" cy="972.2242694516939" r="10.034118340072991" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Clostridium_clostridioforme" class="circle" cx="701.5408724289108" cy="799.2578106463582" r="6.613043844750615" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Acidaminococcus_sp_CAG_542" class="circle" cx="908.4570302077489" cy="753.3098096598178" r="3.940867124091227" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Escherichia_fergusonii" class="circle" cx="39.83807891073292" cy="447.0209683302483" r="2.8216061700905772" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Eggerthella_lenta" class="circle" cx="379.9031331059225" cy="224.91581126265442" r="5.149937652098239" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="s__Dialister_succinatiphilus" class="circle" cx="913.5697732128302" cy="701.3924244197524" r="8.696045378969828" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Prevotella_sp_CAG_5226" class="circle" cx="854.4587886868239" cy="303.41613770593426" r="8.460145961612328" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Bacteroides_stercoris" class="circle" cx="863.4734211646883" cy="424.63255706960723" r="12.268469452038122" stroke="black" stroke-width="4"  fill="#7EC9CE" />
+<circle id="s__Parabacteroides_gordonii" class="circle" cx="831.5099477725198" cy="270.41575487976183" r="6.1669849572238045" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Eubacterium_sp_CAG_251" class="circle" cx="724.972294823714" cy="968.7748730444022" r="5.93974265084042" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Prevotella_melaninogenica" class="circle" cx="834.9561292684523" cy="349.99068104028345" r="2.890781443152309" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Streptococcus_anginosus_group" class="circle" cx="531.587645018802" cy="1014.7247742835352" r="2.632543506844425" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Akkermansia_muciniphila" class="circle" cx="813.4161605684262" cy="484.2137187760646" r="12.751712912754131" stroke="black" stroke-width="4"  fill="#AAAAAA" />
+<circle id="s__Bifidobacterium_angulatum" class="circle" cx="548.0443358742692" cy="464.91934638377325" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="s__Lactobacillus_amylovorus" class="circle" cx="446.2612346307602" cy="702.8163521515435" r="3.1805628818371225" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Intestinimonas_butyriciproducens" class="circle" cx="611.7938125099386" cy="756.3109153349488" r="8.224529418732349" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Prevotella_intermedia" class="circle" cx="927.3927631523152" cy="311.20547382326856" r="6.093810504011577" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Erysipelatoclostridium_ramosum" class="circle" cx="612.0517067388886" cy="585.575960631569" r="5.106168470657951" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Blautia_producta" class="circle" cx="684.4408962408505" cy="832.6315202889936" r="5.313136567798849" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Bacteroides_fragilis" class="circle" cx="969.5881645128303" cy="444.6466014690411" r="14.123990238927279" stroke="black" stroke-width="4"  fill="#7EC9CE" />
+<circle id="s__Clostridium_bolteae_CAG_59" class="circle" cx="616.9126415962957" cy="984.0563009734173" r="3.1661337731389354" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Lactobacillus_paragasseri" class="circle" cx="482.960378778041" cy="692.1255562361157" r="3.646699281495253" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Clostridium_sp_CAG_964" class="circle" cx="644.0871775958649" cy="956.5161385276122" r="4.77752897735118" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Lactobacillus_rogosae" class="circle" cx="455.65802542328083" cy="930.7866400611449" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Bacteroides_finegoldii" class="circle" cx="989.5298732216024" cy="442.7407485487853" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Aeromonas_caviae" class="circle" cx="248.7318739047687" cy="428.39004083978557" r="7.6631984034548" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Phascolarctobacterium_succinatutens" class="circle" cx="894.9688664302153" cy="736.8640587020287" r="6.132439768698165" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Phascolarctobacterium_faecium" class="circle" cx="944.5960550029445" cy="770.8265614159468" r="9.196948843079214" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Prevotella_sp_CAG_520" class="circle" cx="804.6608018188246" cy="336.96455440088437" r="12.80076602689713" stroke="black" stroke-width="4"  fill="#7EC9CE" />
+<circle id="s__Neisseria_subflava" class="circle" cx="281.1570896968358" cy="401.34484921066587" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Enterobacter_bugandensis" class="circle" cx="239.03807447947014" cy="467.6184037520734" r="6.2198673177744075" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Ruminococcus_sp_CAG_488" class="circle" cx="861.2193304754219" cy="786.536692189381" r="8.183727457981334" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Haemophilus_pittmaniae" class="circle" cx="319.2503982883435" cy="556.0133323411771" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Coprococcus_catus" class="circle" cx="713.639262416575" cy="862.1922283499432" r="7.811954708012411" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Eubacterium_sp_CAG_786" class="circle" cx="650.0968668940774" cy="805.0841887373456" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Dialister_pneumosintes" class="circle" cx="875.5372782899659" cy="688.2422320430663" r="7.069484561066805" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Escherichia_coli" class="circle" cx="257.62171085448915" cy="478.1704428952803" r="16" stroke="black" stroke-width="4"  fill="red" />
+<circle id="s__Holdemanella_biformis" class="circle" cx="679.5911674626886" cy="628.6210701994537" r="7.8482993586395695" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Butyricimonas_virosa" class="circle" cx="970.8339896649062" cy="364.6159121909031" r="10.550527816115402" stroke="black" stroke-width="4"  fill="#7EC9CE" />
+<circle id="s__Acidaminococcus_fermentans" class="circle" cx="921.4324515149336" cy="770.3677002981409" r="3.203023666254595" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Parabacteroides_merdae" class="circle" cx="908.9204596703696" cy="207.06060425290713" r="13.105995602984848" stroke="black" stroke-width="4"  fill="#7EC9CE" />
+<circle id="s__Ruminococcus_lactaris" class="circle" cx="792.299146654016" cy="744.5760947157926" r="3.3161934176043784" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Veillonella_rogosae" class="circle" cx="795.2269685973347" cy="622.1113722755356" r="3.370532531096642" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Clostridium_sp_CAG_253" class="circle" cx="610.2026336585493" cy="862.183609268174" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Prevotella_nigrescens" class="circle" cx="884.8363129019697" cy="315.9494997266362" r="7.251148460139386" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Eisenbergiella_massiliensis" class="circle" cx="741.772512717254" cy="892.0599786186581" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Prevotella_sp_F0091" class="circle" cx="834.3858028133525" cy="309.10510214852246" r="4.542816447910587" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Bifidobacterium_kashiwanohense" class="circle" cx="525.3423928897158" cy="497.88173754977583" r="2.664323554147287" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="s__Bacteroides_sp_CAG_462" class="circle" cx="769.4529294601156" cy="461.5799036956553" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Providencia_rettgeri" class="circle" cx="36.08787151185544" cy="547.2981916979094" r="2.9739338612425454" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Clostridium_citroniae" class="circle" cx="646.1666152920045" cy="715.9858677440761" r="5.410308940386058" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Acidaminococcus_intestini" class="circle" cx="856.3300442017774" cy="723.55167447233" r="8.827869800197035" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Bacteroides_dorei" class="circle" cx="772.8274271063526" cy="481.4587145189931" r="10.196549873421205" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Veillonella_rodentium" class="circle" cx="868.2036949250071" cy="655.168291319123" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Citrobacter_portucalensis" class="circle" cx="24.664580020814697" cy="417.16761316498514" r="6.238625960177429" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Kosakonia_pseudosacchari" class="circle" cx="335.4008726793746" cy="502.9936072998683" r="4.760770639795759" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Clostridium_sp_CAG_167" class="circle" cx="551.3492936500844" cy="650.1988492966561" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Actinomyces_sp_S6_Spd3" class="circle" cx="738.4405756301653" cy="207.63326601263378" r="2.2071049112944228" stroke="black" stroke-width="1"  fill="#999FDB" />
+<circle id="s__Kluyvera_georgiana" class="circle" cx="295.74152478988924" cy="496.9522564142431" r="6.213695457847885" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Prevotella_sp_CAG_873" class="circle" cx="886.8002090871682" cy="279.7031565814407" r="4.008015830795453" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Prevotella_timonensis" class="circle" cx="713.1948418898335" cy="379.6530212813602" r="3.804884310132796" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Alistipes_finegoldii" class="circle" cx="662.9021153686922" cy="412.408751496699" r="7.681267809493447" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Eubacterium_coprostanoligenes" class="circle" cx="648.3167883505813" cy="827.7724955041385" r="5.473607736653259" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Megasphaera_sp_DISK_18" class="circle" cx="753.0740699951731" cy="619.5023310550221" r="5.062110335351405" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Lactobacillus_ruminis" class="circle" cx="452.95199174211143" cy="950.6030815676456" r="8.531894564222219" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Odoribacter_splanchnicus" class="circle" cx="950.4652093922482" cy="366.7770213193468" r="13.592426792236886" stroke="black" stroke-width="4"  fill="#7EC9CE" />
+<circle id="s__Bacteroides_clarus" class="circle" cx="972.2242694516939" cy="464.54241955498804" r="5.772625064832742" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Collinsella_aerofaciens" class="circle" cx="372.6095017027774" cy="184.3567693197566" r="13.511956336360898" stroke="black" stroke-width="4"  fill="#999FDB" />
+<circle id="s__Clostridium_hylemonae" class="circle" cx="758.6992361620395" cy="881.3477614153504" r="6.429586729216385" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Prevotella_sp_885" class="circle" cx="723.825287964024" cy="396.7122191148113" r="9.358052176272846" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Anaerobiospirillum_thomasii" class="circle" cx="266.4037215519968" cy="438.8429888860988" r="7.187790783494802" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Fusicatenibacter_saccharivorans" class="circle" cx="777.8105895560445" cy="940.3593704354053" r="8.693885061660021" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Enterococcus_casseliflavus" class="circle" cx="319.5831500757657" cy="909.2236101068647" r="6.4129545758108195" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Streptococcus_infantarius" class="circle" cx="533.8227779354551" cy="834.4459313104371" r="2.5184461762028474" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Enterobacter_cloacae_complex" class="circle" cx="219.05321785359553" cy="465.8522417887794" r="9.66858649266408" stroke="black" stroke-width="1"  fill="#FFC68A" />
+<circle id="s__Firmicutes_bacterium_CAG_145" class="circle" cx="816.0640773562357" cy="712.3839439408346" r="7.2212290330326345" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle id="s__Bacteroides_salyersiae" class="circle" cx="867.957014642727" cy="444.1385449310149" r="6.2463799709605885" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Prevotella_sp_oral_taxon_376" class="circle" cx="864.0710742846112" cy="281.4419020933176" r="3.6876123088750767" stroke="black" stroke-width="1"  fill="#7EC9CE" />
+<circle id="s__Roseburia_sp_CAG_182" class="circle" cx="791.0033350931337" cy="857.6691684664194" r="2.9486958199816304" stroke="black" stroke-width="1"  fill="#85D696" />
+<circle cx="150" cy="1060" r="12" stroke="black" stroke-width="1" fill="red" /> 
+ <text x="170" y="1065" class="legend">keystone</text>
+ <circle cx="350" cy="1060" r="12" stroke="black" stroke-width="1" fill="#85D696" />
+ <text x="370" y="1065" class="legend">p__Firmicutes</text>
+ <circle cx="550" cy="1060" r="12" stroke="black" stroke-width="1" fill="#7EC9CE" />
+ <text x="570" y="1065" class="legend">p__Bacteroidetes</text>
+ <circle cx="750" cy="1060" r="12" stroke="black" stroke-width="1" fill="#FFC68A" />
+ <text x="770" y="1065" class="legend">p__Proteobacteria</text>
+ <circle cx="150" cy="1090" r="12" stroke="black" stroke-width="1" fill="#999FDB" />
+ <text x="170" y="1095" class="legend">p__Actinobacteria</text>
+ <circle cx="350" cy="1090" r="12" stroke="black" stroke-width="1" fill="#C0E481" />
+ <text x="370" y="1095" class="legend">p__Spirochaetes</text>
+ <circle cx="550" cy="1090" r="12" stroke="black" stroke-width="1" fill="#CC99DB" />
+ <text x="570" y="1095" class="legend">p__Euryarchaeota</text>
+ <circle cx="750" cy="1090" r="12" stroke="black" stroke-width="1" fill="#AAAAAA" />
+ <text x="770" y="1095" class="legend">Other</text>
+</svg>
