@@ -331,7 +331,7 @@ Output: <img src='readme_fig/pheno_se.svg' alt='se_distribution' width="600" hei
 5. plot_keystone.ipynb  
 Input: result/pheno_result/ created by script_procedure/, result/taxa_abd_check/ created by script_abundance_check, result/GCN_fix_tree/leaves_cluster.tsv created by script_priori_tree/
 Plot keystone result of phenotype datasets.  
-Output: <img src='./readme_fig/CRC1.PR.svg' alt='keystone_plot' width="600" height="150">  
+Output: <img src='./readme_fig/CRC1.PR.svg' alt='keystone_plot' width="600" height="350">  
 
 6. NSCLC_distribution_se  
 Input: result/immu/SE/ created by script_NSCLC/  
