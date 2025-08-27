@@ -3,11 +3,8 @@
 ## Table of Contents  
 
 - [1. Environment installation](#1-environment-installation)  
-  - [1.1 Install with Conda environment](#11-install-with-conda-environment)
-  - [1.2 R package required](#12-r-package-required)
-- [2. Package requirement](#2-package-requirement)  
-- [3. Input files](#3-input-files)  
-- [4. Script execution order](#4-script-execution-order)
+- [2. Input files](#3-input-files)  
+- [3. Script execution order](#4-script-execution-order)
   - [4.1 Prior GCN structure](#script-prior)
   - [4.2 Completeness](#script-completeness)
   - [4.3 Taxonomy abundance difference](#script-taxa)
@@ -22,19 +19,14 @@
 
 ## Environment installation  
 
-<a id="1-environment-installation"> </a>  
-
 ### Install with Conda environment  
 
-<a id="11-install-with-conda-environment"> </a>
-test in conda 25.1.1
+Create conda enviroment, test under conda 25.1.1
 ```
-git clone https://github.com/deepomicslab/FR_Hierarchy_Gut
-cd FR_Hierarchy_Gut/
-conda create -n meta_fr python=3.8 r-base=4.2
+conda create -n meta_fr python=3.8 r-base=4.2 -c conda-forge
 conda activate meta_fr
 ```
-
+### Install required python package
 ```
 pip install networkx==2.8.7
 pip install ipykernel==5.3.4
@@ -57,112 +49,141 @@ pip install numpy==1.22.4
 pip install pandas==1.5.2
 python -m ipykernel install --user --name meta_fr --display-name "Python (meta_fr)"
 ```
-
 On your jupyter notebook, choose kernel ```Python (meta_fr)```
 
-### R package required
 
-<a id="12-r-package-required"> </a> 
+💡Note: PySEAT have conflict with numpy version. Please use numpy = 1.22.4 and ignore the warning shows on when you install as
+```
+pyseat 0.0.1.4 requires numpy>=1.23.3, but you have numpy 1.22.4 which is incompatible.
+```  
+### Install required R package 
 
 ```
 conda install r-effsize r-ggplot2 r-ggpubr r-svglite r-reshape2 r-dplyr r-tidyr
 ```
 
-## Package requirement  
 
-<a id="2-package-requirement"> </a>  
-PySEAT may have conflict with numpy version. We recommand: numpy = 1.22.4  
 
-## Input file description (can be found at data/)  
 
-<a id="3-input-files"> </a>  
+## Input files 
+```
+git clone https://github.com/deepomicslab/FR_Hierarchy_Gut
+cd FR_Hierarchy_Gut/
+```
+Then please <font color="red">unzip data.zip</font>. You will see **/data** directory.
 
-To reproduce the result, first please <font color="red">download and unzip data.zip</font>. You will see **/data** directory.
+```
+data/
+├── gcn2008.tsv                                  # GCN of 2008 species
+├── sp_d.tsv                                     # Precomputed distance matrix for 2008 species in GCN
+├── module_def0507.tsv                           # Definition of module in KEGG
+├── cMD.select_2008.select_genome.list           # Genomes to create GCN2008
+├── cMD.select_2008.tax.fullname.txt             # Full taxonomy of species
+├── cMD.select_2008.species_phylum.tsv           # Species phylum matching
+│
+├── [ACVD, CRC, asthma, carcinoma_surgery_history, STH, migraine, BD, IBD, 
+│   T2D, hypertension, CFS, IGT, adenoma, schizofrenia]/  # Disease categories
+│   ├── [cohort_name1, cohort_name2, ...]/                # Multiple cohorts per disease
+│   │   ├── metadata.tsv                                  # Metadata (disease in header)
+│   │   └── abd.tsv                                       # Abundance profile (species × samples)
+│
+├── NAFLD/                                       # NAFLD dataset
+│   ├── NASH_forward_63_map.txt                  # Metadata of phenotypes for NASH dataset
+│   ├── abd.tsv                                  # 16S species level profile
+│   ├── NASH_GCN.tsv                             # GCN of NASH for 16S species name
+│   └── taxonomy.tsv                             # Class family species matching
+│
+├── Anti/                                        # Antibiotic treatment dataset
+│   ├── metadata.tsv                             # Metadata
+│   └── abd.tsv                                  # Abundance profile
+│
+├── FMT/                                         # Fecal microbiota transplantation dataset
+│   ├── FMT1/
+│   │   ├── LiSS_2016.tsv                        # Species profile (index: species, header: sample name)
+│   │   └── Li.txt                               # Fraction of donor specific strains
+│   └── FMT2/
+│       ├── Eric_abd.tsv                         # Species level profile
+│       └── Eric.txt                             # Fraction of donor specific strains
+│
+└── immu/                                        # Immunotherapy dataset
+    ├── merged_species.tsv                       # Species level abundance profile
+    ├── sig.txt                                  # Classification of species in original work
+    ├── metadata.txt                             # Metadata including cohort
+    ├── DS1_oncology_clinical_data.csv           # Metadata including death, os, akk in original work
+    └── DS5_longitudinal_clinical_data.csv       # Metadata including akk level in original work
+```
+💡NASH_forward_63_map.txt from xxxx
 
-**&ensp;gcn2008.tsv**(GCN of 2008 species)  
-**&ensp;sp_d.tsv**(precomputed distance matrix for 2008 species in GCN)  
-**&ensp;module_def0507.tsv**(Defination of module in KEGG)
-data in directory **ACVD/, CRC/, asthma/, carcinoma_surgery_history/, STH/, migraine/, BD/, IBD/, T2D/, hypertension/, CFS/, IGT/, adenoma/, schizofrenia/**  
-**&ensp;metadata.tsv**(metadata, disease should be in the header for phenotype comparison)  
-**&ensp;abd.tsv** (index: species, header: sample name)  
-read by abd_profile.input_profile() and species level profile will be extracted.  
-data in directory **NAFLD/**  
-**&ensp;NASH_forward_63_map.txt**(metadata of phenotypes for NASH dataset)  
-**&ensp;abd.tsv** (16s species level profile, index: species, header: sample name)  
-**&ensp;NASH_GCN.tsv**(GCN of NASH for 16s species name)
-**&ensp;taxonomy.tsv**(class family species matching)
-&ensp;data in directory **Anti/**  
-**&ensp;metadata.tsv**(metadata, disease should be in the header for phenotype comparison)  
-**&ensp;abd.tsv** (index: species, header: sample name)  
-data in directory **FMT/**  
-**&ensp;FMT1/LiSS_2016.tsv**(index: species, header: sample name)  
-**&ensp;FMT1/Li.txt**(Fraction of donor specific strains)  
-**&ensp;FMT2/Eric_abd.tsv**(Species level profile)  
-**&ensp;FMT2/Eric.txt**(Fraction of donor specific strains)  
-data in directory **immu/**  
-**&ensp;merged_species.tsv**(species level abundance profile, index: species, header: sample name)  
-**&ensp;sig.txt**(classificaiton of species in original work)
-**&ensp;metadata.txt**(metadata including cohort)  
-**&ensp;DS1_oncology_clinical_data.csv**(metadata including death, os, akk in original work)  
-**&ensp;DS5_longitudinal_clinical_data.csv**(metadata including akk level in original work)  
-
-Genomes to create GCN2008, the full taxonomy of species and species phylum matching  
-**cMD.select_2008.select_genome.list**  
-**cMD.select_2008.tax.fullname.txt**  
-**cMD.select_2008.species_phylum.tsv**
-
-## Script execution order
-
-<a id="4-script-execution-order"> </a>  
+## Scripts
 
 <font color="red">We highly recommend running the scripts in the directory sequentially in the following order.</font>  
 
-If you want to start the analysis from GCN, please run /script_priori_tree/step0_compute_distance first to compute distance matrix of GCN. This may take some time. To save time, you can directly use sp_d.tsv in /data directory which is preproduced by step0_compute_distance.
 
-Prior structure is generated by scripts in /script_priori_tree/step1_GCN_tree, please run this script before FMT, NSCLC, Antibiotic, NSCLC which depend on the prior sturcture.
+### 1. Prior GCN structure (script_priori_tree/)  
+Scipts of manuscript section *Constructing a priori functional redundancy hierarchical structure of species via structural entropy*
 
-### Prior GCN structure (script_priori_tree)  
 
-<a id="script-prior"> </a>Result - Constructing a priori functional redundancy hierarchical structure of species via structural entropy  
+#### a. Compute species distance from GCN [optional]
+```script_priori_tree/step0_compute_distance.ipynb```
 
-Input: gcn2008.tsv
+If you want to start the analysis from GCN, please run this script first to compute distance matrix, which will result as ```sp_d.tsv```. This may take some time (around 20 mins). To save time, you can directly use ```sp_d.tsv``` in /data directory which is preproduced by step0_compute_distance.
+- input: ```data/gcn2008.tsv```
+- output: ```data/sp_d.tsv```
 
-1. step0_compute_distance  
-Compute functional distance for GCN2008.
+#### b. Constructing a priori functional redundancy hierarchical structure of species via structural entropy
+```script_priori_tree/step1_GCN_tree.ipynb```
 
-1. <span id="tree">step1_GCN_tree</span>  
-Make prior GCN tree structure.  
+💡please run this script before FMT, NSCLC, Antibiotic, NSCLC which depend on the prior sturcture.
 
-Output: result/GCN_fix_tree/leaves_cluster.tsv, result/GCN_fix_tree/renamed_GCN_tree.newick.tsv
+- inputs: 
+  - ```data/gcn2008.tsv```
+  - ```data/sp_d.tsv```
+- outputs:
+  - result/GCN_fix_tree/
+    - ```renamed_GCN_tree.newick.tsv``` Tree structure in newick format
+    - ```leaves_cluster.tsv``` Species FRC annotation
 
-### Completeness (script_completeness)  
+🔍 Preview of ```leaves_cluster.tsv``` 
+| species                 | cluster | supercluster |
+|-------------------------|---------|--------------|
+| s__Rhodococcus_fascians | S2_C1   | S2           |
+| s__Nocardia_farcinica   | S2_C1   | S2           |
+| s__Rhodococcus_hoagii   | S2_C1   | S2           |
 
-[**GCN_tree result is required**](#tree)  
 
-<a id="script-completeness"> </a>Result - Functional redundancy hierarchical structure reveals species clusters with distinct functions  
+### 2. Completeness of FRC (script_completeness/)  
 
-Input: module_def0507.tsv
+Result of manuscript section *Functional redundancy hierarchical structure reveals species clusters with distinct functions*
 
-1. completeness  
-Compute the module completeness of each taxon (including NAFLD 16s OTU).
+#### a. Compute the module completeness of each taxon in GCN2008
+```script_completeness/completeness.ipynb```
+- input: 
+  - ```data/module_def0507.tsv```
+  - ```data/gcn2008.tsv```
+- output: 
+  - ```result/completeness/genome_module.completeness.tsv```
 
-2. test_diff  
+
+
+#### b. Compute the module completeness of each taxon in NAFLD 16s OTU
+```script_completeness/completeness_NAFLD.ipynb```
+
+- input: 
+  - ```data/module_def0507.tsv```
+  - ```data/NAFLD/NASH_GCN.tsv```
+- output: 
+  - ```result/completeness_NAFLD/genome_module.completeness.tsv```
+
+
+#### c. Completeness enrichment based on the GCN prior GCN structure.  
+```script_completeness/```
+1. test_diff  
 Test completeness enrichment based on the GCN prior GCN structure.  
 
 Output: result/completeness/, result/completeness_NAFLD/
 
-### <span id="abd">Taxonomy abundance difference (script_abundance_check)</span>  
 
-<a id="script-taxa"> </a>  
-
-Input: ACVD/, CRC/, asthma/, carcinoma_surgery_history/, STH/, migraine/, BD/, IBD/, T2D/, hypertension/, CFS/, IGT/, adenoma/, schizofrenia/, NAFLD/  
-
-1. taxa/taxa_NAFLD
-Check the abundance difference for each taxon (including NAFLD 16s OTU).  
-
-Output: result/taxa_abd_check/, result/taxa_abd_check_NAFLD/
-
-### FMT (script_FMT)  
+### 3. FMT (script_FMT)  
 
 <a id="script-fmt"> </a>Result - Structural entropy of vitamin $K_1$, $K_2$ and $B_2$ biosynthesis FRC in the recipient decreased the fecal microbiota transplantation engraftment efficiency  
 
@@ -171,25 +192,33 @@ Output: result/taxa_abd_check/, result/taxa_abd_check_NAFLD/
 Input: FMT/FMT1, FMT/FMT2  
 
 1. analysis_se*  
-Mutiple regression on SE value, days after FMT and fraction at each cluster/super-cluster.  
+Mutiple regression on SE value, days after FMT and fraction at each cluster/supercluster.  
 
 2. analysis_nfr*  
-Mutiple regression on nFR, days after FMT and fraction at each cluster/super-cluster.
+Mutiple regression on nFR, days after FMT and fraction at each cluster/supercluster.
 
 3. analysis_fr*  
-Mutiple regression on FR, days after FMT and fraction at each cluster/super-cluster.
+Mutiple regression on FR, days after FMT and fraction at each cluster/supercluster.
 
 4. compute_fr*  
-Compute FR at each cluster/super-cluster for each timepoint.
+Compute FR at each cluster/supercluster for each timepoint.(merge to 3)
 
 5. root_*  
 Mutiple regression on FR/nFR/SE, days after FMT and fraction only at root.
 
-Output: result/FMT, result/FMT_FR  
+- Output
+  - abd.tsv
+  - [cluster].pdf
+  - [cluster].tsv
+  - p_values.tsv
+  - root.tsv
+  - root.pdf
 
-### Antibiotic treatment (script_Anti_analysis)  
 
-<a id="script-anti"> </a>Result - Low preservation of FRCs in the initial state leads to distinct reshaping of the gut microbiome after cefprozil exposure  
+
+### 4.Antibiotic treatment (script_Antibiotic/)  
+
+Result - Low preservation of FRCs in the initial state leads to distinct reshaping of the gut microbiome after cefprozil exposure  
 
 [**GCN_tree result is required**](#tree)  
 
@@ -198,10 +227,22 @@ Input: Anti/
 1. analysis_se/analysis_nfr  
 Check SE/nFR difference of control and exposed group at each clsuter/super-cluter.  
 
-2. merge  
+1. merge  
 Merge and plot the difference test result of nFR and SE in control and exposed group.  
 
 Output: result/Anti/
+
+### 5.Taxonomy abundance difference (script_abundance_check)  
+
+
+Input: ACVD/, CRC/, asthma/, carcinoma_surgery_history/, STH/, migraine/, BD/, IBD/, T2D/, hypertension/, CFS/, IGT/, adenoma/, schizofrenia/, NAFLD/  
+large-scale + NAFLD
+
+1. taxa/taxa_NAFLD
+Check the abundance difference for each taxon (including NAFLD 16s OTU).  
+
+Output: result/taxa_abd_check/, result/taxa_abd_check_NAFLD/
+
 
 ### Personalized FR procedure (script_procedure)  
 
@@ -251,7 +292,7 @@ Output: result/NAFLD
 Input: immu/
 
 1. SE  
-Test difference of SE between response group and non-response group at each cluster/super-cluster and compute FR S score for each sample.
+Test difference of SE between response group and non-response group at each cluster/supercluster and compute FR S score for each sample.
 
 2. sig_SE  
 Test difference of SE between response group and non-response group at SIG1/SIG2 clsuter raised in original study and compute S score for each sample.
@@ -304,7 +345,6 @@ Output: result/eigen/
 
 ## Plot tool  
 
-<a id="plot-tool"> </a>
 
 Scripts under **plot_tools/** are used to plot figures.  
 

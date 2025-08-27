@@ -1,2 +1,4 @@
 data/*
 result/*
+__pycache__/*
+src/__pycache__/*
