@@ -129,44 +129,46 @@ def eigenspecies_correlation_network(eigenspecies_df, group_value, prefix):
     sample_cluster_matrix : DataFrame
         Matrix of eigenspecies values
     """
-    # Filter by group
+    
+    # 1. Filter data for the specific group
     filtered_eigenspecies = eigenspecies_df[eigenspecies_df['group'] == group_value]
     
-    # Prepare matrices
+    # 2. Prepare matrices
     eigenspecies_matrix = []
     cluster_list = []
     
-    # Get unique samples
+    # 3. Get unique samples from the filtered data
     unique_samples = filtered_eigenspecies['sample'].unique()
     
-    # Process each cluster
+    # 4. Process each cluster
     for cluster in filtered_eigenspecies['cluster'].unique():
+        # Get values for this cluster
         cluster_values = filtered_eigenspecies[filtered_eigenspecies['cluster'] == cluster]['eigenspecies'].tolist()
         
         # Only include clusters with complete data and variation
         if len(cluster_values) == len(unique_samples) and len(set(cluster_values)) > 1:
-            eigenspecies_matrix.append(cluster_values)
-            cluster_list.append(cluster)
+            # Calculate standard deviation to ensure it's not zero
+            std_dev = np.std(cluster_values)
+            if std_dev > 0:  # Only add clusters with non-zero standard deviation
+                eigenspecies_matrix.append(cluster_values)
+                cluster_list.append(cluster)
+            else:
+                print(f"Warning: Cluster {cluster} has zero standard deviation (all values identical). Skipping.")
     
-    # Create sample-cluster matrix
+    # 5. Create sample-cluster matrix
     sample_cluster_matrix = pd.DataFrame(
         eigenspecies_matrix, 
         columns=unique_samples, 
         index=cluster_list
     )
     
-    # Calculate correlation network
+    # 6. Calculate correlation network and remove rows/columns with all NA values
     network = sample_cluster_matrix.T.corr(method='pearson')
-    
-    # Drop rows/columns with NaN values
-    network = network.dropna(axis=0, how='any')
-    network = network.dropna(axis=1, how='any')
-    
-    # Save network to file (using original group_value for file naming)
-    network.to_csv(f"{prefix}.eigenspecies_cor.{group_value}.tsv", sep='\t')
+    na_rows = network.isna().all(axis=1)
+    na_cols = network.isna().all(axis=0)
+    network = network.loc[~na_rows, ~na_cols]
     
     return network, sample_cluster_matrix
-
     
 def get_preserv_matrix(network1, network2):
     """
