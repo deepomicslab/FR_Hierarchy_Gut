@@ -14,25 +14,25 @@ library(ggplot2)  # v3.4.2
 options(dplyr.summarise.inform = FALSE)
 
 # data input directory
-SRCDIR <- 'D:/TOPOSCORE-main'
+SRCDIR <- '.'
 message('Data source directory: ', SRCDIR)
 
-# Expected input files (in SRCDIR):
-FILES = list(
-  ONCO_CLIN = 'DS1_oncology_clinical_data.csv', 
-  ONCO_MET4 = 'DS2_oncology_microbiome_data.csv',
-  HD_CLIN = 'DS3_healthy_donor_clinical_data.csv', 
-  HD_MET4 = 'DS4_healthy_donor_microbiome_data.csv',
-  LONGITUDINAL_CLIN = 'DS5_longitudinal_clinical_data.csv', 
-  LONGITUDINAL_MET4 = 'DS6_longitudinal_microbiome_data.csv'
-)
-# check that they are all in SRCDIR
-existence <- vapply(unlist(FILES), function(x) file.exists(file.path(SRCDIR, x)), TRUE)
-if (!all(existence)) {
-  message('Input files not found: ', paste(unlist(FILES)[which(!existence)], collapse = ', '))
-  stop()
-}
-message('All expected input files found')
+# # Expected input files (in SRCDIR):
+# FILES = list(
+#   ONCO_CLIN = 'DS1_oncology_clinical_data.csv', 
+#   ONCO_MET4 = 'DS2_oncology_microbiome_data.csv',
+#   HD_CLIN = 'DS3_healthy_donor_clinical_data.csv', 
+#   HD_MET4 = 'DS4_healthy_donor_microbiome_data.csv',
+#   LONGITUDINAL_CLIN = 'DS5_longitudinal_clinical_data.csv', 
+#   LONGITUDINAL_MET4 = 'DS6_longitudinal_microbiome_data.csv'
+# )
+# # check that they are all in SRCDIR
+# existence <- vapply(unlist(FILES), function(x) file.exists(file.path(SRCDIR, x)), TRUE)
+# if (!all(existence)) {
+#   message('Input files not found: ', paste(unlist(FILES)[which(!existence)], collapse = ', '))
+#   stop()
+# }
+# message('All expected input files found')
 
 # other constants and inits
 VARS <- list(
