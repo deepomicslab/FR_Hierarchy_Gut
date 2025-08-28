@@ -76,15 +76,15 @@ def calculate_eigenspecies_together(expr_data, species_FRC, meta_df, g1_samples,
     """
     eigenspecies_results = []
     
-    # 合并所有样本
+    # Merge all samples
     all_samples = g1_samples + g2_samples
-    
-    # 确保expr_data只包含我们需要的样本
+
+    # Ensure expr_data only contains the samples we need
     expr_data = expr_data.loc[:, all_samples]
     
     for cluster in species_FRC['cluster'].unique():
         cluster_speciess = species_FRC[species_FRC['cluster'] == cluster]['species'].tolist()
-        # 筛选有效物种
+        # filter species based on expr
         cluster_speciess = [species for species in cluster_speciess if species in expr_data.index and sum(expr_data.loc[species] != 0) > 0.1 * len(expr_data.columns)]
         
         if len(cluster_speciess) > 0:
@@ -94,7 +94,7 @@ def calculate_eigenspecies_together(expr_data, species_FRC, meta_df, g1_samples,
             eigenspecies = eigenvectors[:, 0]
             
             for sample, sample_id in enumerate(expr_data.columns):
-                # 确定样本所属组别
+                # Determine group based on sample ID
                 group = g1 if sample_id in g1_samples else g2
                 
                 eigenspecies_results.append({
