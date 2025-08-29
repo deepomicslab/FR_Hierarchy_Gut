@@ -614,10 +614,22 @@ Output: result/eigen/
 
 ### 11. Simulation (11. script_simulation/)  
 
+####  JYQ
+```11.script_simulation/a.se_structure_simulation.ipynb``` Rearrange edges with large weights, make them inside/outside/randomly in cluster and compare the SE of the network  
+
+- input: 
+  - ```data/CRC/{cohort}/abd.tsv```
+  - ```data/CRC/{cohort}/metadata.tsv```
+  - ```result/large_scale_cohort/p_all_cohorts_se.tsv```
+  - ```result/GCN_fix_tree/renamed_GCN_tree.newick```
+
+- output:  
+  - ```result/validation/se_structure_simulation/CRC/se_p_values.tsv``` pvalues of the comparison between the three situations 
+  - ```result/validation/se_structure_simulation/CRC/se_mean_std.tsv``` Statistic result of SE values of the 100 experiment under the three situations  
+  - ```result/validation/se_structure_simulation/CRC/se_summary.tsv``` SE values of the 100 experiment under the three situations  
+
 
 ## Plot tool  
-
-
 Scripts under **plot_tools/** are used to plot figures.  
 
 1. init_network  
