@@ -466,26 +466,76 @@ The R scripts used to produce the analysis in original study and is provided by 
 
 [**GCN_fix_tree result is required**](#1-prior-gcn-structure-1script_priori_tree)
 
-Result - Structural entropy of FRCs identified as robust phenotype-specific indicators  
+Scripts of manuscript section *Structural entropy of FRCs identified as robust phenotype-specific indicators*  
 
-Input: ACVD/, CRC/, asthma/, carcinoma_surgery_history/, STH/, migraine/, BD/, IBD/, T2D/, hypertension/, CFS/, IGT/, adenoma/, schizofrenia/
 
-1. SE_diff / NFR_diff  
-Check SE/nFR difference of disease and health group.  
+- input:   
+  - ```data/gcn2008.tsv```  
+  - ```data/sp_d.tsv```  
+  - ```result/GCN_fix_tree/renamed_GCN_tree.newick```  
+  - data/{disease}/{cohort}/ (disease include ACVD, CRC, asthma, carcinoma_surgery_history, STH, migraine, BD, IBD, T2D, hypertension, CFS, IGT, adenoma, schizofrenia)
+    - ```metadata.tsv```  
+    - ```abd.tsv```  
 
-2. check_SE_diff / check_NFR_diff  
-Output some detail statistic information of SE/nFR.  
+#### a. Compute SE values for FRCs
+```07.script_cohort_FRC/a.analysis_SE.ipynb``` 
+Compute SE for FRCs in disease and health group and test the difference.  
 
-3. CRC_recurrent_ROC.ipynb  
-Predict CRC by LODO.
+#### b. Compute nFR values for FRCs
+```07.script_cohort_FRC/b.analysis_nFR.ipynb``` 
+Compute nFR for FRCs in disease and health group and test the difference.  
 
-4. IBD_recurrent_ROC.ipynb  
-Predict IBD by LODO.
 
-5. IBD_ROC.ipynb  
-Predict IBD by cross-validation.  
+- output:  
+  Use SE as an example, nFR is similar  
+  - ```result/large_scale_cohort/{disease}/{cohort}/SE/se_*.tsv``` SE value of FRCs in two groups
+  - ```result/large_scale_cohort/{disease}/{disease}_se.pdf``` Plot FRC with significant difference in SE in at least one cohort of the disease  
+  - ```result/large_scale_cohort/p_all_cohorts_se.tsv``` pvalues of SE at each FRC in all cohorts  
+  - ```result/large_scale_cohort/p_all_cohorts_se.svg``` Plot FRC with significant difference in SE in at least one cohort of all disease  
 
-Output: result/GCN_fix_tree/, result/predict/, result/predict_IBD/
+
+#### c. Differential testing between disease and health group  
+```07.script_cohort_FRC/c.SE_nFR_differential_testing.ipynb``` 
+Output some detail statistic information of SE/nFR. 
+
+- input:   
+  - ```result/large_scale_cohort/p_all_cohorts_se.tsv```  
+  - ```result/large_scale_cohort/p_all_cohorts_nfr.tsv```  
+  - ```result/large_scale_cohort/{disease}/{cohort}/SE/se_*.tsv```  
+  - ```result/large_scale_cohort/{disease}/{cohort}/nFR/fr_*.tsv```  
+
+- output:  
+  - ```result/large_scale_cohort/{disease}/{cohort}/SE/p_detail.tsv``` Statiscic information of SE  
+  - ```result/large_scale_cohort/{disease}/{cohort}/nFR/p_detail.tsv``` Statiscic information of nFR
+
+#### d. Predict phenotype by SE in FRCs   
+- input:   
+  - ```result/large_scale_cohort/p_all_cohorts_se.tsv```  
+  - ```result/large_scale_cohort/{disease}/{cohort}/SE/se_*.tsv```   
+
+```07.script_cohort_FRC/d.CRC_predict_LODO.ipynb``` Predict CRC by LODO.  
+```07.script_cohort_FRC/d.IBD_predict_CV.ipynb``` Predict IBD by cross-validation.   
+```07.script_cohort_FRC/d.IBD_predict_LODO.ipynb``` Predict IBD by LODO.  
+
+- output:  
+  - ```result/predict/{cohort}_{prediction_type}.tsv``` ROC plot of the prediction  
+  - ```result/predict/feature_importance_{prediction_type}.tsv``` Importance of SE in FRCs
+   
+
+#### f. Random experiment on phenotype    
+```07.script_cohort_FRC/f.pheno_related.ipynb``` Randamly shuffle label 100 times of sample to prove the relation between SE of FRCs and phentypes.    
+- input:   
+Use CRC as an example, IBD is also used in this experiment
+  - ```result/large_scale_cohort/CRC/p_all_cohorts_se.tsv```  
+  - ```result/large_scale_cohort/CRC/{cohort}/SE/se_*.tsv``` 
+  - data/CRC/{cohort}/ 
+    - ```metadata.tsv```  
+    - ```abd.tsv```  
+
+- output:  
+  - ```result/validation/phenotype_shuffle/CRC/{cohort}/se_{FRC}*.tsv``` SE of one random experiment for the FRC    
+  - ```result/validation/phenotype_shuffle/CRC/{cohort}/pvalues.tsv``` pvalues of significant difference between disease and health group of the 100 random experiments  
+
 
 
 ### 8. Personalized FR network analysis (08.script_cohort_keystone/)  
