@@ -632,32 +632,78 @@ Output: result/eigen/
 ## Plot tool  
 Scripts under **plot_tools/** are used to plot figures.  
 
-1. init_network  
-Input: cMD.select_2008.species_phylum.tsv
-init FR network layout  
-Output: sector layout file sector_sp_layout.tsv for network plot
+1. ```init_network.ipynb``` init FR network layout.    
+input: 
+  - ```data/cMD.select_2008.species_phylum.tsv```
+output: 
+  - ```plot_tool/sector_sp_layout.tsv``` sector layout file sector_sp_layout.tsv for network plot  
 
-2. NAFLD_draw  
-Input: NAFLD/taxonomy.tsv, result/NAFLD created by script_NAFLD/
-Plot networks of NASH and health dataset.  
-Output: <img src='readme_fig/NASH_network.svg' alt='NASH network' width="400" height="250">  
+2. ```NAFLD_draw.ipynb``` Plot networks of NASH and health dataset.     
+input: 
+  - ```NAFLD/taxonomy.tsv```   
+  - ```plot_tool/NAFLD_layout.tsv```
+  - ```result/NAFLD/cluster_*/keystone_node.tsv```  
+  - ```result/NAFLD/cluster_*/layer_0/fr.tsv```  
+output: 
+  - ```result/NAFLD/cluster_*/network.svg```  
+example:  
+<img src='readme_fig/NASH_network.svg' alt='NASH network' width="400" height="250">  
 
-3. procedure_draw_network  
-Input: sector_sp_layout.tsv created by step1.init_network, result/pheno_result/ created by script_procedure/
-Scripts used to plot personalized FR network for disease and health group.  
-Output: <img src='readme_fig/pheno_network.svg' alt='CRC network' width="300" height="300">  
+3. ```procedure_draw_network.ipynb``` Scripts used to plot personalized FR network for disease and health group.    
+input: 
+  - ```plot_tool/sector_sp_layout.tsv```  
+  - ```result/large_scale_cohort/{disease}/{cohort}/sp/cluster_*/keystone_node.tsv```  
+  - ```result/large_scale_cohort/{disease}/{cohort}/sp/cluster_*/layer_0/fr.tsv```  
+output:   
+  - ```result/large_scale_cohort/{disease}/{cohort}/sp/cluster_*/network.svg```  
+example:   
+<img src='readme_fig/pheno_network.svg' alt='CRC network' width="400" height="400">  
 
-4. pheno_distribution_se  
-Input: result/GCN_fix_tree/SE/GCN_tree_diff/ created by script_GCN_d3  
-Plot SE distribution for disease and health group.  
-Output: <img src='readme_fig/pheno_se.svg' alt='se_distribution' width="600" height="150">  
+4. ```pheno_distribution_se.ipynb``` Plot SE distribution for disease and health group.   
+input: 
+  - ```result/large_scale_cohort/p_all_cohorts_se.tsv```  
+  - ```result/large_scale_cohort/{disease}/{cohort}/SE/se_*.tsv```  
+output:   
+  - ```result/large_scale_cohort/{disease}/{cohort}/SE_distribution/cluster_*/{cohort}.svg```  
+example:  
+<img src='readme_fig/pheno_se.svg' alt='se_distribution' width="600" height="150">  
 
-5. plot_keystone.ipynb  
-Input: result/pheno_result/ created by script_procedure/, result/taxa_abd_check/ created by script_abundance_check, result/GCN_fix_tree/leaves_cluster.tsv created by script_priori_tree/
-Plot keystone result of phenotype datasets.  
-Output: <img src='./readme_fig/CRC1.PR.svg' alt='keystone_plot' width="600" height="350">  
+5. ```plot_keystone.ipynb.ipynb``` Plot keystone result of phenotype datasets.  
+input: 
+  - ```result/GCN_fix_tree/leaves_cluster.tsv```  
+  - ```result/large_scale_cohort/{disease}/{cohort}/{cohort}.abundance.wilcox_testing.tsv```  
+  - ```result/large_scale_cohort/{disease}/{cohort}/sp/cluster_*/keystone_node.tsv```  
+output:   
+  - ```result/keystone/{cohort}.PR.svg```  
+example:  
+<img src='./readme_fig/CRC1.PR.svg' alt='keystone_plot' width="600" height="350">  
 
-6. NSCLC_distribution_se  
-Input: result/immu/SE/ created by script_NSCLC/  
-Plot SE distribution for response group and non-response group.  
-Output: <img src='readme_fig/NSCLC_se.svg' alt='se_distribution_NSCLC' width="600" height="150">  
+6. ```NSCLC_distribution_se.ipynb``` Plot SE distribution for response group and non-response group.  
+input: 
+  - ```result/NSCLC/FRC_SE/Disc/se_*.tsv```  
+  - ```result/NSCLC/FRC_SE/p_detail.tsv```  
+output:   
+  - ```result/NSCLC/FRC_SE_distribution/{cluster}/Disc.svg```  
+example:  
+<img src='readme_fig/NSCLC_se.svg' alt='se_distribution_NSCLC' width="600" height="150">  
+
+7. ```pheno_simulation_plot.ipynb``` Plot simulated pvalues and real pvalues  
+input: 
+  - ```result/large_scale_cohort/p_all_cohorts_se.tsv```  
+  - ```result/large_scale_cohort/{disease}/{cohort}/SE/p_detail.tsv```  
+  - ```result/validation/phenotype_shuffle/{disease}/{cohort}/pvalues.tsv```  
+output:   
+  - ```result/validation/phenotype_shuffle/{disease}/{clsuter}.svg```  
+example:  
+<img src='readme_fig/pheno_simulation.svg' alt='pheno_simulation' width="600" height="150">  
+
+8. ```simu_se_strcture_plot.ipynb``` Plot simulated SE values  
+input: 
+  - ```result/validation/se_structure_simulation/CRC/se_summary.tsv```  
+  - ```result/validation/se_structure_simulation/CRC/se_p_values.tsv```  
+output:   
+  - ```result/validation/se_structure_simulation/CRC/se_summary_scatter.svg```  
+  - ```result/validation/se_structure_simulation/CRC/se_summary_boxplot.svg```  
+example:  
+<img src='readme_fig/se_structure_simu_scatter.svg' alt='se_simulation_scatter' width="600" height="200">  
+<img src='readme_fig/se_structure_simu_boxplot.svg' alt='se_simulation_boxplot' width="300" height="300">  
