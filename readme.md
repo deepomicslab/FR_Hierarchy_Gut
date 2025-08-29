@@ -2,18 +2,18 @@
 
 ## Table of Contents  
 
-- [1. Environment installation](#1-environment-installation)  
-- [2. Input files](#3-input-files)  
-- [3. Script execution order](#4-script-execution-order)
-  - [4.1 Prior GCN structure](#script-prior)
-  - [4.2 Completeness](#script-completeness)
-  - [4.3 Taxonomy abundance difference](#script-taxa)
-  - [4.4 FMT](#script-fmt)
-  - [4.5 Antibiotic treatment](#script-anti)
-  - [4.6 Personalized FR procedure](#script-personalized)
-  - [4.7 NAFLD](#script-nafld)
-  - [4.8 NSCLC](#script-nsclc)
-  - [4.9 Phenotype SE difference in clusters](#script-pheno)
+- [1. Environment installation](#environment-installation)  
+- [2. Input files](#input-files)  
+- [3. Script execution order](#scripts)
+  - [4.1 Prior GCN structure](#1-prior-gcn-structure-01script_priori_tree)
+  - [4.2 Completeness](#2-completeness-of-frc-02script_signature_modules)
+  - [4.3 FMT](#3-fmt-03script_fmt)
+  - [4.4 Antibiotic treatment](#4antibiotic-treatment-04script_antibiotic)
+  - [4.5 NAFLD](#script-nafld)
+  - [4.6 NSCLC](#script-nsclc)
+  - [4.7 Large scale cohort](#script-large)
+  - [4.8 Keystone analysis](#script-keystone)
+  - [4.9 Personalized FR nestedness](#)
   - [4.10 Eigenspecies analysis](#script-eigenspecies)
 - [5.Plot tools](#plot-tool)
 
@@ -59,10 +59,8 @@ pyseat 0.0.1.4 requires numpy>=1.23.3, but you have numpy 1.22.4 which is incomp
 ### Install required R package 
 
 ```
-conda install r-effsize r-ggplot2 r-ggpubr r-svglite r-reshape2 r-dplyr r-tidyr r-randomForest r-pROC
+conda install r-effsize r-ggplot2 r-ggpubr r-svglite r-reshape2 r-dplyr r-tidyr r-readxl r-randomForest r-pROC
 ```
-
-
 
 
 ## Input files 
@@ -108,33 +106,37 @@ data/
 │       ├── Eric_abd.tsv                         # Species level profile
 │       └── Eric.txt                             # Fraction of donor specific strains
 │
-└── immu/                                        # Immunotherapy dataset
+└── NSCLC/                                        # Immunotherapy dataset
     ├── merged_species.tsv                       # Species level abundance profile
     ├── sig.txt                                  # Classification of species in original work
     ├── metadata.txt                             # Metadata including cohort
     ├── DS1_oncology_clinical_data.csv           # Metadata including death, os, akk in original work
     └── DS5_longitudinal_clinical_data.csv       # Metadata including akk level in original work
 ```
-💡NASH_forward_63_map.txt from xxxx CLJ
+💡   
+```data/NAFLD/*``` from [doi: 10.1002/imt2.61](https://onlinelibrary.wiley.com/doi/10.1002/imt2.61)  
+```data/FMT/FMT1/Li.txt``` from [doi: 10.1038/s41467-020-19940-1](https://doi.org/10.1038/s41467-020-19940-1) 
+```data/FMT/FMT2/Eric.txt``` from [doi: 10.1038/s41467-020-19940-1](https://doi.org/10.1038/s41467-020-19940-1) 
+```data/NSCLC/DS*``` from [doi: 10.1016/j.cell.2024.05.029](https://doi.org/10.1016/j.cell.2024.05.029)  
+```data/NSCLC/sig.txt``` from [doi: 10.1016/j.cell.2024.05.029](https://doi.org/10.1016/j.cell.2024.05.029)  
 
 ## Scripts
 
 <font color="red">We highly recommend running the scripts in the directory sequentially in the following order.</font>  
 
-
-### 1. Prior GCN structure (1.script_priori_tree/)  
-Scipts of manuscript section *Constructing a priori functional redundancy hierarchical structure of species via structural entropy*
+### 1. Prior GCN structure (01.script_priori_tree/)  
+Scripts of manuscript section *Constructing a priori functional redundancy hierarchical structure of species via structural entropy*
 
 
 #### a. Compute species distance from GCN [optional]
-```1.script_priori_tree/a.compute_distance.ipynb```
+```01.script_priori_tree/a.compute_distance.ipynb```
 
 If you want to start the analysis from GCN, please run this script first to compute distance matrix, which will result as ```sp_d.tsv```. This may take some time (around 20 mins). To save time, you can directly use ```sp_d.tsv``` in /data directory which is preproduced.
 - input: ```../data/gcn2008.tsv``` GCN of 2008 species
 - output: ```../data/sp_d.tsv``` Distance matrix
 
 #### b. Constructing a priori functional redundancy hierarchical structure of species via structural entropy
-```1.script_priori_tree/b.GCN_tree.ipynb```
+```01.script_priori_tree/b.GCN_tree.ipynb```
 
 💡please run this script before FMT, NSCLC, Antibiotic, NSCLC which depend on the prior sturcture.
 
@@ -155,7 +157,7 @@ If you want to start the analysis from GCN, please run this script first to comp
 
 
 #### c. Detect FRC/supercluster enriched/depleted KOs
-```1.script_priori_tree/c.KO_compare.ipynb```
+```01.script_priori_tree/c.KO_compare.ipynb```
 Using S1-C8 as example.
 - inputs: 
   - ```data/gcn2008.tsv```
@@ -201,42 +203,83 @@ Result of manuscript section *Functional redundancy hierarchical structure revea
     - ```cluster_module_signature.tsv``` Summary of signature modules of superclusters/FRCs.
 
 
-### 3. FMT (03.script_FMT)  
-Scipts of manuscript section *Structural entropy of vitamin $K_1$, $K_2$ and $B_2$ biosynthesis FRC in the recipient decreased the fecal microbiota transplantation engraftment efficiency*
+### 3. FMT (03.script_FMT/)  
+Scripts of manuscript section *Structural entropy of vitamin $K_1$, $K_2$ and $B_2$ biosynthesis FRC in the recipient decreased the fecal microbiota transplantation engraftment efficiency*
 
 [**GCN_fix_tree result is required**](#1-prior-gcn-structure-1script_priori_tree)
 
-CLJ
-Input: FMT/FMT1, FMT/FMT2  
+- input:  
+  - ```result/GCN_fix_tree/renamed_GCN_tree.newick```   
+  - ```../data/sp_d.tsv```  
+  For FMT1:  
+  - ```data/FMT/FMT1/metadata.tsv```  
+  - ```data/FMT/FMT1/fmt_abd.tsv```  
+  - ```data/FMT/FMT1/Li.txt```  
+  For FMT2:  
+  - ```data/FMT/FMT2/Eric.txv```  
+  - ```data/FMT/FMT2/deltat.txt```  
+  - ```data/FMT/FMT2/triads.txt```  
+  - ```data/FMT/FMT2/Eric_abd.tsv```  
+#### a.Mutiple regression on nFR  
+```03.script_FMT/a.analysis_nfr*.ipynb```
+Mutiple regression on nFR, days after FMT and fraction at each FRC/supercluster.
 
-1. analysis_se*  
-Mutiple regression on SE value, days after FMT and fraction at each cluster/supercluster.  
+#### b.Mutiple regression on SE value   
+```03.script_FMT/b.analysis_se*.ipynb``` 
+Mutiple regression on SE value, days after FMT and fraction at each FRC/supercluster.
 
-1. analysis_nfr*  
-Mutiple regression on nFR, days after FMT and fraction at each cluster/supercluster.
-
-1. analysis_fr*  
+#### c.Mutiple regression on FR
+```03.script_FMT/c.analysis_fr*.ipynb```
 Mutiple regression on FR, days after FMT and fraction at each cluster/supercluster.
 
-1. compute_fr*  
-Compute FR at each cluster/supercluster for each timepoint.(merge to 3)
+- Output
+  - result/FMT/\*/\*/ (First * can be nFR/SE/FR, second * can be FMT1/FMT2)
+    - ```[cluster].tsv``` Regression plot data  
+    - ```[cluster].pdf``` Plot of regression
+    - ```p_values.tsv``` F-test p-values of regression, coefficient and its p-values
 
-1. root_*  
-Mutiple regression on FR/nFR/SE, days after FMT and fraction only at root.
+🔍 Preview of ```[cluster].tsv```  
+| sample     | SE_pre | t_post | f_ds |  
+|--------|---------------|--------------|-------------------|
+| FMT1 | 0.79168257             | 2           | 0.302325581              | 
+| FMT1 | 0.83223             | 2           | 0.233333              | 
+
+🔍 Preview of ```pvalues.tsv```  
+|      | F-pvalue | se_co | t_co | const_co | se_p  | t_p | const_p |  
+|--------|---------------|--------------|-------------|----------|----------|----------|----------|
+| cluster_S1-C3 | 0.003328 | -0.94618 | -0.00035   | 0.514195  | 0.00079 | 0.7069  | 2.80E-15|
+| cluster_S1-C15 | 0.019 | -1.4490 | -0.00035   | 0.515  | 0.005268 | 0.7230  | 2.90E-14|
+
+
+#### d. Compute FR at each cluster/supercluster for each timepoint  
+```03.script_FMT/d.analysis_compute_fr*.ipynb```
+- Output
+  - result/FMT/FR_timepoints/\*/ (* can be FMT1/FMT2)
+    - ```fr.tsv``` FR values of each sample at each timepoint  
+
+
+#### e. Mutiple regression on fd/td/nFR at root
+```03.script_FMT/e.root_*.ipynb```
+Mutiple regression on fd/td/nFR at root, days after FMT and fraction only at root.
 
 - Output
-  - abd.tsv
-  - [cluster].pdf
-  - [cluster].tsv
-  - p_values.tsv
-  - root.tsv
-  - root.pdf
+  - result/FMT/root/\*/ (* can be FMT1/FMT2, here use fd as an exsample, nfr and td are similar)
+    - ```fd.tsv``` fd values of each sample   
+    - ```fd_root.pdf``` Plot of regression of fd value
+    - ```fd_p_values.tsv``` F-test p-values of regression, coefficient and its p-values
 
 
+#### f. merge and output result
+```03.script_FMT/f.merge_S4.ipynb```
 
-### 4.Antibiotic treatment (04.script_Antibiotic/)  
+- Output
+  - result/FMT
+    - ```supp_FMT.tsv``` Regression result for nFR and SE in the two cohorts.  
+Results as Supplementary Table S4
 
-Scipts of manuscript section *Low preservation of FRCs in the initial state leads to distinct reshaping of the gut microbiome after cefprozil exposure* 
+### 4. Antibiotic treatment (04.script_Antibiotic/)  
+
+Scripts of manuscript section *Low preservation of FRCs in the initial state leads to distinct reshaping of the gut microbiome after cefprozil exposure* 
 
 [**GCN_fix_tree result is required**](#1-prior-gcn-structure-1script_priori_tree)
 
@@ -250,9 +293,9 @@ Scipts of manuscript section *Low preservation of FRCs in the initial state lead
   - ```data/Anti/abd.csv```
 - output: 
   - result/Anti/nFR
-    - ```nfr_df.tsv```CLJ
-    - ```cluster_[FRC].pdf``` CLJ
-    - ```p_value.tsv``` CLJ
+    - ```nfr_df.tsv``` nFR value of each FRC at each timepoints for each sample
+    - ```cluster_[FRC].pdf``` Plot nFR value boxplot of the FRC at three timepoints
+    - ```p_value.tsv``` nFR differential test p-values between exposed and control group at each timepoint for each FRC
 
 #### b. SE analysis
 ```04.script_Antibiotic/b.analysis_SE.ipynb```
@@ -264,9 +307,9 @@ Scipts of manuscript section *Low preservation of FRCs in the initial state lead
   - ```data/Anti/abd.csv```
 - output: 
   - result/Anti/SE
-    - ```se_df.tsv```CLJ
-    - ```cluster_[FRC].pdf``` CLJ
-    - ```p_value.tsv``` CLJ
+    - ```se_df.tsv``` SE value of each FRC at each timepoints for each sample
+    - ```cluster_[FRC].pdf``` Plot SE value boxplot of the FRC at three timepoints
+    - ```p_value.tsv``` SE differential test p-values between exposed and control group at each timepoint for each FRC
 
 
 #### c. Differential testing of SE/nFR
@@ -323,93 +366,63 @@ Results as Supplementary Table S5
 - output:
   - Correlation of FRC and diversity with p-value in notebook.
 
-### 5.Taxonomy abundance difference (script_abundance_check)  
+### 5. NAFLD (05.script_NAFLD/)  
 
+Scripts of manuscript section *FR keystone species in personalized FR network reveals polycentric structure in healthy individuals and monocentric in non-alcoholic steatohepatitis patients*  
 
-Input: ACVD/, CRC/, asthma/, carcinoma_surgery_history/, STH/, migraine/, BD/, IBD/, T2D/, hypertension/, CFS/, IGT/, adenoma/, schizofrenia/, NAFLD/  
-large-scale + NAFLD
+#### a. Abundance differential testing of each taxon in NAFLD 16s OTU  
+```05.script_NAFLD/abundance_differential_testing.ipynb```  Test difference between NASH and Normal group
+- input: 
+  - ```data/NAFLD/abd.tsv```
+  - ```data/NAFLD/NASH_forward_63_map.txt```
+- output: 
+  - ```result/NAFLD/NASH.Normal.abundance.wilcox_testing.tsv```
 
-1. taxa/taxa_NAFLD
-Check the abundance difference for each taxon (including NAFLD 16s OTU).  
-
-Output: result/taxa_abd_check/, result/taxa_abd_check_NAFLD/
-
-
-### Personalized FR procedure (script_procedure)  
-
-<a id="script-personalized"> </a> Result - Integrating taxonomic composition to construct a personalized FR network  
-
-Input: ACVD/, CRC/, asthma/, carcinoma_surgery_history/, STH/, migraine/, BD/, IBD/, T2D/, hypertension/, CFS/, IGT/, adenoma/, schizofrenia/
-
-1. step1_compute_distance  
-Compute functional distance for GCN2008.
-  
-2. <span id="pheno_anlaysis">step2_cluster_analysis</span>  
-Analyze keystone cluster and keystone taxon for metagenomics abundance profiles in cMD by constructing posterior structure.  
-
-3. step3_keystone_summary  
-Summarize the keystone species.  
-
-4. utils  
-
-    **a. log_effect**  
-    Compute and compare the distribution of personalized FR network before and after log rescalen and normalization.
-
-    **b. nestedness_experiment**  
-    An example to test the nestedness compared with NULL experiments of personalized FR.
-
-    **c. evaluation**  
-    An example to evaluate the feature of GCN.  
-
-Output: result/GCN_evaluation/, result/pheno_result/  
-
-### NAFLD (script_NAFLD)  
-
-Result - FR keystone species in personalized FR network reveals polycentric structure in healthy individuals and monocentric in non-alcoholic steatohepatitis patients  
-#### b. Compute the module completeness of each taxon in NAFLD 16s OTU
-```script_completeness/completeness_NAFLD.ipynb```
+#### b. Analyze the NAFLD dataset using NAFLD GCN
+```05.script_NAFLD/procedure.ipynb```Analyze the NAFLD dataset using NAFLD GCN, compute personalized FR network and find keystone clusters in NASH group and Normal group. 
 
 - input: 
-  - ```data/module_def0507.tsv```
+  - ```data/NAFLD/abd.tsv```
+  - ```data/NAFLD/NASH_forward_63_map.txt```
   - ```data/NAFLD/NASH_GCN.tsv```
 - output: 
-  - ```result/completeness_NAFLD/genome_module.completeness.tsv```
+  - result/NAFLD/cluster_\*/ (* can be NASH/Normal)
+    - ```network.svg``` network plot of personalized FR network  
+    - ```keystone_node.tsv``` Species and FRCs with their PR score
+  - result/NAFLD
+    - ```keystone_abundance_comparison.png``` JYQ  
+    - ```keystone_comparison.png``` JYQ
+    -  ```genome_module.completeness.tsv``` Completeness of module for each species
+    - ```*.module_comp.wilcox.testing.tsv``` Testing results of module completeness comparison  
+    - ```*_species.tsv``` Species involved in comparison with FRC/superclusters annotation
 
 
-Input: NAFLD/  
-
-1. step0_NAFLD  
-An example of constructing personalized FR netowrk, hierarchical tree, keystone species/cluster and comparing keyston clusters of taxa on NAFLD dataset.  
-
-Output: result/NAFLD  
-
-### NSCLC (script_NSCLC)  
+### 6. NSCLC (06.script_NSCLC/)  
 
 [**GCN_fix_tree result is required**](#1-prior-gcn-structure-1script_priori_tree)
 
-<a id="script-nsclc"> </a>Result - FRCs as immune checkpoint inhibitor indicators can predict patient survival  
+Scripts of manuscript section *FRCs as immune checkpoint inhibitor indicators can predict patient survival*  
 
-Input: immu/
+#### a. Reproduce original SIG classification  
+```06.script_NSCLC/SIG_SE.ipynb```  Test difference of SE between response group and non-response group at SIG1/SIG2 clsuter raised in original study and compute S score for each sample.
 
-1. SE  
-Test difference of SE between response group and non-response group at each cluster/supercluster and compute FR S score for each sample.
+#### b. Use FRC to classify NR/R groups  
+```06.script_NSCLC/FRC_SE.ipynb```  Test difference of SE between response group and non-response group at each cluster/supercluster and compute FR S score for each sample.
 
-2. sig_SE  
-Test difference of SE between response group and non-response group at SIG1/SIG2 clsuter raised in original study and compute S score for each sample.
+#### c. Use FRC with SIG as SIG' to classify NR/R groups
+```06.script_NSCLC/c.combination_S_score.ipynb```  Compute combined sig' S score for each sample.
 
-3. combination  
-Compute combined sig' S score for each sample.
 
-4. The r scripts
-Used to produce the analysis in original study and is provided by https://github.com/valerioiebba/TOPOSCORE/tree/main.  
+The R scripts used to produce the analysis in original study and is provided by https://github.com/valerioiebba/TOPOSCORE/tree/main.  
 
 Output: result/immu  
 
-### Phenotype SE difference in clusters (script_GCN_d3)  
+
+### 7. Large scale cohort analysis on priori tree (07.script_cohort_FRC/)  
 
 [**GCN_fix_tree result is required**](#1-prior-gcn-structure-1script_priori_tree)
 
-<a id="script-pheno"> </a>Result - Structural entropy of FRCs identified as robust phenotype-specific indicators  
+Result - Structural entropy of FRCs identified as robust phenotype-specific indicators  
 
 Input: ACVD/, CRC/, asthma/, carcinoma_surgery_history/, STH/, migraine/, BD/, IBD/, T2D/, hypertension/, CFS/, IGT/, adenoma/, schizofrenia/
 
@@ -430,9 +443,42 @@ Predict IBD by cross-validation.
 
 Output: result/GCN_fix_tree/, result/predict/, result/predict_IBD/
 
-### Eigenspecies analysis (script_eigen_graph_preservation)  
 
-<a id="script-eigenspecies"> </a>Result - Eigenspecies of FRCs demonstrate potential as cross-cohort indicators of age and BMI  
+### 8. Personalized FR network analysis (08.script_cohort_keystone/)  
+
+Result - Integrating taxonomic composition to construct a personalized FR network  
+
+Input: ACVD/, CRC/, asthma/, carcinoma_surgery_history/, STH/, migraine/, BD/, IBD/, T2D/, hypertension/, CFS/, IGT/, adenoma/, schizofrenia/
+
+1. step1_compute_distance  
+Compute functional distance for GCN2008.
+  
+2. step2_cluster_analysis  
+Analyze keystone cluster and keystone taxon for metagenomics abundance profiles in cMD by constructing posterior structure.  
+
+3. step3_keystone_summary  
+Summarize the keystone species.  
+
+4. utils  
+
+    **a. log_effect**  
+    Compute and compare the distribution of personalized FR network before and after log rescalen and normalization.
+
+    **b. nestedness_experiment**  
+    An example to test the nestedness compared with NULL experiments of personalized FR.
+
+    **c. evaluation**  
+    An example to evaluate the feature of GCN.  
+
+Output: result/GCN_evaluation/, result/pheno_result/  
+
+### 9. Personalized FR network nestedness (09. script_personalized_FR_nestedness/)  
+
+
+
+### 10. Eigenspecies analysis (10. script_cohorts_eigenspecies/)  
+
+Result - Eigenspecies of FRCs demonstrate potential as cross-cohort indicators of age and BMI  
 
 [**GCN_fix_tree result is required**](#1-prior-gcn-structure-1script_priori_tree)
 
