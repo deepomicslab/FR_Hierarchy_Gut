@@ -9,12 +9,13 @@
   - [4.2 Completeness](#2-completeness-of-frc-02script_signature_modules)
   - [4.3 FMT](#3-fmt-03script_fmt)
   - [4.4 Antibiotic treatment](#4antibiotic-treatment-04script_antibiotic)
-  - [4.5 NAFLD](#script-nafld)
-  - [4.6 NSCLC](#script-nsclc)
-  - [4.7 Large scale cohort](#script-large)
-  - [4.8 Keystone analysis](#script-keystone)
-  - [4.9 Personalized FR nestedness](#)
-  - [4.10 Eigenspecies analysis](#script-eigenspecies)
+  - [4.5 NAFLD](#5-nafld-05script_nafld)
+  - [4.6 NSCLC](#6-nsclc-06script_nsclc)
+  - [4.7 Large scale cohort](#7-large-scale-cohort-analysis-on-priori-tree-07script_cohort_frc)
+  - [4.8 Keystone analysis](#8-personalized-fr-network-analysis-08script_cohort_keystone)
+  - [4.9 Personalized FR nestedness](#9-personalized-fr-network-nestedness-09-script_personalized_fr_nestedness)
+  - [4.10 Eigenspecies analysis](#10-eigenspecies-analysis-10-script_cohorts_eigenspecies)
+  - [4.11 Simulation](#11-simulation-11-script_simulation)
 - [5.Plot tools](#plot-tool)
 
 ## Environment installation  
@@ -404,18 +405,61 @@ Scripts of manuscript section *FR keystone species in personalized FR network re
 Scripts of manuscript section *FRCs as immune checkpoint inhibitor indicators can predict patient survival*  
 
 #### a. Reproduce original SIG classification  
-```06.script_NSCLC/SIG_SE.ipynb```  Test difference of SE between response group and non-response group at SIG1/SIG2 clsuter raised in original study and compute S score for each sample.
+```06.script_NSCLC/SIG_SE.ipynb```  Test difference of SE between response group and non-response group at SIG1/SIG2 clsuter raised in original study and compute S score for each sample.  
 
-#### b. Use FRC to classify NR/R groups  
-```06.script_NSCLC/FRC_SE.ipynb```  Test difference of SE between response group and non-response group at each cluster/supercluster and compute FR S score for each sample.
+- input: 
+  - ```data/NSCLC/merged_species.txt```  
+  - ```data/NSCLC/metadata.txt```  
+  - ```data/NSCLC/sig.txt```  
+  - ```data/gcn2008.tsv```  
+  - ```data/sp_d.tsv```
+  - ```data/NSCLC/DS1_oncology_clinical_data.csv```  
+- output: 
+  - result/NSCLC/SIG_SE/  
+    - ```fig_kde_disc.pdf``` Plot of distribution of TOPOSCORE in NR and R group
+    - ```fig_ROC.pdf``` Plot of ROC for NR/R classification
+    - ```pred_binary_disc.tsv``` Classification result and real group label for each sample
+    - ```NSCLC.pdf``` FRC with significant SE difference between NR and R group
+    - ```cluster_sp.json``` species list of each FRC
+    - ```existed_sp.json``` species exists in each sample of each FRC
+
+#### b. Use SE of FRC to classify NR/R groups  
+```06.script_NSCLC/FRC_SE.ipynb```  Test difference of SE between response group and non-response group at each cluster/supercluster and compute FR S score for each sample.  
+
+- input: 
+  - ```data/NSCLC/merged_species.txt```  
+  - ```data/NSCLC/metadata.txt```  
+  - ```data/gcn2008.tsv```  
+  - ```data/sp_d.tsv```
+  - ```data/NSCLC/DS1_oncology_clinical_data.csv```  
+- output: 
+  - result/NSCLC/FRC_SE/  
+    - ```fig_kde_disc.pdf``` Plot of distribution of TOPOSCORE in NR and R group
+    - ```fig_ROC.pdf``` Plot of ROC for NR/R classification
+    - ```OS_curve.pdf``` Plot of OS curve
+    - ```pred_binary_disc.tsv``` Classification result and real group label for each sample
+    - ```NSCLC.pdf``` FRC with significant SE difference between NR and R group
+    - ```cluster_sp.json``` species list of each FRC
+    - ```existed_sp.json``` species exists in each sample of each FRC
 
 #### c. Use FRC with SIG as SIG' to classify NR/R groups
-```06.script_NSCLC/c.combination_S_score.ipynb```  Compute combined sig' S score for each sample.
+```06.script_NSCLC/c.combination_S_score.ipynb```  Compute combined sig' S score for each sample.  
+
+- input:   
+  - ```result/NSCLC/SIG_SE/cluster_sp.json```  
+  - ```result/NSCLC/SIG_SE/existed_sp.json```  
+  - ```result/NSCLC/FRC_SE/existed_sp.json```  
+  - ```result/NSCLC/FRC_SE/cluster_sp.json```  
+  - ```data/NSCLC/DS1_oncology_clinical_data.csv```  
+- output: 
+  - result/NSCLC/combine/  
+    - ```fig_kde_disc.pdf``` Plot of distribution of TOPOSCORE in NR and R group
+    - ```fig_ROC.pdf``` Plot of ROC for NR/R classification
+    - ```OS_curve.pdf``` Plot of OS curve
+    - ```pred_binary_disc.tsv``` Classification result and real group label for each sample
 
 
 The R scripts used to produce the analysis in original study and is provided by https://github.com/valerioiebba/TOPOSCORE/tree/main.  
-
-Output: result/immu  
 
 
 ### 7. Large scale cohort analysis on priori tree (07.script_cohort_FRC/)  
@@ -488,6 +532,9 @@ Input: ACVD/, CRC/, asthma/, carcinoma_surgery_history/, STH/, migraine/, BD/, I
 Find eigen species and plot the result.  
 
 Output: result/eigen/
+
+### 11. Simulation (11. script_simulation/)  
+
 
 ## Plot tool  
 
