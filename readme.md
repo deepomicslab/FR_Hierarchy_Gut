@@ -48,6 +48,7 @@ pip install cliffs-delta
 pip install pyseat
 pip install numpy==1.22.4
 pip install pandas==1.5.2
+pip install matplotlib_venn
 python -m ipykernel install --user --name meta_fr --display-name "Python (meta_fr)"
 ```
 On your jupyter notebook, choose kernel ```Python (meta_fr)```
@@ -174,6 +175,15 @@ Using S1-C8 as example.
 | K03648 | 6             | 48           | 1706              | 248              | 1.82E-02   | 4.47E-35 | 2.63E-31         |
 | K00560 | 5             | 49           | 1576              | 378              | 2.45E-02   | 1.30E-28 | 3.80E-25         |
 | K02837 | 6             | 48           | 1543              | 411              | 3.33E-02   | 1.54E-25 | 3.01E-22         |
+
+#### Evaluation of GCN  
+```01.script_priori_tree/util_evaluation.ipynb``` Evaluate the feature of GCN following original study.  
+- inputs: 
+  - ```data/gcn2008.tsv```
+  - ```data/sp_d.tsv```
+
+- outputs:
+  - ```result/GCN_evaluation/evaluation.png``` The plot of evaluation result  
 
 ### 2. Completeness of FRC (02.script_signature_modules/)  
 
@@ -377,7 +387,7 @@ Scripts of manuscript section *FR keystone species in personalized FR network re
   - ```data/NAFLD/abd.tsv```
   - ```data/NAFLD/NASH_forward_63_map.txt```
 - output: 
-  - ```result/NAFLD/NASH.Normal.abundance.wilcox_testing.tsv```
+  - ```result/NAFLD/NASH.Normal.abundance.wilcox_testing.tsv``` Differential testing result  
 
 #### b. Analyze the NAFLD dataset using NAFLD GCN
 ```05.script_NAFLD/procedure.ipynb```Analyze the NAFLD dataset using NAFLD GCN, compute personalized FR network and find keystone clusters in NASH group and Normal group. 
@@ -388,7 +398,6 @@ Scripts of manuscript section *FR keystone species in personalized FR network re
   - ```data/NAFLD/NASH_GCN.tsv```
 - output: 
   - result/NAFLD/cluster_\*/ (* can be NASH/Normal)
-    - ```network.svg``` network plot of personalized FR network  
     - ```keystone_node.tsv``` Species and FRCs with their PR score
   - result/NAFLD
     - ```keystone_abundance_comparison.png``` JYQ  
@@ -540,35 +549,55 @@ Use CRC as an example, IBD is also used in this experiment
 
 ### 8. Personalized FR network analysis (08.script_cohort_keystone/)  
 
-Result - Integrating taxonomic composition to construct a personalized FR network  
+Scripts of manuscript section *Integrating taxonomic composition to construct a personalized FR network*  
 
-Input: ACVD/, CRC/, asthma/, carcinoma_surgery_history/, STH/, migraine/, BD/, IBD/, T2D/, hypertension/, CFS/, IGT/, adenoma/, schizofrenia/
+#### a. Abundance differential testing of each species
+```08.script_cohorts_keystone/a.abundance_differential_testing.ipynb```Test abundance difference between disease and health group
+- input:   
+  - data/{disease}/{cohort}/ (disease include ACVD, CRC, asthma, carcinoma_surgery_history, STH, migraine, BD, IBD, T2D, hypertension, CFS, IGT, adenoma, schizofrenia)
+    - ```metadata.tsv```  
+    - ```abd.tsv```  
+- output: 
+  - ```result/large_scale_cohort/{disease}/{cohort}/{cohort}.abundance.wilcox_testing.tsv``` Differential testing result
 
-1. step1_compute_distance  
-Compute functional distance for GCN2008.
-  
-2. step2_cluster_analysis  
-Analyze keystone cluster and keystone taxon for metagenomics abundance profiles in cMD by constructing posterior structure.  
+#### b. Find keystone species and keystone cluster in personalized FR network  
+```08.script_cohorts_keystone/b.personalized_FR_keystone.ipynb```  
+- input:   
+  - ```data/gcn2008.tsv```  
+  - ```data/sp_d.tsv```  
+  - data/{disease}/{cohort}/ (disease include ACVD, CRC, asthma, carcinoma_surgery_history, STH, migraine, BD, IBD, T2D, hypertension, CFS, IGT, adenoma, schizofrenia)
+    - ```metadata.tsv```  
+    - ```abd.tsv```  
+- output: 
+  - ```result/large_scale_cohort/{disease}/{cohort}/sp/cluster_*/keystone_node.tsv``` Species and FRCs with their PR score  
+  - ```result/large_scale_cohort/{disease}/{cohort}/sp/layer_0/fr.tsv``` Personalized FR netowrk
 
-3. step3_keystone_summary  
-Summarize the keystone species.  
+#### c. Summarize the keystone species in different cohort
+```08.script_cohorts_keystone/c.keystone_summary.ipynb  ```
 
-4. utils  
+- input: 
+  - ```result/large_scale_cohort/{disease}/{cohort}/sp/cluster_*/keystone_node.tsv``` 
 
-    **a. log_effect**  
-    Compute and compare the distribution of personalized FR network before and after log rescalen and normalization.
-
-    **b. nestedness_experiment**  
-    An example to test the nestedness compared with NULL experiments of personalized FR.
-
-    **c. evaluation**  
-    An example to evaluate the feature of GCN.  
-
-Output: result/GCN_evaluation/, result/pheno_result/  
 
 ### 9. Personalized FR network nestedness (09. script_personalized_FR_nestedness/)  
 
+#### log effect of personalized FR network  
+```09.script_personalized_FR_nestedness/util_log_effect.ipynb``` Compute and show effect on the distribution of personalized FR network before and after log rescaled and normalization.  
+- input:   
+  - ```data/gcn2008.tsv```  
+  - ```data/sp_d.tsv```  
+  - ```data/CRC/CRC1/metadata.tsv'```  
+  - ```data/CRC/CRC1/abd.tsv```  
 
+#### nestedness of personalized FR network  
+[**Personalized FR network is required.**](#8-personalized-fr-network-analysis-08script_cohort_keystone)
+```09.script_personalized_FR_nestedness/util_nestedness_experiment.ipynb``` Test the nestedness compared with NULL experiments of personalized FR network.  
+- input:   
+  - ```result/large_scale_cohort/{disease}/{cohort}/sp/layer_0/fr.tsv``` (disease include ACVD, CRC, asthma, carcinoma_surgery_history, STH, migraine, BD, IBD, T2D, hypertension, CFS, IGT, adenoma, schizofrenia)
+
+- output:  
+  - ```result/personalized_FR_nestedness/p_df.tsv``` pvalues of the comparison between real FR network nestedness and NULL model nestedness
+  
 
 ### 10. Eigenspecies analysis (10. script_cohorts_eigenspecies/)  
 
