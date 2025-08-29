@@ -9,7 +9,7 @@ $diffd = $ARGV[3];
 $leavep = $ARGV[4];
 $outdir = $ARGV[5];
 $dir = "$phenod/$pheno/$id/sp";
-$diff = "$diffd/$pheno/p_$id.tsv";
+$diff = "$diffd/$pheno/$id/$id.abundance.wilcox_testing.tsv";
 
 
 
