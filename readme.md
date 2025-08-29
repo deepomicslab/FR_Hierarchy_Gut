@@ -117,8 +117,8 @@ data/
 ```
 💡   
 ```data/NAFLD/*``` from [doi: 10.1002/imt2.61](https://onlinelibrary.wiley.com/doi/10.1002/imt2.61)  
-```data/FMT/FMT1/Li.txt``` from [doi: 10.1038/s41467-020-19940-1](https://doi.org/10.1038/s41467-020-19940-1) 
-```data/FMT/FMT2/Eric.txt``` from [doi: 10.1038/s41467-020-19940-1](https://doi.org/10.1038/s41467-020-19940-1) 
+```data/FMT/FMT1/Li.txt``` from [doi: 10.1038/s41467-020-19940-1](https://doi.org/10.1038/s41467-020-19940-1)   
+```data/FMT/FMT2/Eric.txt``` from [doi: 10.1038/s41467-020-19940-1](https://doi.org/10.1038/s41467-020-19940-1)   
 ```data/NSCLC/DS*``` from [doi: 10.1016/j.cell.2024.05.029](https://doi.org/10.1016/j.cell.2024.05.029)  
 ```data/NSCLC/sig.txt``` from [doi: 10.1016/j.cell.2024.05.029](https://doi.org/10.1016/j.cell.2024.05.029)  
 
