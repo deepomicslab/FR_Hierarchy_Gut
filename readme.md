@@ -48,6 +48,7 @@ pip install cliffs-delta
 pip install pyseat
 pip install numpy==1.22.4
 pip install pandas==1.5.2
+pip install matplotlib_venn
 python -m ipykernel install --user --name meta_fr --display-name "Python (meta_fr)"
 ```
 On your jupyter notebook, choose kernel ```Python (meta_fr)```
@@ -116,8 +117,8 @@ data/
 ```
 💡   
 ```data/NAFLD/*``` from [doi: 10.1002/imt2.61](https://onlinelibrary.wiley.com/doi/10.1002/imt2.61)  
-```data/FMT/FMT1/Li.txt``` from [doi: 10.1038/s41467-020-19940-1](https://doi.org/10.1038/s41467-020-19940-1) 
-```data/FMT/FMT2/Eric.txt``` from [doi: 10.1038/s41467-020-19940-1](https://doi.org/10.1038/s41467-020-19940-1) 
+```data/FMT/FMT1/Li.txt``` from [doi: 10.1038/s41467-020-19940-1](https://doi.org/10.1038/s41467-020-19940-1)   
+```data/FMT/FMT2/Eric.txt``` from [doi: 10.1038/s41467-020-19940-1](https://doi.org/10.1038/s41467-020-19940-1)   
 ```data/NSCLC/DS*``` from [doi: 10.1016/j.cell.2024.05.029](https://doi.org/10.1016/j.cell.2024.05.029)  
 ```data/NSCLC/sig.txt``` from [doi: 10.1016/j.cell.2024.05.029](https://doi.org/10.1016/j.cell.2024.05.029)  
 
@@ -174,6 +175,15 @@ Using S1-C8 as example.
 | K03648 | 6             | 48           | 1706              | 248              | 1.82E-02   | 4.47E-35 | 2.63E-31         |
 | K00560 | 5             | 49           | 1576              | 378              | 2.45E-02   | 1.30E-28 | 3.80E-25         |
 | K02837 | 6             | 48           | 1543              | 411              | 3.33E-02   | 1.54E-25 | 3.01E-22         |
+
+#### Evaluation of GCN  
+```01.script_priori_tree/util_evaluation.ipynb``` Evaluate the feature of GCN following original study.  
+- inputs: 
+  - ```data/gcn2008.tsv```
+  - ```data/sp_d.tsv```
+
+- outputs:
+  - ```result/GCN_evaluation/evaluation.png``` The plot of evaluation result  
 
 ### 2. Completeness of FRC (02.script_signature_modules/)  
 
@@ -377,7 +387,7 @@ Scripts of manuscript section *FR keystone species in personalized FR network re
   - ```data/NAFLD/abd.tsv```
   - ```data/NAFLD/NASH_forward_63_map.txt```
 - output: 
-  - ```result/NAFLD/NASH.Normal.abundance.wilcox_testing.tsv```
+  - ```result/NAFLD/NASH.Normal.abundance.wilcox_testing.tsv``` Differential testing result  
 
 #### b. Analyze the NAFLD dataset using NAFLD GCN
 ```05.script_NAFLD/procedure.ipynb```Analyze the NAFLD dataset using NAFLD GCN, compute personalized FR network and find keystone clusters in NASH group and Normal group. 
@@ -388,7 +398,6 @@ Scripts of manuscript section *FR keystone species in personalized FR network re
   - ```data/NAFLD/NASH_GCN.tsv```
 - output: 
   - result/NAFLD/cluster_\*/ (* can be NASH/Normal)
-    - ```network.svg``` network plot of personalized FR network  
     - ```keystone_node.tsv``` Species and FRCs with their PR score
   - result/NAFLD
     - ```keystone_abundance_comparison.png``` JYQ  
@@ -466,59 +475,129 @@ The R scripts used to produce the analysis in original study and is provided by 
 
 [**GCN_fix_tree result is required**](#1-prior-gcn-structure-1script_priori_tree)
 
-Result - Structural entropy of FRCs identified as robust phenotype-specific indicators  
+Scripts of manuscript section *Structural entropy of FRCs identified as robust phenotype-specific indicators*  
 
-Input: ACVD/, CRC/, asthma/, carcinoma_surgery_history/, STH/, migraine/, BD/, IBD/, T2D/, hypertension/, CFS/, IGT/, adenoma/, schizofrenia/
 
-1. SE_diff / NFR_diff  
-Check SE/nFR difference of disease and health group.  
+- input:   
+  - ```data/gcn2008.tsv```  
+  - ```data/sp_d.tsv```  
+  - ```result/GCN_fix_tree/renamed_GCN_tree.newick```  
+  - data/{disease}/{cohort}/ (disease include ACVD, CRC, asthma, carcinoma_surgery_history, STH, migraine, BD, IBD, T2D, hypertension, CFS, IGT, adenoma, schizofrenia)
+    - ```metadata.tsv```  
+    - ```abd.tsv```  
 
-2. check_SE_diff / check_NFR_diff  
-Output some detail statistic information of SE/nFR.  
+#### a. Compute SE values for FRCs
+```07.script_cohort_FRC/a.analysis_SE.ipynb``` 
+Compute SE for FRCs in disease and health group and test the difference.  
 
-3. CRC_recurrent_ROC.ipynb  
-Predict CRC by LODO.
+#### b. Compute nFR values for FRCs
+```07.script_cohort_FRC/b.analysis_nFR.ipynb``` 
+Compute nFR for FRCs in disease and health group and test the difference.  
 
-4. IBD_recurrent_ROC.ipynb  
-Predict IBD by LODO.
 
-5. IBD_ROC.ipynb  
-Predict IBD by cross-validation.  
+- output:  
+  Use SE as an example, nFR is similar  
+  - ```result/large_scale_cohort/{disease}/{cohort}/SE/se_*.tsv``` SE value of FRCs in two groups
+  - ```result/large_scale_cohort/{disease}/{disease}_se.pdf``` Plot FRC with significant difference in SE in at least one cohort of the disease  
+  - ```result/large_scale_cohort/p_all_cohorts_se.tsv``` pvalues of SE at each FRC in all cohorts  
+  - ```result/large_scale_cohort/p_all_cohorts_se.svg``` Plot FRC with significant difference in SE in at least one cohort of all disease  
 
-Output: result/GCN_fix_tree/, result/predict/, result/predict_IBD/
+
+#### c. Differential testing between disease and health group  
+```07.script_cohort_FRC/c.SE_nFR_differential_testing.ipynb``` 
+Output some detail statistic information of SE/nFR. 
+
+- input:   
+  - ```result/large_scale_cohort/p_all_cohorts_se.tsv```  
+  - ```result/large_scale_cohort/p_all_cohorts_nfr.tsv```  
+  - ```result/large_scale_cohort/{disease}/{cohort}/SE/se_*.tsv```  
+  - ```result/large_scale_cohort/{disease}/{cohort}/nFR/fr_*.tsv```  
+
+- output:  
+  - ```result/large_scale_cohort/{disease}/{cohort}/SE/p_detail.tsv``` Statiscic information of SE  
+  - ```result/large_scale_cohort/{disease}/{cohort}/nFR/p_detail.tsv``` Statiscic information of nFR
+
+#### d. Predict phenotype by SE in FRCs   
+- input:   
+  - ```result/large_scale_cohort/p_all_cohorts_se.tsv```  
+  - ```result/large_scale_cohort/{disease}/{cohort}/SE/se_*.tsv```   
+
+```07.script_cohort_FRC/d.CRC_predict_LODO.ipynb``` Predict CRC by LODO.  
+```07.script_cohort_FRC/d.IBD_predict_CV.ipynb``` Predict IBD by cross-validation.   
+```07.script_cohort_FRC/d.IBD_predict_LODO.ipynb``` Predict IBD by LODO.  
+
+- output:  
+  - ```result/predict/{cohort}_{prediction_type}.tsv``` ROC plot of the prediction  
+  - ```result/predict/feature_importance_{prediction_type}.tsv``` Importance of SE in FRCs
+   
+
+#### f. Random experiment on phenotype    
+```07.script_cohort_FRC/f.pheno_related.ipynb``` Randamly shuffle label 100 times of sample to prove the relation between SE of FRCs and phentypes.    
+- input:   
+Use CRC as an example, IBD is also used in this experiment
+  - ```result/large_scale_cohort/CRC/p_all_cohorts_se.tsv```  
+  - ```result/large_scale_cohort/CRC/{cohort}/SE/se_*.tsv``` 
+  - data/CRC/{cohort}/ 
+    - ```metadata.tsv```  
+    - ```abd.tsv```  
+
+- output:  
+  - ```result/validation/phenotype_shuffle/CRC/{cohort}/se_{FRC}*.tsv``` SE of one random experiment for the FRC    
+  - ```result/validation/phenotype_shuffle/CRC/{cohort}/pvalues.tsv``` pvalues of significant difference between disease and health group of the 100 random experiments  
+
 
 
 ### 8. Personalized FR network analysis (08.script_cohort_keystone/)  
 
-Result - Integrating taxonomic composition to construct a personalized FR network  
+Scripts of manuscript section *Integrating taxonomic composition to construct a personalized FR network*  
 
-Input: ACVD/, CRC/, asthma/, carcinoma_surgery_history/, STH/, migraine/, BD/, IBD/, T2D/, hypertension/, CFS/, IGT/, adenoma/, schizofrenia/
+#### a. Abundance differential testing of each species
+```08.script_cohorts_keystone/a.abundance_differential_testing.ipynb```Test abundance difference between disease and health group
+- input:   
+  - data/{disease}/{cohort}/ (disease include ACVD, CRC, asthma, carcinoma_surgery_history, STH, migraine, BD, IBD, T2D, hypertension, CFS, IGT, adenoma, schizofrenia)
+    - ```metadata.tsv```  
+    - ```abd.tsv```  
+- output: 
+  - ```result/large_scale_cohort/{disease}/{cohort}/{cohort}.abundance.wilcox_testing.tsv``` Differential testing result
 
-1. step1_compute_distance  
-Compute functional distance for GCN2008.
-  
-2. step2_cluster_analysis  
-Analyze keystone cluster and keystone taxon for metagenomics abundance profiles in cMD by constructing posterior structure.  
+#### b. Find keystone species and keystone cluster in personalized FR network  
+```08.script_cohorts_keystone/b.personalized_FR_keystone.ipynb```  
+- input:   
+  - ```data/gcn2008.tsv```  
+  - ```data/sp_d.tsv```  
+  - data/{disease}/{cohort}/ (disease include ACVD, CRC, asthma, carcinoma_surgery_history, STH, migraine, BD, IBD, T2D, hypertension, CFS, IGT, adenoma, schizofrenia)
+    - ```metadata.tsv```  
+    - ```abd.tsv```  
+- output: 
+  - ```result/large_scale_cohort/{disease}/{cohort}/sp/cluster_*/keystone_node.tsv``` Species and FRCs with their PR score  
+  - ```result/large_scale_cohort/{disease}/{cohort}/sp/layer_0/fr.tsv``` Personalized FR netowrk
 
-3. step3_keystone_summary  
-Summarize the keystone species.  
+#### c. Summarize the keystone species in different cohort
+```08.script_cohorts_keystone/c.keystone_summary.ipynb  ```
 
-4. utils  
+- input: 
+  - ```result/large_scale_cohort/{disease}/{cohort}/sp/cluster_*/keystone_node.tsv``` 
 
-    **a. log_effect**  
-    Compute and compare the distribution of personalized FR network before and after log rescalen and normalization.
-
-    **b. nestedness_experiment**  
-    An example to test the nestedness compared with NULL experiments of personalized FR.
-
-    **c. evaluation**  
-    An example to evaluate the feature of GCN.  
-
-Output: result/GCN_evaluation/, result/pheno_result/  
 
 ### 9. Personalized FR network nestedness (09. script_personalized_FR_nestedness/)  
 
+#### log effect of personalized FR network  
+```09.script_personalized_FR_nestedness/util_log_effect.ipynb``` Compute and show effect on the distribution of personalized FR network before and after log rescaled and normalization.  
+- input:   
+  - ```data/gcn2008.tsv```  
+  - ```data/sp_d.tsv```  
+  - ```data/CRC/CRC1/metadata.tsv'```  
+  - ```data/CRC/CRC1/abd.tsv```  
 
+#### nestedness of personalized FR network  
+[**Personalized FR network is required.**](#8-personalized-fr-network-analysis-08script_cohort_keystone)
+```09.script_personalized_FR_nestedness/util_nestedness_experiment.ipynb``` Test the nestedness compared with NULL experiments of personalized FR network.  
+- input:   
+  - ```result/large_scale_cohort/{disease}/{cohort}/sp/layer_0/fr.tsv``` (disease include ACVD, CRC, asthma, carcinoma_surgery_history, STH, migraine, BD, IBD, T2D, hypertension, CFS, IGT, adenoma, schizofrenia)
+
+- output:  
+  - ```result/personalized_FR_nestedness/p_df.tsv``` pvalues of the comparison between real FR network nestedness and NULL model nestedness
+  
 
 ### 10. Eigenspecies analysis (10. script_cohorts_eigenspecies/)  
 
@@ -535,38 +614,96 @@ Output: result/eigen/
 
 ### 11. Simulation (11. script_simulation/)  
 
+####  JYQ
+```11.script_simulation/a.se_structure_simulation.ipynb``` Rearrange edges with large weights, make them inside/outside/randomly in cluster and compare the SE of the network  
+
+- input: 
+  - ```data/CRC/{cohort}/abd.tsv```
+  - ```data/CRC/{cohort}/metadata.tsv```
+  - ```result/large_scale_cohort/p_all_cohorts_se.tsv```
+  - ```result/GCN_fix_tree/renamed_GCN_tree.newick```
+
+- output:  
+  - ```result/validation/se_structure_simulation/CRC/se_p_values.tsv``` pvalues of the comparison between the three situations 
+  - ```result/validation/se_structure_simulation/CRC/se_mean_std.tsv``` Statistic result of SE values of the 100 experiment under the three situations  
+  - ```result/validation/se_structure_simulation/CRC/se_summary.tsv``` SE values of the 100 experiment under the three situations  
+
 
 ## Plot tool  
-
-
 Scripts under **plot_tools/** are used to plot figures.  
 
-1. init_network  
-Input: cMD.select_2008.species_phylum.tsv
-init FR network layout  
-Output: sector layout file sector_sp_layout.tsv for network plot
+1. ```init_network.ipynb``` init FR network layout.    
+input: 
+  - ```data/cMD.select_2008.species_phylum.tsv```
+output: 
+  - ```plot_tool/sector_sp_layout.tsv``` sector layout file sector_sp_layout.tsv for network plot  
 
-2. NAFLD_draw  
-Input: NAFLD/taxonomy.tsv, result/NAFLD created by script_NAFLD/
-Plot networks of NASH and health dataset.  
-Output: <img src='readme_fig/NASH_network.svg' alt='NASH network' width="400" height="250">  
+2. ```NAFLD_draw.ipynb``` Plot networks of NASH and health dataset.     
+input: 
+  - ```NAFLD/taxonomy.tsv```   
+  - ```plot_tool/NAFLD_layout.tsv```
+  - ```result/NAFLD/cluster_*/keystone_node.tsv```  
+  - ```result/NAFLD/cluster_*/layer_0/fr.tsv```  
+output: 
+  - ```result/NAFLD/cluster_*/network.svg```  
+example:  
+<img src='readme_fig/NASH_network.svg' alt='NASH network' width="400" height="250">  
 
-3. procedure_draw_network  
-Input: sector_sp_layout.tsv created by step1.init_network, result/pheno_result/ created by script_procedure/
-Scripts used to plot personalized FR network for disease and health group.  
-Output: <img src='readme_fig/pheno_network.svg' alt='CRC network' width="300" height="300">  
+3. ```procedure_draw_network.ipynb``` Scripts used to plot personalized FR network for disease and health group.    
+input: 
+  - ```plot_tool/sector_sp_layout.tsv```  
+  - ```result/large_scale_cohort/{disease}/{cohort}/sp/cluster_*/keystone_node.tsv```  
+  - ```result/large_scale_cohort/{disease}/{cohort}/sp/cluster_*/layer_0/fr.tsv```  
+output:   
+  - ```result/large_scale_cohort/{disease}/{cohort}/sp/cluster_*/network.svg```  
+example:   
+<img src='readme_fig/pheno_network.svg' alt='CRC network' width="400" height="400">  
 
-4. pheno_distribution_se  
-Input: result/GCN_fix_tree/SE/GCN_tree_diff/ created by script_GCN_d3  
-Plot SE distribution for disease and health group.  
-Output: <img src='readme_fig/pheno_se.svg' alt='se_distribution' width="600" height="150">  
+4. ```pheno_distribution_se.ipynb``` Plot SE distribution for disease and health group.   
+input: 
+  - ```result/large_scale_cohort/p_all_cohorts_se.tsv```  
+  - ```result/large_scale_cohort/{disease}/{cohort}/SE/se_*.tsv```  
+output:   
+  - ```result/large_scale_cohort/{disease}/{cohort}/SE_distribution/cluster_*/{cohort}.svg```  
+example:  
+<img src='readme_fig/pheno_se.svg' alt='se_distribution' width="600" height="150">  
 
-5. plot_keystone.ipynb  
-Input: result/pheno_result/ created by script_procedure/, result/taxa_abd_check/ created by script_abundance_check, result/GCN_fix_tree/leaves_cluster.tsv created by script_priori_tree/
-Plot keystone result of phenotype datasets.  
-Output: <img src='./readme_fig/CRC1.PR.svg' alt='keystone_plot' width="600" height="350">  
+5. ```plot_keystone.ipynb.ipynb``` Plot keystone result of phenotype datasets.  
+input: 
+  - ```result/GCN_fix_tree/leaves_cluster.tsv```  
+  - ```result/large_scale_cohort/{disease}/{cohort}/{cohort}.abundance.wilcox_testing.tsv```  
+  - ```result/large_scale_cohort/{disease}/{cohort}/sp/cluster_*/keystone_node.tsv```  
+output:   
+  - ```result/keystone/{cohort}.PR.svg```  
+example:  
+<img src='./readme_fig/CRC1.PR.svg' alt='keystone_plot' width="600" height="350">  
 
-6. NSCLC_distribution_se  
-Input: result/immu/SE/ created by script_NSCLC/  
-Plot SE distribution for response group and non-response group.  
-Output: <img src='readme_fig/NSCLC_se.svg' alt='se_distribution_NSCLC' width="600" height="150">  
+6. ```NSCLC_distribution_se.ipynb``` Plot SE distribution for response group and non-response group.  
+input: 
+  - ```result/NSCLC/FRC_SE/Disc/se_*.tsv```  
+  - ```result/NSCLC/FRC_SE/p_detail.tsv```  
+output:   
+  - ```result/NSCLC/FRC_SE_distribution/{cluster}/Disc.svg```  
+example:  
+<img src='readme_fig/NSCLC_se.svg' alt='se_distribution_NSCLC' width="600" height="150">  
+
+7. ```pheno_simulation_plot.ipynb``` Plot simulated pvalues and real pvalues  
+input: 
+  - ```result/large_scale_cohort/p_all_cohorts_se.tsv```  
+  - ```result/large_scale_cohort/{disease}/{cohort}/SE/p_detail.tsv```  
+  - ```result/validation/phenotype_shuffle/{disease}/{cohort}/pvalues.tsv```  
+output:   
+  - ```result/validation/phenotype_shuffle/{disease}/{clsuter}.svg```  
+example:  
+<img src='readme_fig/pheno_simulation.svg' alt='pheno_simulation' width="600" height="150">  
+
+8. ```simu_se_strcture_plot.ipynb``` Plot simulated SE values  
+input: 
+  - ```result/validation/se_structure_simulation/CRC/se_summary.tsv```  
+  - ```result/validation/se_structure_simulation/CRC/se_p_values.tsv```  
+output:   
+  - ```result/validation/se_structure_simulation/CRC/se_summary_scatter.svg```  
+  - ```result/validation/se_structure_simulation/CRC/se_summary_boxplot.svg```  
+example:  
+<img src='readme_fig/se_structure_simu_scatter.svg' alt='se_simulation_scatter' width="600" height="200">  
+<img src='readme_fig/se_structure_simu_boxplot.svg' alt='se_simulation_boxplot' width="300" height="300">  
