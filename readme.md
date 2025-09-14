@@ -400,8 +400,6 @@ Scripts of manuscript section *FR keystone species in personalized FR network re
   - result/NAFLD/cluster_\*/ (* can be NASH/Normal)
     - ```keystone_node.tsv``` Species and FRCs with their PR score
   - result/NAFLD
-    - ```keystone_abundance_comparison.png``` JYQ  
-    - ```keystone_comparison.png``` JYQ
     -  ```genome_module.completeness.tsv``` Completeness of module for each species
     - ```*.module_comp.wilcox.testing.tsv``` Testing results of module completeness comparison  
     - ```*_species.tsv``` Species involved in comparison with FRC/superclusters annotation
@@ -605,16 +603,34 @@ Result - Eigenspecies of FRCs demonstrate potential as cross-cohort indicators o
 
 [**GCN_fix_tree result is required**](#1-prior-gcn-structure-1script_priori_tree)
 
-Input: ACVD/, CRC/, asthma/, carcinoma_surgery_history/, STH/, migraine/, BD/, IBD/, T2D/, hypertension/, CFS/, IGT/, adenoma/, schizofrenia/
+```10.script_cohorts_eigenspecies/a.eigenspecies.ipynb``` 
+Analysis 28 cohorts with eigenspecies framework. 
+- input:   
+  - ```'result/GCN_fix_tree/leaves_cluster.tsv```
+  - ```data/{disease}/{cohort}/abd.tsv``` (disease include ACVD, CRC, asthma, carcinoma_surgery_history, STH, migraine, BD, IBD, T2D, hypertension, CFS, IGT, adenoma, schizofrenia)
+  - ```data/{disease}/{cohort}/metadata.tsv```
 
-1. run.ipynb  
-Find eigen species and plot the result.  
+- output:  
+  - result/large_scale_cohort/{disease}/{cohort}/eigenspecies/
+   - same as``` 04.script_Antibiotic/d.eigenspecies.ipynb``` output.
 
-Output: result/eigen/
+```10.script_cohorts_eigenspecies/b.confounders.ipynb```
+Correlation of eigenspecies and ohter phenotype with confounder adjusted.
+- input: 
+  - ```a.eigenspecies.ipynb``` output
 
+- output:  
+  - result/large_scale_cohort/{disease}/{cohort}/phenotype/
+    - ```confounder.stats.tsv``` Confounder statistic
+    - ```confounder.summary.tsv``` Summary of confounder
+    - ```duplicate_variables.tsv```	Duplicate variables discard	
+    - ```recommended_confounders.txt``` Recommended confounder used in regression
+    - ```eigenspecies_target_analysis.tsv``` regression results
+    - ```significant_associations.tsv``` Significantly association with FDR adjusted p-value < 0.05
+
+    
 ### 11. Simulation (11. script_simulation/)  
 
-####  JYQ
 ```11.script_simulation/a.se_structure_simulation.ipynb``` Rearrange edges with large weights, make them inside/outside/randomly in cluster and compare the SE of the network  
 
 - input: 
@@ -628,6 +644,19 @@ Output: result/eigen/
   - ```result/validation/se_structure_simulation/CRC/se_mean_std.tsv``` Statistic result of SE values of the 100 experiment under the three situations  
   - ```result/validation/se_structure_simulation/CRC/se_summary.tsv``` SE values of the 100 experiment under the three situations  
 
+```11.script_simulation/b.reduction_simulation.ipynb``` 
+Taxonomy abundance reduction permutation simulation
+
+- input: 
+  - ```../data/NAFLD/abd.tsv```
+  - ```../data/NAFLD/NASH_forward_63_map.txt```
+  - ```cancer_causal_threshold_80/``` Pre-bulit causal inference matrix
+
+- output: 
+  - result/perturbation_simulation/
+  - ```simulation_params_root_seed_42.tsv``` simulation pararmeter generated based on seed = 42
+  - ```simulation_results_root_seed_42_reduction_*.tsv``` Simulation result with reduction [0.05/0.1/0.15/0.2]
+  - ```FR_boxplot_root_seed_42_all_reductions.png```  
 
 ## Plot tool  
 Scripts under **plot_tools/** are used to plot figures.  
