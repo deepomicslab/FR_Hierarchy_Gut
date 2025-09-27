@@ -1,5 +1,5 @@
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17213455.svg)]([https://doi.org/10.xxxx/zenodo.xxxxxxx](https://doi.org/10.5281/zenodo.17213455))
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17213455.svg)](https://doi.org/10.5281/zenodo.17213455)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub release](https://img.shields.io/github/v/release/deepomicslab/FR_Hierarchy_Gut.svg)](https://github.com/deepomicslab/FR_Hierarchy_Gut/releases/tag/v1.0.0)
 
@@ -743,3 +743,4 @@ example:
 <img src='readme_fig/se_structure_simu_scatter.svg' alt='se_simulation_scatter' width="600" height="200">  
 
 <img src='readme_fig/se_structure_simu_boxplot.svg' alt='se_simulation_boxplot' width="300" height="300">  
+
