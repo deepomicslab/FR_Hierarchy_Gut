@@ -5,3 +5,6 @@ __pycache__/*
 .Rhistory
 10.script_cohorts_eigenspecies/.Rhistory
 10.script_cohorts_eigenspecies/local_test.ipynb
+data_body/*
+run_body/*
+run_body2/*
