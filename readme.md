@@ -131,6 +131,9 @@ data/
 ## Scripts
 
 <font color="red">We highly recommend running the scripts in the directory sequentially in the following order.</font>  
+### Running Instructions
+
+Please run the `.ipynb` notebooks in numerical and alphabetical order (e.g., 01.a → 01.b → 02.a). All supporting `.R` and `.py` files are auxiliary scripts that will be called from within the notebooks - you don't need to run them separately. The command lines to execute these supporting files are already included in the notebooks.
 
 ### 1. Prior GCN structure (01.script_priori_tree/)  
 Scripts of manuscript section *Constructing a priori functional redundancy hierarchical structure of species via structural entropy*
@@ -352,7 +355,9 @@ Results as Supplementary Table S5
 
 #### d. Eigenspecies analysis 
 ```04.script_Antibiotic/d.eigenspecies.ipynb```
-(require ```04.script_Antibiotic/eigenspecies_utils.py```)
+(require ```src/eigenspecies_utils.py``` for modules used)
+(require ```04.script_Antibiotic/run_preservation.R``` for visualization)
+
 - prepare group file for comparison pairs, two groups in one comparison
 - calculate eigenspecies of all FRCs in all samples in two groups
 - construct eigenspecies correlation network for two groups respectively
@@ -611,6 +616,9 @@ Result - Eigenspecies of FRCs demonstrate potential as cross-cohort indicators o
 
 ```10.script_cohorts_eigenspecies/a.eigenspecies.ipynb``` 
 Analysis 28 cohorts with eigenspecies framework. 
+(require ```run_eigenspecies_together_COHORT.py``` for batch eigenspecies analysis for each cohort)
+(require ```run_preservation_COHORT.R``` for batch eigenspecies preservation visualization for each cohort)
+
 - input:   
   - ```'result/GCN_fix_tree/leaves_cluster.tsv```
   - ```data/{disease}/{cohort}/abd.tsv``` (disease include ACVD, CRC, asthma, carcinoma_surgery_history, STH, migraine, BD, IBD, T2D, hypertension, CFS, IGT, adenoma, schizofrenia)
